@@ -1,0 +1,23 @@
+{% if page.path contains "/faq/" %}
+<div class="card card-layout-z1">
+	<div class="card-header">
+		<h3>FAQ</h3>
+	</div>
+	<div class="card-body">
+		<ul>
+			<li><a href="{{ site.github.url }}/save-chages-performance">SaveChanges Performance</a></li>
+		</ul>
+
+	</div>
+</div>
+
+{% elsif page.path contains "/problems/" %}
+<div class="card card-layout-z1">
+	<div class="card-header">
+		<h3>Problems</h3>
+	</div>
+	<div class="card-body">
+	</div>
+</div>
+
+{% endif %}
