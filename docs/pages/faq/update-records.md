@@ -41,7 +41,7 @@ All rows that match the entity key are considered as existing and are UPDATED in
 
 ## How to update without loading entities in the context?
 
-Updating entities using SaveChanges normally requires to load them first in the ChangeTracker. These additional round-trips are often not necessary.
+Updating entities using SaveChanges requires typically to load them first in the ChangeTracker. These additional round-trips are often not necessary.
 
 ### StackOverflow Related Questions
 

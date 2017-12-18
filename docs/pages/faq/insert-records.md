@@ -64,7 +64,7 @@ using (var ctx = new CustomerContext())
 
 ## What's the fastest way to insert?
 
-When you want to insert hundreds, thousands, or millions entities, and your application suffers from performances issues.
+When you want to insert hundreds, thousands, or millions of entities, and your application suffers from performances issues.
 
 ### StackOverflow Related Questions
 
@@ -75,7 +75,7 @@ When you want to insert hundreds, thousands, or millions entities, and your appl
 
 ### BulkInsert
 
-There are many solutions to insert many records in the fastest way, but the most significant and recommended solution is BulkInsert provided by [Entity Framework Extensions](http://entityframework-extensions.net/) library. By default, identity value are populated to make it even easier to use.
+There are many solutions to insert many records in the fastest way, but the most significant and recommended solution is BulkInsert provided by [Entity Framework Extensions](http://entityframework-extensions.net/) library. By default, identity value is populated to make it even easier to use.
 
 #### Performance Comparisons
 
@@ -118,13 +118,13 @@ using (var ctx = new CustomerContext())
 
 ### Alternative to BulkInsert
 
-There are some free third party library alternative to Entity Framework Extensions, they are not hard to find but we don't recommand them since they work with simple scenario but fail at supporting complex type, inheritance and association.
+There are some free third-party libraries alternative to Entity Framework Extensions, they are not hard to find, but we don't recommend them since they work with the simple scenario but fail at supporting complex type, inheritance, and association.
 
 ### SqlBulkCopy
 
-Using SqlBulkCopy (for SQL Server) is without a doubt the fastest solution (very slighty faster than Entity Framework Extensions) but also the longer to implement.
+Using SqlBulkCopy (for SQL Server) is without a doubt the fastest solution (very slightly faster than Entity Framework Extensions) but also the longer to implement.
 
-Be careful, this solution add some code complexity for the maintenance team.
+Be careful; this solution adds some code complexity for the maintenance team.
 
 #### Steps to use SqlBulkCopy
 
@@ -135,6 +135,7 @@ Be careful, this solution add some code complexity for the maintenance team.
  5. MAP the SqlBulkCopy to database
  6. Use WriteToServer
  7. Done!
+
 
 
 

@@ -1,5 +1,5 @@
 ---
-permalink: save-chages-performance
+permalink: save-changes-performance
 ---
 
 ## How to Improve SaveChanges Performance? 
