@@ -34,7 +34,7 @@ using (var ctx = new CustomerContext())
  - [Entity framework performance slow](https://stackoverflow.com/questions/40526018/entity-framework-performance-slow?rq=1)
  - [When should I call SaveChanges() when creating 1000's of Entity Framework objects?](https://stackoverflow.com/questions/1930982/when-should-i-call-savechanges-when-creating-1000s-of-entity-framework-object?rq=1)
 
-### Answer
+## Answer
 
 [Entity Framework Extensions](http://entityframework-extensions.net/) library adds the BulkSaveChanges extension method to the DbContext. It performs save operations 10 to 50 times faster. 
 
