@@ -4,4 +4,5 @@ permalink: faq
 
 ## FAQ
 
-- [SaveChanges Performance](save-chages-performance)
+- [SaveChanges Performance](/save-chages-performance)
+- [Insert Records](/insert-records)
