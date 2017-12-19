@@ -10,3 +10,5 @@ permalink: faq
 - [Update Records](/update-records)
 - [Update Without Loading](/update-without-loading)
 - [Delete Records](/delete-records)
+- [Delete Without Loading](/delete-without-loading)
+- [Merge Records](/merge-records)

@@ -29,7 +29,7 @@ context.BulkDelete(customers, options =>
 
 All rows that match the entity key are considered as existing and are **DELETED** from the database.
 
-#### Performance Comparisons
+### Performance Comparisons
 
 |Operations	|1,000 Entities	|2,000 Entities	|5,000 Entities|
 |:--------- |:------------- |:------------- |:------------ |

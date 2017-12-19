@@ -13,13 +13,10 @@ Updating entities using SaveChanges requires typically to load them first in the
 
 ## Answer
 
-### BulkUpdate
-
 [Entity Framework Extensions](http://entityframework-extensions.net/) library adds the UpdateFromQuery extension method. **UpdateFromQuery** gives you access to directly execute an `UPDATE` statement in the database and provide a **HUGE** performance improvement.
 
-UPDATE all rows from the database using a LINQ Query without loading entities in the context.
-
-An UPDATE statement is built using the LINQ expression and directly executed in the database.
+ - UPDATE all rows from the database using a LINQ Query without loading entities in the context.
+ - An UPDATE statement is built using the LINQ expression and directly executed in the database.
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -34,7 +31,7 @@ context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {
 
 {% endhighlight %}
 
-#### Performance Comparisons
+### Performance Comparisons
 
 |Operations	     |1,000 Entitie  |2,000 Entities |5,000 Entities|
 |:-------------- |:------------- |:------------- |:------------ |
