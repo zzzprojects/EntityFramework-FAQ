@@ -11,6 +11,7 @@ fastest-way-to-insert,Fastest Way To Insert,Fastest Way To Insert,,Fastest Way T
 update-without-loading,Update Without Loading,Update Without Loading,,Update Without Loading,,,
 delete-without-loading,Delete Without Loading,Delete Without Loading,,Delete Without Loading,,,
 merge-records,Merge Records,Merge Records,,Merge Records,,,
+include-with-where-clause,Include With Where Clause,Include With Where Clause,,Include With Where Clause,,,
 exceptions,Exceptions,Exceptions,,Exceptions,,,
 not-found-in-object-state-manager,Not Found in ObjectStateManager,Not Found in ObjectStateManager,,Not Found in ObjectStateManager,,,
 concurrency,Concurrency,Concurrency,,Concurrency,,,
