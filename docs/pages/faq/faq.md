@@ -12,4 +12,5 @@ permalink: faq
 - [Delete Records](/delete-records)
 - [Delete Without Loading](/delete-without-loading)
 - [Merge Records](/merge-records)
-- [Include With Where Clause](include-with-where-clause)
+- [Include With Where Clause](/include-with-where-clause)
+- [Include Multiple Levels](/include-multiple-levels)
