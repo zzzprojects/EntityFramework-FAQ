@@ -4,13 +4,18 @@
 		<h3>FAQ</h3>
 	</div>
 	<div class="card-body">
-		<ul>
-			<li><a href="{{ site.github.url }}/save-changes-performance">SaveChanges Performance</a></li>
+        <ul>
+            <li><a href="{{ site.github.url }}/save-changes-performance">SaveChanges Performance</a></li>
             <li><a href="{{ site.github.url }}/insert-records">Insert Records</a></li>
+            <li><a href="{{ site.github.url }}/fastest-way-to-insert">Fastest Way To Insert</a></li>
             <li><a href="{{ site.github.url }}/update-records">Update Records</a></li>
+            <li><a href="{{ site.github.url }}/update-without-loading">Update Without Loading</a></li>
             <li><a href="{{ site.github.url }}/delete-records">Delete Records</a></li>
-		</ul>
-
+            <li><a href="{{ site.github.url }}/delete-without-loading">Delete Without Loading</a></li>
+            <li><a href="{{ site.github.url }}/merge-records">Merge Records</a></li>
+            <li><a href="{{ site.github.url }}/include-with-where-clause">Include With Where Clause</a></li>
+            <li><a href="{{ site.github.url }}/include-multiple-levels">Include Multiple Levels</a></li>
+        </ul>
 	</div>
 </div>
 
@@ -21,6 +26,19 @@
 	</div>
 	<div class="card-body">
 	</div>
+</div>
+
+{% elsif page.path contains "/exceptions/" %}
+<div class="card card-layout-z1">
+    <div class="card-header">
+        <h3>Exceptions</h3>
+    </div>
+    <div class="card-body">
+        <ul>
+            <li><a href="{{ site.github.url }}/not-found-in-object-state-manager">Not Found in ObjectStateManager</a></li>
+            <li><a href="{{ site.github.url }}/concurrency">Concurrency</a></li>
+        </ul>
+    </div>
 </div>
 
 {% endif %}

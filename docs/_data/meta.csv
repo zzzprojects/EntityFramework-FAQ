@@ -7,4 +7,13 @@ save-changes-performance,SaveChanges Performance,SaveChanges Performance,,SaveCh
 insert-records,Insert Records,Insert Records,,Insert Records,,,
 update-records,Update Records,Update Records,,Update Records,,,
 delete-records,Delete Records,Delete Records,,Delete Records,,,
+fastest-way-to-insert,Fastest Way To Insert,Fastest Way To Insert,,Fastest Way To Insert,,,
+update-without-loading,Update Without Loading,Update Without Loading,,Update Without Loading,,,
+delete-without-loading,Delete Without Loading,Delete Without Loading,,Delete Without Loading,,,
+merge-records,Merge Records,Merge Records,,Merge Records,,,
+include-with-where-clause,Include With Where Clause,Include With Where Clause,,Include With Where Clause,,,
+include-multiple-levels,Include Multiple Levels,Include Multiple Levels,,Include Multiple Levels,,,
+exceptions,Exceptions,Exceptions,,Exceptions,,,
+not-found-in-object-state-manager,Not Found in ObjectStateManager,Not Found in ObjectStateManager,,Not Found in ObjectStateManager,,,
+concurrency,Concurrency,Concurrency,,Concurrency,,,
 
