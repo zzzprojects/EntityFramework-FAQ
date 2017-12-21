@@ -14,3 +14,4 @@ permalink: faq
 - [Merge Records](/merge-records)
 - [Include With Where Clause](/include-with-where-clause)
 - [Include Multiple Levels](/include-multiple-levels)
+- [Use LINQ Dynamically](/use-linq-dynamically)
