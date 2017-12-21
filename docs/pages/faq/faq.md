@@ -16,3 +16,4 @@ permalink: faq
 - [Include Multiple Levels](/include-multiple-levels)
 - [Use LINQ Dynamically](/use-linq-dynamically)
 - [View Generated Sql](/view-generated-sql)
+- [Check Object Existence](/check-object-existence)
