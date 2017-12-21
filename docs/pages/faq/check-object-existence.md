@@ -4,7 +4,7 @@ permalink: check-object-existence
 
 ## How to check if an object exists in the database?
 
-What is the best way performance wise to check if object exists in the database. 
+What is the best way performance wise to check if the object exists in the database. 
 
 ### StackOverflow Related Questions
 
@@ -13,7 +13,7 @@ What is the best way performance wise to check if object exists in the database.
 
 ## Answer
 
-For IEnumerable<T>, using **Any()** method is generally the fastest way to check if object exists in the database. It only has to look at one iteration and will return as soon as it finds a match.
+For IEnumerable<T>, using **Any()** method is the fastest way to check if the object exists in the database. It only has to look at one iteration and will return as soon as it finds a match.
 
 {% include template-example.html %} 
 {% highlight csharp %}
