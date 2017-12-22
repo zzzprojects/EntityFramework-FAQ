@@ -23,4 +23,5 @@ concurrency,Concurrency,Concurrency,,Concurrency,,,
 cannot-construct-entity,Cannot Construct Entity,Cannot Construct Entity,,Cannot Construct Entity,,,
 specified-type-not-supported,Specified Type Not Supported,Specified Type Not Supported,,Specified Type Not Supported,,,
 linq-does-not-recognize-method,LINQ Does Not Recognize Method,LINQ Does Not Recognize Method,,LINQ Does Not Recognize Method,,,
+specified-property-not-supported,Specified Property Not Supported,Specified Property Not Supported,,Specified Property Not Supported,,,
 

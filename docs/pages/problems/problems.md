@@ -9,3 +9,4 @@ permalink: problems
 - [Cannot Construct Entity](/cannot-construct-entity)
 - [Specified Type Not Supported](/specified-type-not-supported)
 - [LINQ Does Not Recognize Method](/linq-does-not-recognize-method)
+- [Specified Property Not Supported](/specified-property-not-supported)
