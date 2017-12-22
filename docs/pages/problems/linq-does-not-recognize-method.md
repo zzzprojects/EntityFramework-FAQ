@@ -20,6 +20,9 @@ using (var context = new CustomerContext())
 
 ### StackOverflow Related Questions
 
+ - [Why LINQ to Entities does not recognize the method 'System.String ToString()?](https://stackoverflow.com/questions/10110266/why-linq-to-entities-does-not-recognize-the-method-system-string-tostring)
+ - [LINQ to Entities does not recognize the method 'System.String Format(System.String, System.Object, System.Object)'](https://stackoverflow.com/questions/10079990/linq-to-entities-does-not-recognize-the-method-system-string-formatsystem-stri)
+ - [LINQ to Entities does not recognize the method 'System.String ToString()' method, and this method cannot be translated into a store expression](https://stackoverflow.com/questions/5899683/linq-to-entities-does-not-recognize-the-method-system-string-tostring-method)
 
 ## Solution
 
