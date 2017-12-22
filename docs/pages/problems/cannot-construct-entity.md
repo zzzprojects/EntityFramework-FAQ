@@ -25,7 +25,7 @@ using (var context = new CustomerContext())
  - [The entity cannot be constructed in a LINQ to Entities query](https://stackoverflow.com/questions/5325797/the-entity-cannot-be-constructed-in-a-linq-to-entities-query)
  - ["The entity or complex type cannot be constructed in a LINQ to Entities query" in Controler](https://stackoverflow.com/questions/31920656/the-entity-or-complex-type-cannot-be-constructed-in-a-linq-to-entities-query-i)
 
-## Answer
+## Solution
 
 ### Anonymous Type
 

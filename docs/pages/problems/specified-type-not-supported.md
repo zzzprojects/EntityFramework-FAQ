@@ -24,7 +24,7 @@ using (var context = new CustomerContext())
  - [The specified type member 'Date' is not supported in LINQ](https://stackoverflow.com/questions/28381268/the-specified-type-member-date-is-not-supported-in-linq)
  - [The specified type member 'Date' is not supported in LINQ to Entities. Only initializers, entity members, and entity navigation properties](https://stackoverflow.com/questions/14601676/the-specified-type-member-date-is-not-supported-in-linq-to-entities-only-init)
 
-## Answer
+## Solution
 
 The easiest solution to handle this exception is to use **DbFunctions.TruncateTime** method
 {% include template-example.html %} 
