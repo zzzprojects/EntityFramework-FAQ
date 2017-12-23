@@ -1,0 +1,107 @@
+term,definition,category
+Entity Client,Entity client provides the ability to work against entities in the form of rows and columns using SQL queries.,Architecture
+Entity Layer,Entity Layer defines the entities and relationships.,Architecture
+Mapping layer,Mapping layer maps the entities and relationships defined at conceptual layer with actual relationships and tables defined at logical layer.,Architecture
+Object Service,Object Services provides the functionality needed to work with objects that are based on your entities.,Architecture
+Storage Layer,Storage Layer contains the entire database schema in XML format.,Architecture
+Asynchronous Query,Entity Framework supports asynchronous operations for querying and saving of data.,Asynchronous Programming
+Entity Container,Specifies entity sets and association sets that will be implemented in a specified namespace.,Container
+Entity Set,A logical container for entities of a given type and its subtypes. Entity sets are mapped to tables in a database.,Container
+Convention (Code First),A rule that Entity Framework uses to infer the shape of your model from your classes.,Convention
+Column,Specifies the database column that a property is mapped to.,Data Annotations
+ConcurrencyCheck,Specifies that a property participates in optimistic concurrency checks.,Data Annotations
+Data Annotations,DataAnnotations is used to configure the classes which will highlight the most commonly needed configurations.,Data Annotations
+ForeignKey,Denotes a property used as a foreign key in a relationship,Data Annotations
+Index,Specifies that the database column to which the property is mapped has an index.,Data Annotations
+InverseProperty,Specifies the inverse of a navigation property that represents the other end of the same relationship.,Data Annotations
+Key,Denotes one or more properties that uniquely identify an entity.,Data Annotations
+MaxLength,Specifies the maximum length of array or string data allowed in a property.,Data Annotations
+MinLength,Specifies the minimum length of array or string data allowed in a property.,Data Annotations
+NotMapped,Denotes that a property or class should be excluded from database mapping.,Data Annotations
+Required,Specifies that a data field value is required.,Data Annotations
+StringLength,Specifies the minimum and maximum length of characters that are allowed in a data field.,Data Annotations
+Table,Specifies the database table that a class is mapped to.,Data Annotations
+TimeStamp,"Specifies the database column with timestamp datatype, and it can be applied to only one byte array property of a domain class.",Data Annotations
+Concurrency Conflicts,"A concurrency conflict occurs when one user displays an entity's data in order to edit it, and then another user updates the same entity's data before the first user's change is written to the database.",Data Concurrency
+Handling Optimistic Concurrency,"In the database table, include a tracking column that can be used to determine when a row has been changed.",Data Concurrency
+Optimistic Concurrency,"EF saves the entity to the database, assuming that the same data has not changed since the entity was loaded.",Data Concurrency
+Pessimistic Concurrency (Locking),"Locking a row for update access, and no other users are allowed to` lock the row either for read-only or update access",Data Concurrency
+Entities,"Blueprints for Business Classes, e.g. Invoice, InvoiceItem, etc.",Data Model
+Entity Data Model (EDM),"EDM is an extended version of the ERM which specifies client-side data model, and it is the core of the Entity Framework",Data Model
+Entity Relationship Model (ERM),ERM defines a schema of entities and their relationships with one another.,Data Model
+Inheritance,Inheritance used with entities serves the same purpose as inheritance used with classes,Data Model
+Storage Model,"A definition for the logical model of data in a supported data source, such as a relational database.",Data Model
+Indexs,"An index is an on-disk data structure that is based on tables and views. Indexes make the retrieval of data faster and efficient, in most cases. ",Database
+Stored Procedures,"Entity Framework allows you to use stored procedures to perform predefined logic on database tables,",Database
+Table-Valued Function (TVF),"TVF is very similar to stored procedures but with one key difference, i.e., the results from a TVF can be used in a LINQ query while the results of a stored procedure cannot.",Database
+Views,A view is an object that contains data obtained by a predefined query.,Database
+Create Operation,Adding a new object is as simple as constructing a new instance of your object and add it using the Add method on DbSet.,Database Operations
+Delete Operation,"To delete an entity using Entity Framework, you use the Remove method on DbSet.",Database Operations
+Read Operation,Reading the existing data from the database,Database Operations
+Update Operation,Changing existing objects is as simple as updating the value assigned to the property(s) and calling SaveChanges.,Database Operations
+BeginTransaction,"It allows several operations to be combined within the same transaction and hence either all are committed, or all are rolled back as one.",Database Transaction
+Transaction,"Combining several database operations (insert, update, delete etc.) into one transaction",Database Transaction
+UseTransaction,"It allows the DbContext to use a transaction, which was started outside of the Entity Framework.",Database Transaction
+Code First,"In Code First, POCO classes are created first, and the database is generated from these POCO classes.",Dev Approaches
+Database First,"In this approach data model, context and entity classes are created from an existing database.",Dev Approaches
+Model  First,"In this approach, Entities, relationships, and inheritance hierarchies are created in EF designer first, and then a database is generated from that model.",Dev Approaches
+Change Tracking,Change Tracking tracks the changes made to entities and their relations,Entities & DbContext
+DbContext,The primary class that is responsible for interacting with data as objects is called DbContext class.,Entities & DbContext
+Disconnected Entities,Entities that are not being tracked by a context are known as disconnected entities.,Entities & DbContext
+POCO Entities,"POCO stands for ""plain-old"" CLR objects which can be used as an existing domain objects with the data model.",Entities & DbContext
+Seed Database,A method that should be overridden to add data to the context for seeding. ,Entities & DbContext
+Self-tracking Entity,An entity built from a code generation template that helps with N-Tier development.,Entities & DbContext
+Enum Support,Entity Framework allows you to define a property on a domain class that is an enum type and map it to a database column of an integer type.,Enum Support
+Fluent API,An API that can be used to configure a Code First model. Fluent API covers everything that data annotations can do in addition to some more advanced configuration not possible with data annotations.,Fluent API
+Default Schema,Configures the default database schema name. This default database schema name is used for database objects that do not have an explicitly configured schema name.,Fluent API Entity Mapping
+Entity Mapping,Entity mapping is just some simple mappings that will impact Entity Framework's understanding of how the classes are mapped to the databases. ,Fluent API Entity Mapping
+Entity Splitting,"Entity Splitting lets you combine data coming from multiple tables into a single class, and it can only be used with tables that have a one-to-one relationship between them.",Fluent API Entity Mapping
+Map Entity to Table,Configures the table name that this entity type is mapped to.,Fluent API Entity Mapping
+HasColumnName,Configures the name of the database column used to store the property.,Fluent API Properties Mapping
+HasColumnOrder,Configures the order of the database column used to store the property.This method is also used to specify key ordering when an entity type has a composite key.,Fluent API Properties Mapping
+HasColumnType,Configures the data type of the database column used to store the property.,Fluent API Properties Mapping
+HasKey,Configures the primary key property(s) for this entity type.,Fluent API Properties Mapping
+HasMaxLength,Configures the property to have the specified maximum length.,Fluent API Properties Mapping
+IsConcurrencyToken,Configures the property to be used as an optimistic concurrency token.,Fluent API Properties Mapping
+IsRequired,Configures the property to be required. The database column used to store this property will be non-nullable.,Fluent API Properties Mapping
+IsUnicode,Configures the property to support Unicode string content.,Fluent API Properties Mapping
+Properties Mapping,The Property method is used to configure attributes for each property belonging to an entity or complex type.,Fluent API Properties Mapping
+Context Lifetime,The lifetime of a context begins when the instance is created and ends when it is either disposed or garbage-collected.,Lifecycle
+Entity Lifecycle,"The Entity Lifecycle describes the process in which an Entity is created, added, modified, deleted, etc.",Lifecycle
+Eager Loading,Eager loading is the process where a query for one type of entity also loads related entities as part of the query.,Loading Related Entities
+Explicit Loading,"When you disable the lazy loading, it is still possible to lazily load related entities, but it must be done with an explicit call.",Loading Related Entities
+Lazy Loading,"Lazy loading means delaying the loading of related data, until you specifically request for it.",Loading Related Entities
+Logging SQL,It captures an equivalent SQL query generated by Entity Framework internally and provides it as output.,Logging SQL
+Object-Relational Mapping,A technique for transforming data from a relational database into data types that can be used in object-oriented software applications.,Mapping
+Table-per-concrete type (TPC),A method of mapping the inheritance where each non-abstract type in the hierarchy is mapped to separate table in the database.,Mapping
+Table-per-hierarchy (TPH),A method of mapping the inheritance where all types in the hierarchy are mapped to the same table in the database. A discriminator column(s) is used to identify what type each row is associated with.,Mapping
+Table-per-type (TPT),"A method of mapping the inheritance where the common properties of all types in the hierarchy are mapped to the same table in the database, but properties unique to each type are mapped to a separate table.",Mapping
+Automated Migration,Automatic Migrations allows you to use Code First Migrations just by executing a command in Package Manager Console,Migration
+Code Based Migration,Configures the Entity Framework to automatically drop and re-create the database each time you change the data model.,Migration
+Migration,Migration is a process in which any change in a database will also need to change the data model and vice versa.,Migration
+Object Layer,The entity types and object context definitions that are used by the Entity Framework.,Object
+Object Query,A query executed within an object context against a conceptual model that returns data as objects.,Object
+Proxy Object,An object that derives from a POCO class and is generated by the Entity Framework to support change tracking and lazy loading.,Object
+Command Tree,"A common, programmatic representation of all Entity Framework queries that are composed of one or more expressions.",Querying Data
+LINQ to Entities,LINQ to Entities enables developers to write queries against the Entity Framework conceptual model in a declarative language.,Querying Data
+Projection Queries,"Projection queries improve the efficiency of your application, by only retrieving specific fields from your database.",Querying Data
+Foreign key association,An association between entities where a property that represents the foreign key is included in the class of the dependent entity,Relationships
+Identifying relationship,"A relationship where the primary key of the principal entity is part of the primary key of the dependent entity. In this kind of relationship, the dependent entity cannot exist without the principal entity.",Relationships
+Independent association,An association between entities where there is no property representing the foreign key in the class of the dependent entity.,Relationships
+Many-to-Many Relationship,"A row in table A can have many matching rows in table B, and vice versa.",Relationships
+Multiplicity,"The number of entities that can exist on each side of a relationship, as defined by an association also known as cardinality.",Relationships
+Navigation Property,"A property of an entity that references another entity, e.g., Invoice contains an InvoiceItems navigation property.",Relationships
+One-to-Many Relationship,"A row in table A can have many matching rows in table B, but a row in table B can have only one matching row in table A, e.g., an Invoice can have multiple InvoiceItems",Relationships
+One-to-One Relationship,"A row in table A can have no more than one matching row in table B, and vice versa. E.g., each Invoice can have a unique InvoiceDetail",Relationships
+Relationships,The relationship is a situation that exists between relational database tables through foreign keys.,Relationships
+Spatial Data,"Entity Framework supports spatial data types DbGeography and DbGeometry which allow queries to analyze spatial data. e.g., a query can filter based on the distance between two geographic locations.",Spatial Data
+Entity SQL,A storage-independent dialect of SQL that works directly with conceptual entity schemas and that supports conceptual model concepts such as inheritance and relationships.,SQL
+Native SQL,You can run queries using raw SQL directly against the database using DbContext.,SQL
+SQL Commands,"ExecuteSqlCommnad method is used in sending non-query commands to the database, such as the Insert, Update or Delete command.",SQL
+Complex Type,The specification for a data type that represents a non-scalar property of an entity type that does not have a key property.,Type
+entity type,A .NET Framework class that represents an entity as it is defined in the conceptual model.,Type
+Multiple Entity Sets Per Type,The ability for an entity type to be defined in more than one entity set.,Type
+ValidateEntity,DbContext has an Overridable method called ValidateEntity and validation logic can be put in here directly. ,Validation
+Validation,Entity Framework provides a great variety of validation features can be implemented to both client-side and server-side validation.,Validation
+Referential Constraint,A constraint that is defined in a conceptual model that indicates that an entity has a dependent relationship to another entity.,General
+Simple Type,A primitive type that is used for defining properties in the conceptual model.,General

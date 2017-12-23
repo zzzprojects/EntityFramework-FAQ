@@ -1,8 +1,12 @@
+{% if site.data.meta[meta_index].h1.size > 25 %}
+{% assign h1_display = "display-5" %}
+{% endif %}
+
 <div class="header-angle">
 	<div class="top-triangle wow slideInRight" data-wow-duration="1.5s"></div>
 	<div class="header-angle-inner">
 		<div class="container">
-			<h1>
+			<h1 class="{{ h1_display }}">
 			{{site.data.meta[meta_index].h1}}
 			</h1>
 			{% if site.data.meta[meta_index].h2 != null %}

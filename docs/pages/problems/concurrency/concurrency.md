@@ -6,7 +6,7 @@ permalink: concurrency
 
 A concurrency conflict occurs when one user displays an entity's data in order to edit it, and then another user updates or deletes the same entity's data before the first user's change is written to the database. 
 
-Another for this exception is when a new object is created and and it's state is set to modified the EntityState.Modified.
+Another case for this exception is when a new object is created and and it's state is set to modified the EntityState.Modified.
 
 {% include template-example.html %} 
 {% highlight csharp %}

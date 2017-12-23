@@ -4,9 +4,21 @@ permalink: problems
 
 ## Troubleshooting
 
-- [Not Found in ObjectStateManager](/not-found-in-object-state-manager)
-- [Concurrency](/concurrency)
-- [Cannot Construct Entity](/cannot-construct-entity)
-- [Specified Type Not Supported](/specified-type-not-supported)
-- [LINQ Does Not Recognize Method](/linq-does-not-recognize-method)
-- [Specified Property Not Supported](/specified-property-not-supported)
+<h3>Concurrency</h3>
+<ul>
+	<li><a href="{{ site.github.url }}/concurrency">Concurrency</a></li>
+</ul>
+<h3>Delete</h3>
+<ul>
+	<li><a href="{{ site.github.url }}/not-found-in-object-state-manager">Not Found in ObjectStateManager</a></li>
+</ul>
+<h3>LINQ</h3>
+<ul>
+	<li><a href="{{ site.github.url }}/specified-type-not-supported">Specified Type Not Supported</a></li>
+	<li><a href="{{ site.github.url }}/linq-does-not-recognize-method">LINQ Does Not Recognize Method</a></li>
+	<li><a href="{{ site.github.url }}/specified-property-not-supported">Specified Property Not Supported</a></li>
+</ul>
+<h3>Projection</h3>
+<ul>
+	<li><a href="{{ site.github.url }}/cannot-construct-entity">Cannot Construct Entity</a></li>
+</ul>

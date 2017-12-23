@@ -4,17 +4,38 @@ permalink: faq
 
 ## FAQ
 
-- [SaveChanges Performance](/save-changes-performance)
-- [Insert Records](/insert-records)
-- [Fastest Way To Insert](/fastest-way-to-insert)
-- [Update Records](/update-records)
-- [Update Without Loading](/update-without-loading)
-- [Delete Records](/delete-records)
-- [Delete Without Loading](/delete-without-loading)
-- [Merge Records](/merge-records)
-- [Include With Where Clause](/include-with-where-clause)
-- [Include Multiple Levels](/include-multiple-levels)
-- [Use LINQ Dynamically](/use-linq-dynamically)
-- [View Generated Sql](/view-generated-sql)
-- [Check Object Existence](/check-object-existence)
-- [LINQ Prevent SQL Injection](/linq-prevent-sql-injection)
+<h3>SaveChanges</h3>
+<ul>
+	<li><a href="{{ site.github.url }}/save-changes-performance">SaveChanges Performance</a></li>
+</ul>
+<h3>Insert</h3>
+<ul>
+	<li><a href="{{ site.github.url }}/insert-records">Insert Records</a></li>
+	<li><a href="{{ site.github.url }}/fastest-way-to-insert">Fastest Way To Insert</a></li>
+</ul>
+<h3>Update</h3>
+<ul>
+	<li><a href="{{ site.github.url }}/update-records">Update Records</a></li>
+	<li><a href="{{ site.github.url }}/update-without-loading">Update Without Loading</a></li>
+</ul>
+<h3>Delete</h3>
+<ul>
+	<li><a href="{{ site.github.url }}/delete-records">Delete Records</a></li>
+	<li><a href="{{ site.github.url }}/delete-without-loading">Delete Without Loading</a></li>
+</ul>
+<h3>Merge</h3>	
+<ul>
+	<li><a href="{{ site.github.url }}/merge-records">Merge Records</a></li>
+</ul>
+<h3>Include</h3>
+<ul>
+	<li><a href="{{ site.github.url }}/include-with-where-clause">Include With Where Clause</a></li>
+	<li><a href="{{ site.github.url }}/include-multiple-levels">Include Multiple Levels</a></li>
+</ul>
+<h3>LINQ</h3>
+<ul>
+	<li><a href="{{ site.github.url }}/use-linq-dynamically">Use LINQ Dynamically</a></li>
+	<li><a href="{{ site.github.url }}/view-generated-sql">View Generated Sql</a></li>
+	<li><a href="{{ site.github.url }}/check-object-existence">Check Object Existence</a></li>
+	<li><a href="{{ site.github.url }}/linq-prevent-sql-injection">LINQ Prevent SQL Injection</a></li>
+</ul>
