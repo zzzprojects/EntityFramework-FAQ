@@ -14,3 +14,7 @@ permalink: faq
 - [Merge Records](/merge-records)
 - [Include With Where Clause](/include-with-where-clause)
 - [Include Multiple Levels](/include-multiple-levels)
+- [Use LINQ Dynamically](/use-linq-dynamically)
+- [View Generated Sql](/view-generated-sql)
+- [Check Object Existence](/check-object-existence)
+- [LINQ Prevent SQL Injection](/linq-prevent-sql-injection)

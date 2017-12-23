@@ -2,7 +2,7 @@
 permalink: concurrency
 ---
 
-## Store update, insert, or delete statement affected an unexpected number of rows (0)
+## Exception: Store update, insert, or delete statement affected an unexpected number of rows (0)
 
 A concurrency conflict occurs when one user displays an entity's data in order to edit it, and then another user updates or deletes the same entity's data before the first user's change is written to the database. 
 

@@ -6,7 +6,7 @@ permalink: include-multiple-levels
 
 Eager loading is the process whereby a query for one type of entity also loads related entities as part of the query. Eager loading is achieved by use of the Include method. 
 
-The Include() method works quite well for Lists on objects, but what if there is a need for multiple levels of depth. For example, Customer contains list of invoices and each invoice then contains a list of items.
+The Include() method works quite well for Lists on objects, but what if there is a need for multiple levels of depth. For example, Customer contains a list of invoices and each invoice then contains a list of items.
 ### StackOverflow Related Questions
 
  - [Entity Framework - Include Multiple Levels of Properties](https://stackoverflow.com/questions/10822656/entity-framework-include-multiple-levels-of-properties)
@@ -30,7 +30,7 @@ using (var context = new MyContext())
 
 {% endhighlight %}
 
-The above example will loads all customers, their related invoices, and the items of each invoice.
+The above example will load all customers, their related invoices, and the items of each invoice.
 
 ### Entity Framework Core
 
