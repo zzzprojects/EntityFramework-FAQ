@@ -8,7 +8,7 @@ Batch Update allows you to improve EF performance by updating multiple records i
 
 ## Why Batch Delete?
 
-For **HUGE** performance gains, everything is executed on the database side. To use batch update you will need to use third-party library.
+For **HUGE** performance gains, everything is executed on the database side. To use batch update, you will need to use a third-party library.
 
 ## Google Related Searches
 

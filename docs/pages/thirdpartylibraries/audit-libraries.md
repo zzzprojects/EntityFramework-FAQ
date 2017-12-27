@@ -8,7 +8,7 @@ The audit allows you to log changes from Entity Framework change tracker in a da
 
 ## Why Audit?
 
-Entity Framework saves entities in a database but doesn't let you easily track changes. To follow all the changes you will need to use third-party library.
+Entity Framework saves entities in a database but doesn't let you easily track changes. To follow all the changes, you will need to use a third-party library.
 
 ### Common scenario:
 

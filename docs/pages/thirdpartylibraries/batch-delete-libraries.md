@@ -8,7 +8,7 @@ Batch Delete allows you to improve EF performance by deleting multiple records i
 
 ## Why Batch Delete?
 
-For **HUGE** performance gains, everything is executed on the database side. To use batch delete you will need to use third-party library.
+For **HUGE** performance gains, everything is executed on the database side. To use batch delete, you will need to use a third-party library.
 
 ## Google Related Searches
 
