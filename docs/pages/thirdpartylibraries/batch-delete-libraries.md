@@ -1,33 +1,37 @@
 ---
-permalink: batch-update
+permalink: batch-delete-libraries
 ---
 
 ## Introduction
 
-Batch Update allows you to improve EF performance by updating multiple records in a database from a LINQ Query without loading entities.
+Batch Delete allows you to improve EF performance by deleting multiple records in a database from a LINQ Query without loading entities.
 
 ## Why Batch Delete?
 
-For **HUGE** performance gains, everything is executed on the database side. To use batch update you will need to use third-party library.
+For **HUGE** performance gains, everything is executed on the database side. To use batch delete you will need to use third-party library.
 
 ## Google Related Searches
 
- - [Entity Framework Update Without Loading](https://www.google.com/search?q=entity+framework+update+without+loading)
- - [Entity Framework Update Without Retrieving](https://www.google.com/search?q=entity+framework+update+without+retrieving)
+ - [Entity Framework Delete Without Loading](https://www.google.com/search?q=entity+framework+delete+without+loading)
+ - [Entity Framework Delete Without Retrieving](https://www.google.com/search?q=entity+framework+delete+without+retrieving)
 
 ## StackOverflow Related Questions
 
- - [How to Bulk Update records in Entity Framework?](https://stackoverflow.com/questions/44194877/how-to-bulk-update-records-in-entity-framework)
- - [Entity Framework update/insert multiple entities](https://stackoverflow.com/questions/39656794/entity-framework-update-insert-multiple-entities)
- - [Batch update on object list using EntityFramework 6 and Linq](https://stackoverflow.com/questions/30738697/batch-update-on-object-list-using-entityframework-6-and-linq)
+ - [How do I delete multiple rows in Entity Framework (without foreach)](https://stackoverflow.com/questions/2519866/how-do-i-delete-multiple-rows-in-entity-framework-without-foreach)
+ - [How to Delete multiple records in Linq to Entity?](https://stackoverflow.com/questions/20452652/how-to-delete-multiple-records-in-linq-to-entity?noredirect=1&lq=1)
+ - [Bulk-deleting in LINQ to Entities](https://stackoverflow.com/questions/869209/bulk-deleting-in-linq-to-entities?noredirect=1&lq=1)
 
 {% include template-example.html %} 
 {% highlight csharp %}
 // using Z.EntityFramework.Plus; // Don't forget to include this.
 
-// UPDATE all users inactive for 2 years
+// DELETE all users inactive for 2 years
 ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
-         .Update(x => new User() { IsSoftDeleted = 1 });
+         .Delete();
+
+// DELETE using a BatchSize
+ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
+         .Delete(x => x.BatchSize = 1000);
 {% endhighlight %}
 
 ## Supported Libraries
