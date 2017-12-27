@@ -16,6 +16,9 @@
 {% elsif page.path contains "/problems/" %}
 	{% assign is_context_problems = true; %}
 	{% assign is_context_problems_css_active = "active"; %}
+{% elsif page.path contains "/thirdpartylibraries/" %}
+	{% assign is_context_thirdpartylibraries = true; %}
+	{% assign is_context_thirdpartylibraries_css_active = "active"; %}
 {% endif %}
 {% for num in (0..site.data.meta.size) %}	
 	{% if site.data.meta[num].permalink == page.permalink %}
