@@ -35,3 +35,4 @@ bulk-update-libraries,BulkUpdate Libraries,BulkUpdate Libraries,,BulkUpdate Libr
 bulk-delete-libraries,BulkDelete Libraries,BulkDelete Libraries,,BulkDelete Libraries,,,
 bulk-merge-libraries,BulkMerge Libraries,BulkMerge Libraries,,BulkMerge Libraries,,,
 cache-libraries,Cache Libraries,Cache Libraries,,Cache Libraries,,,
+deferred-query-libraries,Deferred Query Libraries,Deferred Query Libraries,,Deferred Query Libraries,,,
