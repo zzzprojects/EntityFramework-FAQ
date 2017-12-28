@@ -10,7 +10,7 @@ BulkInsert allows you to improve EF performance by inserting multiples entities 
 
 For **HUGE** performance gains, Entity Framework makes one database round-trip for each entity to insert/update/delete. 
 
-So if you want to add 10,000 entities, 10,000 database round trip will be required which is **INSANELY** slow. To use So if you want to add 10,000 entities, 10,000 database round trip will be required, you will need to use a third-party library.
+So if you want to add 10,000 entities, 10,000 database round trip will be required which is **INSANELY** slow. To use BulkInsert, you will need to use a third-party library.
 
 |Operations	|1,000 Entities	|2,000 Entities	|5,000 Entities|
 |:----------|:----------|:----------|:----------|
