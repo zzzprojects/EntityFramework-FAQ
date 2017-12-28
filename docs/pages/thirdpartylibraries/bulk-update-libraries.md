@@ -8,7 +8,7 @@ BulkUpdate allows you to improve EF performance by updating multiples entities w
 
 ## Why BulkUpdate?
 
-For **HUGE** performance gains, Entity Framework makes one database round-trip for each entity to insert/update/delete. 
+For **HUGE** performance gains, Entity Framework makes one database round-trip for each entity to update. 
 
 So if you want to modify 10,000 entities, 10,000 database round trip will be required which is **INSANELY** slow. To use BulkUpdate, you will need to use a third-party library.
 

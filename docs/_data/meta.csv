@@ -32,3 +32,6 @@ batch-update-libraries,Batch Update Libraries,Batch Update Libraries,,Batch Upda
 bulk-save-changes-libraries,BulkSaveChanges Libraries,BulkSaveChanges Libraries,,BulkSaveChanges Libraries,,,
 bulk-insert-libraries,BulkInsert Libraries,BulkInsert Libraries,,BulkInsert Libraries,,,
 bulk-update-libraries,BulkUpdate Libraries,BulkUpdate Libraries,,BulkUpdate Libraries,,,
+bulk-delete-libraries,BulkDelete Libraries,BulkDelete Libraries,,BulkDelete Libraries,,,
+bulk-merge-libraries,BulkMerge Libraries,BulkMerge Libraries,,BulkMerge Libraries,,,
+cache-libraries,Cache Libraries,Cache Libraries,,Cache Libraries,,,
