@@ -1,27 +1,27 @@
 ---
-permalink: bulk-save-changes-libraries
+permalink: bulk-insert-libraries
 ---
 
 ## Introduction
 
-BulkSaveChanges allows you to improve EF performance by saving multiples entities with bulk operations.
+BulkInsert allows you to improve EF performance by inserting multiples entities with bulk operations.
 
-## Why BulkSaveChanges?
+## Why BulkInsert?
 
 For **HUGE** performance gains, Entity Framework makes one database round-trip for each entity to insert/update/delete. 
 
-So if you want to save (add, modify or remove) 10,000 entities, 10,000 database round trip will be required which is **INSANELY** slow. To use BulkSaveChanges, you will need to use a third-party library.
+So if you want to add 10,000 entities, 10,000 database round trip will be required which is **INSANELY** slow. To use So if you want to add 10,000 entities, 10,000 database round trip will be required, you will need to use a third-party library.
 
 |Operations	|1,000 Entities	|2,000 Entities	|5,000 Entities|
 |:----------|:----------|:----------|:----------|
-|BulKSaveChanges	|90 ms	|150 ms	|350 ms|
+|BulkInsert	|6 ms	|10 ms	|15 ms|
 |SaveChanges	|1,000 ms	|2,000 ms	|5,000 ms|
 
 ## Google Related Searches
 
- - [Entity Framework Bulk Operations](https://www.google.com/search?q=entity+framework+bulk+operations)
- - [Entity Framework SaveChanges Performance](https://www.google.com/search?q=entity+framework+savechanges+performance)
- - [Entity Framework SaveChanges Slow](https://www.google.com/search?q=entity+framework+savechanges+slow)
+ - [Entity Framework Insert Multiple Records](https://www.google.com/search?q=entity+framework+insert+multiple+records)
+ - [Entity Framework Insert Multiple Rows](https://www.google.com/search?q=entity+framework+insert+multiple+rows)
+ - [Entity Framework Add Range](https://www.google.com/search?q=entity+framework+add+range)
 
 ## StackOverflow Related Questions
 
@@ -33,19 +33,30 @@ So if you want to save (add, modify or remove) 10,000 entities, 10,000 database 
  - [Entity Framework Bulk Insert Throws KeyNotFoundException error](https://stackoverflow.com/questions/32225183/entity-framework-bulk-insert-throws-keynotfoundexception-error/37969443#37969443)
  - [Bulk insert from a csv file using Entity Framework](https://stackoverflow.com/questions/36725006/bulk-insert-from-a-csv-file-using-entity-framework)
 
+
 {% include template-example.html %} 
 {% highlight csharp %}
 // using Z.EntityFramework.Extensions; // Don't forget to include this.
 
 // Easy to use
-context.BulkSaveChanges();
+context.BulkInsert(list);
 
 // Easy to customize
-context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
+context.BulkInsert(list, bulk => bulk.BatchSize = 100);
 {% endhighlight %}
 
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|
 |:----------|:----------|:----------|:----------|:----------|:----------|
-|[Z.EntityFramework.Extensions](http://entityframework-extensions.net/)	|PRO	|EF6	|< 1 Day	|Yes	| Bulk SaveChanges<br>Bulk Insert<br>Bulk Update<br>Bulk Delete<br>Bulk Merge|
+|[Z.EntityFramework.Plus](http://entityframework-plus.net/)	|FREE	|EF5<br>EF6<br>EF Core|	< 1 Day	|Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Deferred Query<br>Filter<br>Future<br>Include Filter<br>Include Optimized|
+
+## Unsuported Library
+
+Use these libraries at your risk!
+
+|Library	|Type	|EF Version	|Support	|Doc	|Features |
+|:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
+|[EFUtilities](https://github.com/MikaelEliasson/EntityFramework.Utilities)	|FREE	|EF5<br>EF6	|No	    |No |Bulk Insert<br>Batch Delete<br>Batch Update<br>Include Optimized<br>
+|[EntityFramework.BulkInsert](https://efbulkinsert.codeplex.com/)	|FREE	|EF5<br>EF6    |No	    |Yes    |Bulk Insert |
+
