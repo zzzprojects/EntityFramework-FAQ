@@ -1,5 +1,5 @@
 ---
-permalink: filter-libraries
+permalink: filter
 ---
 
 ## Introduction

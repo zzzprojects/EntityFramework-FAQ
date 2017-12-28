@@ -1,5 +1,5 @@
 ---
-permalink: bulk-update-libraries
+permalink: bulk-update
 ---
 
 ## Introduction

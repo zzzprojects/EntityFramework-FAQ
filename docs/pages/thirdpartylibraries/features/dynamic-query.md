@@ -1,5 +1,5 @@
 ---
-permalink: dynamic-query-libraries
+permalink: dynamic-query
 ---
 
 ## Introduction

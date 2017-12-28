@@ -1,5 +1,5 @@
 ---
-permalink: deferred-query-libraries
+permalink: deferred-query
 ---
 
 ## Introduction

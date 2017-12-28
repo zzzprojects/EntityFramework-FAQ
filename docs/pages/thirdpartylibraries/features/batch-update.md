@@ -1,5 +1,5 @@
 ---
-permalink: batch-update-libraries
+permalink: batch-update
 ---
 
 ## Introduction

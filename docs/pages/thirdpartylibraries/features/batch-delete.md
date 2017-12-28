@@ -1,5 +1,5 @@
 ---
-permalink: batch-delete-libraries
+permalink: batch-delete
 ---
 
 ## Introduction

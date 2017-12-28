@@ -1,5 +1,5 @@
 ---
-permalink: bulk-delete-libraries
+permalink: bulk-delete
 ---
 
 ## Introduction

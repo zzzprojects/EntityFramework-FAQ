@@ -1,5 +1,5 @@
 ---
-permalink: cache-libraries
+permalink: cache
 ---
 
 ## Introduction

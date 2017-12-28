@@ -1,5 +1,5 @@
 ---
-permalink: include-optimized-libraries
+permalink: include-optimized
 ---
 
 ## Introduction

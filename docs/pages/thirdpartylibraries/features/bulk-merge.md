@@ -1,5 +1,5 @@
 ---
-permalink: bulk-merge-libraries
+permalink: bulk-merge
 ---
 
 ## Introduction

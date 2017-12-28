@@ -1,5 +1,5 @@
 ---
-permalink: future-libraries
+permalink: future
 ---
 
 ## Introduction
