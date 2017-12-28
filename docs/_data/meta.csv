@@ -36,3 +36,5 @@ bulk-delete-libraries,BulkDelete Libraries,BulkDelete Libraries,,BulkDelete Libr
 bulk-merge-libraries,BulkMerge Libraries,BulkMerge Libraries,,BulkMerge Libraries,,,
 cache-libraries,Cache Libraries,Cache Libraries,,Cache Libraries,,,
 deferred-query-libraries,Deferred Query Libraries,Deferred Query Libraries,,Deferred Query Libraries,,,
+dynamic-query-libraries,Dynamic Query Libraries,Dynamic Query Libraries,,Dynamic Query Libraries,,,
+filter-libraries,Filter Libraries,Filter Libraries,,Filter Libraries,,,
