@@ -1,5 +1,5 @@
 ---
-permalink: audit-libraries
+permalink: audit 
 ---
 
 ## Introduction
@@ -60,7 +60,7 @@ foreach(var entry in entries)
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|
 |:----------|:----------|:----------|:----------|:----------|:----------|
-|[Z.EntityFramework.Plus](http://entityframework-plus.net/)	|FREE	|EF5<br>EF6<br>EF Core|	< 1 Day	|Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Deferred Query<br>Filter<br>Future<br>Include Filter<br>Include Optimized|
+|[Z.EntityFramework.Plus](/ef-plus)	|FREE	|EF5<br>EF6<br>EF Core|	< 1 Day	|Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Deferred Query<br>Filter<br>Future<br>Include Filter<br>Include Optimized|
 |[Audit.NET](https://github.com/thepirat000/Audit.NET)	|FREE	|EF6<br>EF Core	|< 1 Day	|Yes    |Audit  |
 |[Microsoft.EntityFrameworkCore.AutoHistory](https://github.com/Arch/AutoHistory)	|FREE	|EF Core	|< 1 Day	|No	    | Audit |
 

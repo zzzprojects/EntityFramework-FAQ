@@ -1,5 +1,5 @@
 ---
-permalink: bulk-insert-libraries
+permalink: bulk-insert
 ---
 
 ## Introduction
@@ -49,7 +49,7 @@ context.BulkInsert(list, bulk => bulk.BatchSize = 100);
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|
 |:----------|:----------|:----------|:----------|:----------|:----------|
-|[Z.EntityFramework.Plus](http://entityframework-plus.net/)	|FREE	|EF5<br>EF6<br>EF Core|	< 1 Day	|Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Deferred Query<br>Filter<br>Future<br>Include Filter<br>Include Optimized|
+|[Z.EntityFramework.Extensions](/ef-extesnsions)	|PRO	|EF6	|< 1 Day	|Yes	| Bulk SaveChanges<br>Bulk Insert<br>Bulk Update<br>Bulk Delete<br>Bulk Merge|
 
 ## Unsuported Library
 
