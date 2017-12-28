@@ -90,5 +90,30 @@
 	</div>
 </div>
 
+{% elsif page.path contains "/thirdpartylibraries/" %}
+<div class="card card-layout-z1">
+    <div class="card-header">
+        <h5>Supported Features</h5>
+    </div>
+    <div class="card-body">
+        <ul>
+            <li><a href="{{ site.github.url }}/audit-libraries">Audit</a></li>
+            <li><a href="{{ site.github.url }}/batch-delete-libraries">Batch Delete</a></li>
+            <li><a href="{{ site.github.url }}/batch-update-libraries">Batch Update</a></li>
+            <li><a href="{{ site.github.url }}/bulk-save-changes-libraries">BulkSaveChanges</a></li>
+            <li><a href="{{ site.github.url }}/bulk-insert-libraries">BulkInsert</a></li>
+            <li><a href="{{ site.github.url }}/bulk-update-libraries">BulkUpdate</a></li>
+            <li><a href="{{ site.github.url }}/bulk-delete-libraries">BulkDelete</a></li>
+            <li><a href="{{ site.github.url }}/bulk-merge-libraries">BulkMerge</a></li>
+            <li><a href="{{ site.github.url }}/cache-libraries">Cache</a></li>
+            <li><a href="{{ site.github.url }}/deferred-query-libraries">Deferred Query</a></li>
+            <li><a href="{{ site.github.url }}/dynamic-query-libraries">Dynamic Query</a></li>
+            <li><a href="{{ site.github.url }}/filter-libraries">Filter</a></li>
+            <li><a href="{{ site.github.url }}/future-libraries">Future</a></li>
+            <li><a href="{{ site.github.url }}/include-filter-libraries">Include Filter</a></li>
+            <li><a href="{{ site.github.url }}/include-optimized-libraries">Include Optimized</a></li>
+        </ul>
+    </div>
+</div>
 {% endif %}
 
