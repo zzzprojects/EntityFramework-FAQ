@@ -72,8 +72,6 @@ var linqDynamic = list.Where(x => "x > 2");
 
 ### Entity Framework Version
 
- - .NET Framework 4.0
- - .NET Framework 4.5 *(For Async Methods)*
- - .NET Standard 1.3
+ - All versions are supported.
 
 [Learn more about the library](http://eval-expression.net)

@@ -57,7 +57,9 @@ using (var scope = AuditScope.Create("SomeEvent", () => someTarget))
 
 ## Requirements
 
- - .NET Framework 4.5 or greater
- - .NetCore 1.0 or greater (NetStandard 1.3)
+### Entity Framework Version
+
+ - Entity Framework Core
+ - Entity Framework 6
 
 [Learn more](https://github.com/thepirat000/Audit.NET)
