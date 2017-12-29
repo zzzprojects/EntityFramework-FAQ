@@ -4,7 +4,7 @@ permalink: ef-plus
 
 ## Definition
 
-**Entity Framework Plus** is a library that Improve Entity Framework performance and overcome limitations with **MUST-HAVE** features.
+**Entity Framework Plus** is a library that improves Entity Framework performance and overcomes limitations with **MUST-HAVE** features.
 
 ## Features
 
@@ -26,7 +26,7 @@ permalink: ef-plus
 
 ## Batch Operations
 
-Batch Operations method allow to perform **UPDATE** or **DELETE** operation directly in the database using a LINQ Query without loading entities in the context.
+Batch Operations method allow performing **UPDATE** or **DELETE** operation directly in the database using a LINQ Query without loading entities in the context.
 
 Everything is executed on the database side to let you get the best performance available.
 
@@ -45,9 +45,9 @@ ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
 {% endhighlight %}
 
 
-### Audit
+## Audit
 
-Allow to easily track changes, exclude/include entity or property and auto save audit entries in the database.
+Allow to track changes easily, exclude/include entity or property, and autosave audit entries in the database.
 
 {% include template-example.html %} 
 {% highlight csharp %}

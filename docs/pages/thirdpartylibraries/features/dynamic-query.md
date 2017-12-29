@@ -45,5 +45,5 @@ var customersList2 = context.Customers
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|
 |:----------|:----------|:----------|:----------|:----------|:----------|
-|[Eval Expression.NET](https://github.com/zzzprojects/Eval-Expression.NET/wiki/LINQ-Dynamic)	|FREE/PRO	|All	|< 1 Day	|Yes	|Dynamic Query|
-|[System.Linq.Dynamic](https://github.com/kahanu/System.Linq.Dynamic)	|FREE	|All	|< 1 Day	|Yes    |Dynamic Query  |
+|[Eval Expression.NET](/eval-expression-net)	|FREE/PRO	|All	|< 1 Day	|Yes	|Dynamic Query|
+|[System.Linq.Dynamic](/system-linq-dynamic)	|FREE	|All	|< 1 Day	|Yes    |Dynamic Query  |
