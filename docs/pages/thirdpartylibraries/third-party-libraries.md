@@ -23,7 +23,7 @@ The only way to achieve is either create code for this kind of scenario or use a
 |[Audit.NET](/audit-net)	|FREE	|EF6<br>EF Core	|< 1 Day	|Yes    |Audit  |
 |[System.Linq.Dynamic](/system-linq-dynamic)	|FREE	|All	|< 1 Day	|Yes    |Dynamic Query  |
 |[EntityFramework.Cache](/ef-cache)	|FREE	|EF6	|< 2 Days	|No	    | Cache |
-|[EntityFramework.DynamicFilters](https://github.com/zzzprojects/EntityFramework.DynamicFilters)	|FREE	|EF6	|< 2 Days	|Yes    |Filter |
+|[EntityFramework.DynamicFilters](/ef-dynamic-filters)	|FREE	|EF6<br>EF Core	|< 2 Days	|Yes    |Filter |
 |[Microsoft.EntityFrameworkCore.AutoHistory](https://github.com/Arch/AutoHistory)	|FREE	|EF Core	|< 1 Day	|No	    | Audit |
 
 ## Unsuported Library
