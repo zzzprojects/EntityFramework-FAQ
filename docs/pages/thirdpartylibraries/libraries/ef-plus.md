@@ -45,7 +45,7 @@ ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
 {% endhighlight %}
 
 
-### Audit
+## Audit
 
 Allow to easily track changes, exclude/include entity or property and auto save audit entries in the database.
 

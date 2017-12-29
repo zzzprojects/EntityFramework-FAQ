@@ -20,7 +20,7 @@ The only way to achieve is either create code for this kind of scenario or use a
 |[Z.EntityFramework.Extensions](/ef-extesnsions)	|PRO	|EF6	|< 1 Day	|Yes	| Bulk SaveChanges<br>Bulk Insert<br>Bulk Update<br>Bulk Delete<br>Bulk Merge|
 |[Z.EntityFramework.Plus](/ef-plus)	|FREE	|EF5<br>EF6<br>EF Core|	< 1 Day	|Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Deferred Query<br>Filter<br>Future<br>Include Filter<br>Include Optimized|
 |[Eval Expression.NET](/eval-expression-net)	|FREE/PRO	|All	|< 1 Day	|Yes	|Dynamic Query|
-|[Audit.NET](https://github.com/thepirat000/Audit.NET)	|FREE	|EF6<br>EF Core	|< 1 Day	|Yes    |Audit  |
+|[Audit.NET](/audit-net)	|FREE	|EF6<br>EF Core	|< 1 Day	|Yes    |Audit  |
 |[System.Linq.Dynamic](https://github.com/kahanu/System.Linq.Dynamic)	|FREE	|All	|< 1 Day	|Yes    |Dynamic Query  |
 |[EntityFramework.Cache](https://github.com/moozzyk/EFCache)	|FREE	|EF6	|< 2 Days	|No	    | Cache |
 |[EntityFramework.DynamicFilters](https://github.com/zzzprojects/EntityFramework.DynamicFilters)	|FREE	|EF6	|< 2 Days	|Yes    |Filter |
