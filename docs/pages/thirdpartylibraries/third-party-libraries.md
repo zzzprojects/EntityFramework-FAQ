@@ -22,7 +22,7 @@ The only way to achieve is either create code for this kind of scenario or use a
 |[Eval Expression.NET](/eval-expression-net)	|FREE/PRO	|All	|< 1 Day	|Yes	|Dynamic Query|
 |[Audit.NET](/audit-net)	|FREE	|EF6<br>EF Core	|< 1 Day	|Yes    |Audit  |
 |[System.Linq.Dynamic](/system-linq-dynamic)	|FREE	|All	|< 1 Day	|Yes    |Dynamic Query  |
-|[EntityFramework.Cache](https://github.com/moozzyk/EFCache)	|FREE	|EF6	|< 2 Days	|No	    | Cache |
+|[EntityFramework.Cache](/ef-cache)	|FREE	|EF6	|< 2 Days	|No	    | Cache |
 |[EntityFramework.DynamicFilters](https://github.com/zzzprojects/EntityFramework.DynamicFilters)	|FREE	|EF6	|< 2 Days	|Yes    |Filter |
 |[Microsoft.EntityFrameworkCore.AutoHistory](https://github.com/Arch/AutoHistory)	|FREE	|EF Core	|< 1 Day	|No	    | Audit |
 

@@ -44,7 +44,7 @@ var countries2 = ctx.Countries.FromCache().ToList();
 |Library	|Type	|EF Version	|Support	|Doc	|Features|
 |:----------|:----------|:----------|:----------|:----------|:----------|
 |[Z.EntityFramework.Plus](/ef-plus)	|FREE	|EF5<br>EF6<br>EF Core|	< 1 Day	|Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Deferred Query<br>Filter<br>Future<br>Include Filter<br>Include Optimized|
-|[EntityFramework.Cache](https://github.com/moozzyk/EFCache)	|FREE	|EF6	|< 2 Days	|No	    | Cache |
+|[EntityFramework.Cache](/ef-cache)	|FREE	|EF6	|< 2 Days	|No	    | Cache |
 
 ## Unsuported Library
 
