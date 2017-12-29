@@ -26,7 +26,7 @@ The only way to achieve is either create code for this kind of scenario or use a
 |[EntityFramework.DynamicFilters](/ef-dynamic-filters)	|FREE	|EF6<br>EF Core	|< 2 Days	|Yes    |Filter |
 |[Microsoft.EntityFrameworkCore.AutoHistory](https://github.com/Arch/AutoHistory)	|FREE	|EF Core	|< 1 Day	|No	    | Audit |
 
-## Unsuported Library
+## Unsuported Libraries
 
 Use these libraries at your risk!
 

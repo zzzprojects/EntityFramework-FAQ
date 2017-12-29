@@ -51,7 +51,7 @@ context.BulkInsert(list, bulk => bulk.BatchSize = 100);
 |:----------|:----------|:----------|:----------|:----------|:----------|
 |[Z.EntityFramework.Extensions](/ef-extesnsions)	|PRO	|EF6	|< 1 Day	|Yes	| Bulk SaveChanges<br>Bulk Insert<br>Bulk Update<br>Bulk Delete<br>Bulk Merge|
 
-## Unsuported Library
+## Unsuported Libraries
 
 Use these libraries at your risk!
 

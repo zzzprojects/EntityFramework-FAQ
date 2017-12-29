@@ -40,7 +40,7 @@ ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
 |:----------|:----------|:----------|:----------|:----------|:----------|
 |[Z.EntityFramework.Plus](/ef-plus)	|FREE	|EF5<br>EF6<br>EF Core|	< 1 Day	|Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Deferred Query<br>Filter<br>Future<br>Include Filter<br>Include Optimized|
 
-## Unsuported Library
+## Unsuported Libraries
 
 Use these libraries at your risk!
 

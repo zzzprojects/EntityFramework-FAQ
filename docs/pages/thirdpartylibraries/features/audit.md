@@ -64,7 +64,7 @@ foreach(var entry in entries)
 |[Audit.NET](/audit-net)	|FREE	|EF6<br>EF Core	|< 1 Day	|Yes    |Audit  |
 |[Microsoft.EntityFrameworkCore.AutoHistory](https://github.com/Arch/AutoHistory)	|FREE	|EF Core	|< 1 Day	|No	    | Audit |
 
-## Unsuported Library
+## Unsuported Libraries
 
 Use these libraries at your risk!
 
