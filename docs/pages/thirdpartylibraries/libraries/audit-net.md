@@ -6,7 +6,7 @@ permalink: audit-net
 
 **Audit.NET** is an extensible framework to audit executing operations in .NET applications.
 
-It generate an audit log with evidence for reconstruction and examination of activities that have affected specific operations or procedures.
+It generates an audit log with evidence for reconstruction and examination of activities that have affected specific operations or procedures.
 
 ## AuditScope
 
@@ -26,12 +26,12 @@ using (AuditScope.Create("Order:Update", () => order))
 {% endhighlight %}
 
  - The first parameter of the Create method is an event type name intended to identify and group the events. 
- - The second is the delegate to obtain the object to track (target object) and this object is passed as a `Func<object>` to allow the library inspect the value at the beggining and at the disposal of the scope. 
+ - The second is the delegate to obtain the object to track (target object), and this object is passed as a `Func<object>` to allow the library inspect the value at the beginning and at the disposal of the scope. 
  - It is not mandatory to supply a target object, pass `null` when you don't want to track a specific object.
 
 ## Discard Option
 
-The AuditScope object has a Discard() method to allow the user to discard an event under certain condition.
+The AuditScope object has a Discard() method to allow the user to discard an event under specific condition.
 
 For example, if you want to avoid saving the audit event when an exception is thrown:
 
