@@ -44,12 +44,12 @@ var list = ctx.Posts.ToList();
 |Library	|Type	|EF Version	|Support	|Doc	|Features|
 |:----------|:----------|:----------|:----------|:----------|:----------|
 |[Z.EntityFramework.Plus](/ef-plus)	|FREE	|EF5<br>EF6<br>EF Core|	< 1 Day	|Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Deferred Query<br>Filter<br>Future<br>Include Filter<br>Include Optimized|
-|[EntityFramework.DynamicFilters](https://github.com/zzzprojects/EntityFramework.DynamicFilters)	|FREE	|EF6	|< 2 Days	|Yes    |Filter |
+|[EntityFramework.DynamicFilters](/ef-dynamic-filters)	|FREE	|EF6	|< 2 Days	|Yes    |Filter |
 
-## Unsuported Library
+## Unsuported Libraries
 
 Use this library at your risk!
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features |
 |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
-|[EntityFramework.Filters](https://github.com/jbogard/EntityFramework.Filters)	|FREE	|EF6	|No	    |Yes    |Filter |
+|[EntityFramework.Filters](/ef-filters)	|FREE	|EF6	|No	    |Yes    |Filter |

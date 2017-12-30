@@ -22,21 +22,21 @@ The only way to achieve is either create code for this kind of scenario or use a
 |[Eval Expression.NET](/eval-expression-net)	|FREE/PRO	|All	|< 1 Day	|Yes	|Dynamic Query|
 |[Audit.NET](/audit-net)	|FREE	|EF6<br>EF Core	|< 1 Day	|Yes    |Audit  |
 |[System.Linq.Dynamic](/system-linq-dynamic)	|FREE	|All	|< 1 Day	|Yes    |Dynamic Query  |
-|[EntityFramework.Cache](https://github.com/moozzyk/EFCache)	|FREE	|EF6	|< 2 Days	|No	    | Cache |
-|[EntityFramework.DynamicFilters](https://github.com/zzzprojects/EntityFramework.DynamicFilters)	|FREE	|EF6	|< 2 Days	|Yes    |Filter |
-|[Microsoft.EntityFrameworkCore.AutoHistory](https://github.com/Arch/AutoHistory)	|FREE	|EF Core	|< 1 Day	|No	    | Audit |
+|[EntityFramework.Cache](/ef-cache)	|FREE	|EF6	|< 2 Days	|No	    | Cache |
+|[EntityFramework.DynamicFilters](/ef-dynamic-filters)	|FREE	|EF6<br>EF Core	|< 2 Days	|Yes    |Filter |
+|[Microsoft.EntityFrameworkCore.AutoHistory](/auto-history)	|FREE	|EF Core	|< 1 Day	|No	    | Audit |
 
-## Unsuported Library
+## Unsuported Libraries
 
 Use these libraries at your risk!
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features |
 |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
-|[AuditDbContext](https://auditdbcontext.codeplex.com/)	|FREE	|EF6	|No |Yes    |Audit  |
+|[AuditDbContext](/audit-dbcontext)	|FREE	|EF6	|No |Yes    |Audit  |
 |[EFAuditing](https://github.com/johannbrink/EFAuditing)	|FREE	|EF Core	|No	    |No |Audit  |
-|[EFUtilities](https://github.com/MikaelEliasson/EntityFramework.Utilities)	|FREE	|EF5<br>EF6	|No	    |No |Bulk Insert<br>Batch Delete<br>Batch Update<br>Include Optimized<br>
-|[EntityFramework.Extended](https://github.com/zzzprojects/EntityFramework.Extended)	|FREE	|EF5<br>EF6	|No	    |Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Future|
-|[EntityFramework.Filters](https://github.com/jbogard/EntityFramework.Filters)	|FREE	|EF6	|No	    |Yes    |Filter |
+|[EFUtilities](/ef-utilities)	|FREE	|EF5<br>EF6	|No	    |No |Bulk Insert<br>Batch Delete<br>Batch Update<br>Include Optimized<br>
+|[EntityFramework.Extended](/ef-extended)	|FREE	|EF5<br>EF6	|No	    |Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Future|
+|[EntityFramework.Filters](/ef-filters)	|FREE	|EF6	|No	    |Yes    |Filter |
 |[EntityFramework.MappingAPI](https://efmappingapi.codeplex.com/)	|FREE	|EF6	|No	    |No     |Model API  |
 |[TrackerEnabledDbContext](https://github.com/bilal-fazlani/tracker-enabled-dbcontext)	|FREE	|EF6	|No	    |Yes	|Audit  |
 |[EntityFramework.BulkInsert](https://efbulkinsert.codeplex.com/)	|FREE	|EF5<br>EF6    |No	    |Yes    |Bulk Insert |
