@@ -4,7 +4,7 @@ permalink: ef-utilities
 
 ## Definition
 
-Entity Frameworkis quite fast in many cases, but doing CRUD operations over many entities is slow. **EntityFramework.Utilities** provides some batch operations to solve this problem.
+Entity Framework is quite fast in many cases, but doing CRUD operations over many entities is slow. **EntityFramework.Utilities** provides some batch operations to solve this problem.
 
 ## Utility Methods
 
@@ -12,7 +12,7 @@ Entity Frameworkis quite fast in many cases, but doing CRUD operations over many
 
 ### Update Single Value
 
-A simpler API for working with disconnected entities and only updating single values. This is useful if you want to update a value on an entity without roundtripping the database. A typical usecase could be to update the number of reads of a blogpost. 
+A simpler API for working with disconnected entities and only updating single values. It is useful if you want to update a value on an entity without roundtripping the database. A typical use case could be to update the number of reads of a blogpost. 
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -27,9 +27,9 @@ using (var db = new YourDbContext())
 
 ### IncludeEFU
 
-The standard EF Include is really really slow to use. They reason is that it cross joins the child records against the parent which means you load a significant amount of duplicate data. This means more data to transfer, more data to parse, more memory etc etc.
+The standard EF Include is slow to use. The reason is that it cross joins the child records against the parent which means you load a significant amount of duplicate data. It means more data to transfer, more data to parse, more memory etc.
 
-Include EFU on the other hand runs two parallel queries and stitch the data toghether in memory.
+Include EFU, on the other hand, runs two parallel queries and stitch the data together in memory.
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -53,14 +53,14 @@ var result = db.Contacts
 Batch Operations methods all work outside the normal EF pipeline and are located on the EFBatchOperation class. 
 
  - The design decision behind this choice is to make it clear you are NOT working against the context when using these methods. 
- - That's means change tracking, and 2nd level cache or validation will NOT be run. 
- - This is for pure performance and nothing less. 
+ - That means change tracking, and 2nd level cache or validation will NOT be run. 
+ - It is for pure performance and nothing less. 
  - These methods are also highly provider dependent. 
- - Right now the only existing provider is for Sql Server but it should be easy to add others.
+ - Right now the only existing provider is for SQL Server, but it should be easy to add others.
 
 ### Batch Delete
 
-Delete all Entities matching the predicate, instead of loading them into memory then delete them one by one. **EntityFramework.Utilities** helper method will create a Sql Query that deletes all items in one single call to the database.
+Delete all Entities matching the predicate, instead of loading them into memory then delete them one by one. **EntityFramework.Utilities** helper method will create a SQL Query that removes all items in one single call to the database.
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -76,7 +76,7 @@ using (var db = new YourDbContext())
 
 ### Batch Insert
 
-Insert many entities in a very efficient way instead of adding them one by one as you normally would do with EF.
+Insert many entities in a very efficient way instead of adding them one by one as you usually would do with EF.
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -89,7 +89,7 @@ using (var db = new YourDbContext())
 
 ### Batch Update Entities
 
-Batch Update works just like **Batch Insert** and you can chose exactly which columns to update too.
+Batch Update works just like **Batch Insert** and you can choose exactly which columns to update too.
 
 For example, load all items from the database and update them.
 
@@ -110,7 +110,7 @@ EFBatchOperation.For(db, db.Comments).UpdateAll(commentsFromDb, x => x.ColumnsTo
 
 ### EF 4-5
 
- - You need to manually select any of the O.1.xxx packages as the later packages are for EF V6.
+ - You need to manually select any of the O.1.x packages as the later packages are for EF V6.
 
 ### EF 6
 

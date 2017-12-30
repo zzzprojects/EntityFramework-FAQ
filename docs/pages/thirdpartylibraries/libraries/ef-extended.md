@@ -17,7 +17,7 @@ permalink: ef-extended
 
 ## Batch Update and Delete
 
-A current limitations of the Entity Framework is that in order to update or delete an entity you have to first retrieve it into memory. Now in most scenarios this is just fine. There are however some senerios where performance would suffer. Also, for single deletes, the object must be retrieved before it can be deleted requiring two calls to the database. Batch update and delete eliminates the need to retrieve and load an entity before modifying it.
+A current limitation of the Entity Framework is that to update or delete an entity you have first to retrieve it into memory. Now in most scenarios, this is just fine. There are however some scenarios where performance would suffer. Also, for single deletes, the object must be retrieved before it can be deleted requiring two calls to the database. Batch update and delete eliminate the need to retrieve and load an entity before modifying it.
 
 ### Deleting
 
@@ -73,7 +73,7 @@ var users = q1.ToList();
 
 ## Query Result Cache
 
-To cache query results, use the FromCache extension method. Below is a sample caching query results. Simply construct the LINQ query as you normally would, then append the FromCache extension.
+To cache query results, use the FromCache extension method. Below is a sample caching query results. Just construct the LINQ query as you usually would, then append the FromCache extension.
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -93,9 +93,9 @@ var tasks = db.Tasks
 
 The Audit Log feature will capture the changes to entities anytime they are submitted to the database. 
 
- - The Audit Log captures only the entities that are changed and only the properties on those entities that were changed. 
+ - The Audit Log captures only the entities that are changed and only the properties of those entities that were changed. 
  - The before and after values are recorded. 
- - AuditLogger.LastAudit is where this information is held and there is a ToXml() method that makes it easy to turn the AuditLog into xml for easy storage.
+ - AuditLogger.LastAudit is where this information is held, and there is a ToXml() method that makes it easy to turn the AuditLog into XML for easy storage.
 
 The AuditLog can be customized via attributes on the entities or via a Fluent Configuration API.
 
