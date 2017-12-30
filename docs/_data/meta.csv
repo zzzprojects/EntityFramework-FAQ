@@ -49,3 +49,4 @@ system-linq-dynamic,System.Linq.Dynamic,System.Linq.Dynamic,,System.Linq.Dynamic
 ef-cache,Entity Framework Cache,Entity Framework Cache,,Entity Framework Cache,,,
 ef-dynamic-filters,Entity Framework Dynamic Filters,Entity Framework Dynamic Filters,,Entity Framework Dynamic Filters,,,
 auto-history,AutoHistory,AutoHistory,,AutoHistory,,,
+audit-dbcontext,AuditDbContext,AuditDbContext,,AuditDbContext,,,
