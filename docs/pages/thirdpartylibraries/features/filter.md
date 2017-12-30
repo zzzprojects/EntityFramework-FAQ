@@ -52,4 +52,4 @@ Use this library at your risk!
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features |
 |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
-|[EntityFramework.Filters](https://github.com/jbogard/EntityFramework.Filters)	|FREE	|EF6	|No	    |Yes    |Filter |
+|[EntityFramework.Filters](/ef-filters)	|FREE	|EF6	|No	    |Yes    |Filter |
