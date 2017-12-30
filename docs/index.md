@@ -33,6 +33,30 @@ permalink: index
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-md-6 col-lg-6">
+						<div class="jumbotron">
+							<h2 class="display-4">3rd Party Libraries</h2>
+							<p class="lead">Learn about libraries to extend EF</p>
+							<hr class="my-4">
+							<p>Start learning about which library you can use to enhance Entity Framework.</p>
+							<p class="lead">
+								<a class="btn btn-lg btn-z" href="third-party-libraries" role="button">Learn more</a>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-6">
+						<div class="jumbotron">
+							<h2 class="display-4">Glossary</h2>
+							<p class="lead">Learn about general EF Term</p>
+							<hr class="my-4">
+							<p>Start learning common term used for Entity Framework.</p>
+							<p class="lead">
+								<a class="btn btn-primary btn-z" href="glossary" role="button">Learn more</a>
+							</p>
+						</div>
+					</div>
+				</div>
         	</div>	
         </div>
 	</div>
