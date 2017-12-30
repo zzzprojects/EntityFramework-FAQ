@@ -52,4 +52,4 @@ Use these libraries at your risk!
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features |
 |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
-|[EntityFramework.Extended](https://github.com/zzzprojects/EntityFramework.Extended)	|FREE	|EF5<br>EF6	|No	    |Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Future|
+|[EntityFramework.Extended](/ef-extended)	|FREE	|EF5<br>EF6	|No	    |Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Future|
