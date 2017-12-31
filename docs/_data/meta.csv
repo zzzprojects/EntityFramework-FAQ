@@ -54,3 +54,4 @@ ef-utilities,Entity Framework Utilities,Entity Framework Utilities,,Entity Frame
 ef-extended,Entity Framework Extended,Entity Framework Extended,,Entity Framework Extended,,,
 ef-filters,Entity Framework Filters,Entity Framework Filters,,Entity Framework Filters,,,
 tracker-enabled-dbcontext,TrackerEnabledDbContext,TrackerEnabledDbContext,,TrackerEnabledDbContext,,,
+ef-auditing,EFAuditing,EFAuditing,,EFAuditing,,,
