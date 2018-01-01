@@ -1,10 +1,10 @@
 ---
-permalink: improve-ef-add-performance
+permalink: improve-ef-detect-changes-performance
 ---
 
-## How to Improve Entity Framework Add Performance?
+## How to Improve Entity Framework DetectChanges Performance?
 
-When you overuse the Add() method for multiple entities, your application suffers from performance issues.
+When you track multiple entities in your context, then your application will suffer from performance issues causing by Entity Framework DetectChanges method.
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -14,6 +14,8 @@ using (var ctx = new CustomerContext())
     {
         var customer = new Customer();
         // ...code...
+        
+        // DetectChanges is invoked every time you call Add
         ctx.Customers.Add(customer);
     }
     
@@ -28,24 +30,72 @@ using (var ctx = new CustomerContext())
 
 ## Answer
 
-### Is Entity Framework Add Really Slow?
-
-In fact, the **Add** method is not slow at all. Adding an entity to a list cannot be that slow. It's the DetectChanges method invoked inside the Add method which is insanely slow!
-
-Using the **Add** method in a loop is usually a poor practice which impacts your application performance severely when poorly used.
-
- - **USE** AddRange over Add (**Recommended**)
+ - **REDUCE** the amount of entities in your context
+ - **REDUCE** the number of DetectChanges
  - **SET** AutoDetectChanges to false
- - **SPLIT** SaveChanges in multiple batches
 
-### Use AddRange over Add (Recommended)
+### REDUCE the number of entities in your context
 
-When adding multiple entities, you should always use Entity Framework AddRange once with a list instead of calling multiple time the Add method.
+When adding/modifying multiple entities, split your logic into numerous batches to have fewer records in the context.
+
+#### Why?
+
+More tracking entities your context contains, slower the DetectChanges method is!
+
+#### Performance Comparisons
+
+|Operations	|100 Entities	|1,000 Entities	|10,000 Entities|
+|:--------- |:------------- |:------------- |:--------------|
+|Unlimited	|15 ms	        |1,050 ms	    |105,000 ms     |
+|10	        |3 ms	        |40 ms	        |350 ms         |
+|100	    |15 ms	        |125 ms	        |1,200 ms       |
+|1,000	    |15 ms	        |1,050 ms	    |10,200 ms      |
+
+***Note:***
+ - **: SaveChanges time not included*
+ - ***: Entity with two relations*
+
+#### How?
+
+ 1. CREATE batchSize variable
+ 2. CALL SaveChanges before creating a new batch
+ 3. CALL SaveChanges
+ 4. Done!
+
+{% include template-example.html %} 
+{% highlight csharp %}
+// 1. CREATE batchSize variable
+int batchSize = 1000;
+
+var ctx = new CustomerContext();
+for (int i = 0; i < lines.Count; i++)
+{
+    // 2. CALL SaveChanges before creating a new batch
+    if (i != 0 && i%batchSize == 0)
+    {
+        ctx.SaveChanges();
+        ctx = new CustomerContext();
+    }
+
+    var customer = new Customer();
+    // ...code...
+    ctx.Customers.Add(customer);
+}
+
+// 3. CALL SaveChanges
+ctx.SaveChanges();
+
+// 4. Done!
+{% endhighlight %}
+
+### Reduce the number of DetectChanges
+
+When adding multiple entities, you should always use Entity Framework AddRange once with a list instead of calling various time the Add method.
 
 #### Why?
 
  - The Add method DetectChanges after every records added.
- - The AddRange method DetectChanges after all records are added.
+ - The AddRange method DetectChanges after all records is added.
 
 #### Performance Comparisons
 
@@ -144,58 +194,4 @@ using (var ctx = new CustomerContext())
 }
 {% endhighlight %}
 
-### SPLIT SaveChanges into multiple batches
-
-This solution is not recommended. When adding multiple entities, split entities with a batch size in multiple different contexts.
-
-#### Why?
-
-More tracking entities your context contains, slower the DetectChanges method is! So by reducing the number of entities by context, you improve the performance.
-
-#### Performance Comparisons
-
-|Operations |100 Entities	|1,000 Entities	|10,000 Entities|
-|:--------- |:------------- |:------------- |:--------------|
-|Unlimited	|15 ms	        |1,050 ms	    |105,000 ms     |
-|10	        |3 ms	        |40 ms	        |350 ms         |
-|100	    |15 ms	        |125 ms	        |1,200 ms       |
-|1,000	    |15 ms	        |1,050 ms	    |10,200 ms      |
-
-***Note:***
- - **: SaveChanges time not included*
- - ***: Entity with two relations*
-
-#### How
-
- 1. CREATE a batchSize variable
- 2. CALL SaveChanges before creating a new batch
- 3. CALL SaveChanges
- 4. Done!
-
-
-{% include template-example.html %} 
-{% highlight csharp %}
-// 1. CREATE a batchSize variable
-int batchSize = 1000;
-
-var ctx = new CustomerContext();
-for (int i = 0; i < lines.Count; i++)
-{
-    // 2. CALL SaveChanges before creating a new batch
-    if (i != 0 && i%batchSize == 0)
-    {
-        ctx.SaveChanges();
-        ctx = new CustomerContext();
-    }
-
-    var customer = new Customer();
-    // ...code...
-    ctx.Customers.Add(customer);
-}
-
-// 3. CALL SaveChanges
-ctx.SaveChanges();
-
-// 4. Done!
-{% endhighlight %}
 
