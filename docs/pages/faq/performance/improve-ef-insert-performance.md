@@ -32,7 +32,7 @@ The DbContext.SaveChanges is a poor choice for BULK operations as far as perform
 
  - [Fastest Way of Inserting in Entity Framework](https://stackoverflow.com/questions/5940225/fastest-way-of-inserting-in-entity-framework)
  - [Writing to large number of records take too much time using Entity Framework](https://stackoverflow.com/questions/43981993/writing-to-large-number-of-records-take-too-much-time-using-entity-framework?noredirect=1&lq=1)
- 
+
 ## Answer
 
 There are many solutions to insert many records into the database in an efficient way.

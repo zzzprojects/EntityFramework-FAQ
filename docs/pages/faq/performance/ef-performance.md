@@ -14,17 +14,17 @@ permalink: ef-performance
 
 ### Performance Cheat Sheet
 
-|Problem	            |Solution           |
-|:--------------------- |:----------------- |
-|[Add](/improve-ef-add-performance)                    |Use AddRange<br>Disable AutoDetectChanges<br>Add in Batches  |
-|Change Tracker         |Track Less Entities    |
-|[DetectChanges](/improve-ef-detect-changes-performance)          |Disable AutoDetectChanges<br>SaveChanges in Batches   |
-|Eager Loading          |Use AsNoTracking<br>Use EF+ Caching<br>Use EF+ Query Future  |
-|Lazy Loading           |Use Eager Loading  |
-|[Include](/improve-ef-include-performance)                |Split in multiple Include<br>Use EF+ IncludeFilter<br>Use EF+ IncludeOptimized   |
-|[Insert](/improve-ef-include-performance)                 |Use EFE BulkInsert |
-|Query                  |Use AsNoTracking<br>Use EF+ Caching<br>Use EF+ Query Future  |
-|SaveChanges            |Use EFE Bulk Operations<br>Use EFE BulkSaveChanges        |
+|Problem	                                            |Solution                                                                       |
+|:----------------------------------------------------- |:----------------------------------------------------------------------------- |
+|[Add](/improve-ef-add-performance)                     |Use AddRange<br>Disable AutoDetectChanges<br>Add in Batches                    |
+|Change Tracker                                         |Track Less Entities                                                            |
+|[DetectChanges](/improve-ef-detect-changes-performance)|Disable AutoDetectChanges<br>SaveChanges in Batches                            |
+|Eager Loading                                          |Use AsNoTracking<br>Use EF+ Caching<br>Use EF+ Query Future                    |
+|Lazy Loading                                           |Use Eager Loading                                                              |
+|[Include](/improve-ef-include-performance)             |Split in multiple Include<br>Use EF+ IncludeFilter<br>Use EF+ IncludeOptimized |
+|[Insert](/improve-ef-include-performance)              |Use EFE BulkInsert                                                             |
+|Query                                                  |Use AsNoTracking<br>Use EF+ Caching<br>Use EF+ Query Future                    |
+|[SaveChanges](/improve-ef-save-changes-performance)    |Use EFE Bulk Operations<br>Use EFE BulkSaveChanges                             |
 
 ### Recommendation
 
