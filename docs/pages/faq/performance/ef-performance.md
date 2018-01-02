@@ -22,7 +22,7 @@ permalink: ef-performance
 |Eager Loading          |Use AsNoTracking<br>Use EF+ Caching<br>Use EF+ Query Future  |
 |Lazy Loading           |Use Eager Loading  |
 |[Include](/improve-ef-include-performance)                |Split in multiple Include<br>Use EF+ IncludeFilter<br>Use EF+ IncludeOptimized   |
-|Insert                 |Use EFE BulkInsert |
+|[Insert](/improve-ef-include-performance)                 |Use EFE BulkInsert |
 |Query                  |Use AsNoTracking<br>Use EF+ Caching<br>Use EF+ Query Future  |
 |SaveChanges            |Use EFE Bulk Operations<br>Use EFE BulkSaveChanges        |
 

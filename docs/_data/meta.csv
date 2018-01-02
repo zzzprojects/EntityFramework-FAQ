@@ -29,6 +29,7 @@ improve-ef-add-performance,Improve EF Add Performance,Improve EF Add Performance
 improve-ef-detect-changes-performance,Improve EF DetectChanges Performance,Improve EF DetectChanges Performance,,Improve EF DetectChanges Performance,,,
 why-detect-changes-slow,Why DetectChanges is slow?,Why DetectChanges is slow?,,Why DetectChanges is slow?,,,
 improve-ef-include-performance,Improve EF Include Performance,Improve EF Include Performance,,Improve EF Include Performance,,,
+improve-ef-insert-performance,Improve EF Insert Performance,Improve EF Insert Performance,,Improve EF Insert Performance,,,
 glossary,Glossary,Glossary,,Glossary,,,
 third-party-libraries,Third Party Libraries,Third Party Libraries,,Third Party Libraries,,,
 audit,Audit,Audit,,Audit,,,
