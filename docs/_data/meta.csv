@@ -31,6 +31,7 @@ why-detect-changes-slow,Why DetectChanges is slow?,Why DetectChanges is slow?,,W
 improve-ef-include-performance,Improve EF Include Performance,Improve EF Include Performance,,Improve EF Include Performance,,,
 improve-ef-insert-performance,Improve EF Insert Performance,Improve EF Insert Performance,,Improve EF Insert Performance,,,
 improve-ef-save-changes-performance,Improve EF SaveChanges Performance,Improve EF SaveChanges Performance,,Improve EF SaveChanges Performance,,,
+why-first-query-slow,Why First Query is slow?,Why First Query is slow?,,Why First Query is slow?,,,
 glossary,Glossary,Glossary,,Glossary,,,
 third-party-libraries,Third Party Libraries,Third Party Libraries,,Third Party Libraries,,,
 audit,Audit,Audit,,Audit,,,
