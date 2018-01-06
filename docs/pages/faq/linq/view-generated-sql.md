@@ -18,6 +18,17 @@ Now the question is how the generated SQL statements look like and how we can vi
 
 ## Answer
 
+The simple way of viewing the SQL generated is to use reflection to create an **ObjectQuery** object and then call the **ToTraceString()** method to actually store the query results.
+
+{% include template-example.html %} 
+{% highlight csharp %}
+using (var context = new CustomerContext())
+{
+    var query = context.Customers.Where(c => c.Id == 1); 
+    var sql = ((System.Data.Objects.ObjectQuery)query).ToTraceString();  
+}
+{% endhighlight %}
+
 ### EF SQL Logging
 
 Entity Framework team added support for interception and logging of generated SQL in EF6. The DbContext.Database.Log property can be set to a delegate for any method that takes a string.

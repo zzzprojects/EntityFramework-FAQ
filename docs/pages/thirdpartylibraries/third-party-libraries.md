@@ -33,10 +33,10 @@ Use these libraries at your risk!
 |Library	|Type	|EF Version	|Support	|Doc	|Features |
 |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
 |[AuditDbContext](/audit-dbcontext)	|FREE	|EF6	|No |Yes    |Audit  |
-|[EFAuditing](https://github.com/johannbrink/EFAuditing)	|FREE	|EF Core	|No	    |No |Audit  |
+|[EFAuditing](/ef-auditing)	|FREE	|EF Core	|No	    |No |Audit  |
 |[EFUtilities](/ef-utilities)	|FREE	|EF5<br>EF6	|No	    |No |Bulk Insert<br>Batch Delete<br>Batch Update<br>Include Optimized<br>
 |[EntityFramework.Extended](/ef-extended)	|FREE	|EF5<br>EF6	|No	    |Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Future|
 |[EntityFramework.Filters](/ef-filters)	|FREE	|EF6	|No	    |Yes    |Filter |
 |[EntityFramework.MappingAPI](https://efmappingapi.codeplex.com/)	|FREE	|EF6	|No	    |No     |Model API  |
-|[TrackerEnabledDbContext](https://github.com/bilal-fazlani/tracker-enabled-dbcontext)	|FREE	|EF6	|No	    |Yes	|Audit  |
+|[TrackerEnabledDbContext](/tracker-enabled-dbcontext)	|FREE	|EF6	|No	    |Yes	|Audit  |
 |[EntityFramework.BulkInsert](https://efbulkinsert.codeplex.com/)	|FREE	|EF5<br>EF6    |No	    |Yes    |Bulk Insert |
