@@ -24,6 +24,7 @@ cannot-construct-entity,Cannot Construct Entity,Cannot Construct Entity,,Cannot 
 specified-type-not-supported,Specified Type Not Supported,Specified Type Not Supported,,Specified Type Not Supported,,,
 linq-does-not-recognize-method,LINQ Does Not Recognize Method,LINQ Does Not Recognize Method,,LINQ Does Not Recognize Method,,,
 specified-property-not-supported,Specified Property Not Supported,Specified Property Not Supported,,Specified Property Not Supported,,,
+only-primitive-types-supported,Only Primitive Types Supported,Only Primitive Types Supported,,Only Primitive Types Supported,,,
 ef-performance,Improve Entity Framework Performance,Improve Entity Framework Performance,,Improve Entity Framework Performance,,,
 improve-ef-add-performance,Improve EF Add Performance,Improve EF Add Performance,,Improve EF Add Performance,,,
 improve-ef-detect-changes-performance,Improve EF DetectChanges Performance,Improve EF DetectChanges Performance,,Improve EF DetectChanges Performance,,,
