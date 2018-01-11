@@ -18,6 +18,8 @@ The Include() method works quite well for Lists on objects, but what if there is
 
 The Include() method allows the required depth of eager loading to be specified by providing Select expressions to the appropriate depth.
 
+#### Using Lambda Expression
+
 {% include template-example.html %} 
 {% highlight csharp %}
 
@@ -31,6 +33,22 @@ using (var context = new MyContext())
 {% endhighlight %}
 
 The above example will load all customers, their related invoices, and the items of each invoice.
+
+#### Using String Path
+
+Load all customers, all their related invoices, and all items of each invoice using a string to specify the relationships.
+
+{% include template-example.html %} 
+{% highlight csharp %}
+
+using (var context = new MyContext())
+{
+    var customers = context.Customers
+            .Include("Invoices.Items"))
+            .ToList();
+}
+
+{% endhighlight %}
 
 ### Entity Framework Core
 
