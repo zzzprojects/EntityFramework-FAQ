@@ -17,6 +17,7 @@ permalink: problems
 	<li><a href="{{ site.github.url }}/specified-type-not-supported">Specified Type Not Supported</a></li>
 	<li><a href="{{ site.github.url }}/linq-does-not-recognize-method">LINQ Does Not Recognize Method</a></li>
 	<li><a href="{{ site.github.url }}/specified-property-not-supported">Specified Property Not Supported</a></li>
+    <li><a href="{{ site.github.url }}/only-primitive-types-supported">Only Primitive Types Supported</a></li>
 </ul>
 <h3>Projection</h3>
 <ul>
