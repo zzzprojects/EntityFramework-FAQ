@@ -1,25 +1,56 @@
 ---
 permalink: videos
 ---
+<h2>YouTube</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Videos</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+{% for video in site.data.videos %}
+	{% if video.Kind == "YouTube" %}
+		<tr>
+			<td>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.ID }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</td>
+			<td>
+				<h3>{{ video.Title }}</h3>
+				{{ video.Description }}
+			</td>
+		</tr>
+	{% endif %}
+{% endfor %}		
+	</tbody>
+</table>
 
-## Overview
+<h2>Lydia</h2>
+<table>
+	<thead>
+		<tr>
+			<th>Videos</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+{% for video in site.data.videos %}
+	{% if video.Kind == "Lydia" %}
+		<tr>
+			<td>
+				<iframe width='560' height='315' src='https://www.lynda.com/player/embed/{{ video.ID }}?fs=3&w=560&h=315&ps=paused&utm_medium=referral&utm_source=embed+video&utm_campaign=ldc-website&utm_content=vid-{{ video.ID }}' mozallowfullscreen='true' webkitallowfullscreen='true' allowfullscreen='true' frameborder='0'></iframe>
+			</td>
+			<td>
+				<h3>{{ video.Title }}</h3>
+				{{ video.Description }}
+			</td>
+		</tr>
+	{% endif %}
+{% endfor %}		
+	</tbody>
+</table>
 
-<h3>Youtube</h3>
-<ul>
-	<li><a href="https://www.youtube.com/watch?v=ok3kajIFHow&t=4s">Entity Framework Tutorial with ASP.NET MVC</a></li>
-	<li><a href="https://www.youtube.com/watch?v=Z7713GBhi4k&list=PL6n9fhu94yhUPBSX-E2aJCnCR3-_6zBZx">What is Entity Framework</a></li>
-	<li><a href="https://www.youtube.com/watch?v=ZX7_12fwQLU">Entity Framework 6 Tutorial: Learn Entity Framework 6 from Scratch</a></li>
-    <li><a href="https://www.youtube.com/watch?v=VYa7EdMnP4E">Entity Framework Core 2.0: data, mobile, server, IoT, and more</a></li>
-</ul>
-<h3>Lynda</h3>
-<ul>
-	<li><a href="https://www.lynda.com/ASP-NET-tutorials/Getting-Started-Entity-Framework-6-1-3/506475-2.html">Entity Framework 6 Tutorial: Learn Entity Framework 6 from Scratch</a></li>
-	<li><a href="https://www.lynda.com/Entity-Framework-tutorials/Learning-Entity-Framework-Core/559226-2.html">Learning Entity Framework Core</a></li>
-    <li><a href="https://www.lynda.com/Entity-Framework-tutorials/Accessing-Existing-Databases-Entity-Framework-Core/510080-2.html">Accessing Existing Databases with Entity Framework Core</a></li>
-    <li><a href="https://www.lynda.com/Angular-tutorials/Building-Applications-Angular-ASP-NET-Core-Entity-Framework-Core/609024-2.html">Building Applications with Angular, ASP.NET Core, and Entity Framework Core</a></li>
-    <li><a href="https://www.lynda.com/Entity-Framework-tutorials/Practical-Application-Architecture-Entity-Framework-Core/569340-2.html">Practical Application Architecture with Entity Framework Core</a></li>
-
-</ul>
 <h3>Pluralsight</h3>
 <ul>
 	<li><a href="https://app.pluralsight.com/library/courses/entity-framework-6-getting-started/table-of-contents">Getting Started with Entity Framework 6</a></li>
