@@ -26,6 +26,8 @@ permalink: videos
 	</tbody>
 </table>
 
+<a href="{{ site.github.url }}/youtube-videos">more videos...</a>
+
 <h2>Lynda</h2>
 <table>
 	<thead>
@@ -36,7 +38,7 @@ permalink: videos
 	</thead>
 	<tbody>
 {% for video in site.data.videos %}
-	{% if video.Kind == "Lynda" %}
+	{% if video.Kind == "Lynda"  and video.Pinned == "1" %}
 		<tr>
 			<td>
 				<iframe width='560' height='315' src='https://www.lynda.com/player/embed/{{ video.ID }}?fs=3&w=560&h=315&ps=paused&utm_medium=referral&utm_source=embed+video&utm_campaign=ldc-website&utm_content=vid-{{ video.ID }}' mozallowfullscreen='true' webkitallowfullscreen='true' allowfullscreen='true' frameborder='0'></iframe>
@@ -50,6 +52,35 @@ permalink: videos
 {% endfor %}		
 	</tbody>
 </table>
+
+<a href="{{ site.github.url }}/lynda-videos">more videos...</a>
+
+<h3>Channel 9</h3>
+<table>
+	<thead>
+		<tr>
+			<th>Videos</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+{% for video in site.data.videos %}
+	{% if video.Kind == "Channel9" and video.Pinned == "1" %}
+		<tr>
+			<td>
+                <iframe width='560' height='315' src="https://channel9.msdn.com/{{ video.ID }}/player?format=smooth" mozallowfullscreen='true' webkitallowfullscreen='true' allowFullScreen frameBorder="0"></iframe>
+			</td>
+			<td>
+				<h3>{{ video.Title }}</h3>
+				{{ video.Description }}
+			</td>
+		</tr>
+	{% endif %}
+{% endfor %}		
+	</tbody>
+</table>
+
+<a href="{{ site.github.url }}/channel9-videos">more videos...</a>
 
 <h3>Pluralsight</h3>
 <ul>
@@ -80,30 +111,6 @@ permalink: videos
 <ul>
     <li><a href="https://mva.microsoft.com/en-US/training-courses/implementing-entity-framework-with-mvc-8931?l=e2H2lDC3_8304984382">Implementing Entity Framework with MVC</a></li>
 </ul>
-<h3>Channel 9</h3>
-<table>
-	<thead>
-		<tr>
-			<th>Videos</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-{% for video in site.data.videos %}
-	{% if video.Kind == "Channel9" %}
-		<tr>
-			<td>
-                <iframe width='560' height='315' src="https://channel9.msdn.com/{{ video.ID }}/player?format=smooth" mozallowfullscreen='true' webkitallowfullscreen='true' allowFullScreen frameBorder="0"></iframe>
-			</td>
-			<td>
-				<h3>{{ video.Title }}</h3>
-				{{ video.Description }}
-			</td>
-		</tr>
-	{% endif %}
-{% endfor %}		
-	</tbody>
-</table>
 
 <h3>Others</h3>
 <ul>
