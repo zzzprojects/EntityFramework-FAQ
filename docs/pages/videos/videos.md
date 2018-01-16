@@ -11,7 +11,7 @@ permalink: videos
 	</thead>
 	<tbody>
 {% for video in site.data.videos %}
-	{% if video.Kind == "YouTube" %}
+	{% if video.Kind == "YouTube" and video.Pinned == "1" %}
 		<tr>
 			<td>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.ID }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -26,7 +26,7 @@ permalink: videos
 	</tbody>
 </table>
 
-<h2>Lydia</h2>
+<h2>Lynda</h2>
 <table>
 	<thead>
 		<tr>
@@ -36,7 +36,7 @@ permalink: videos
 	</thead>
 	<tbody>
 {% for video in site.data.videos %}
-	{% if video.Kind == "Lydia" %}
+	{% if video.Kind == "Lynda" %}
 		<tr>
 			<td>
 				<iframe width='560' height='315' src='https://www.lynda.com/player/embed/{{ video.ID }}?fs=3&w=560&h=315&ps=paused&utm_medium=referral&utm_source=embed+video&utm_campaign=ldc-website&utm_content=vid-{{ video.ID }}' mozallowfullscreen='true' webkitallowfullscreen='true' allowfullscreen='true' frameborder='0'></iframe>
@@ -81,16 +81,30 @@ permalink: videos
     <li><a href="https://mva.microsoft.com/en-US/training-courses/implementing-entity-framework-with-mvc-8931?l=e2H2lDC3_8304984382">Implementing Entity Framework with MVC</a></li>
 </ul>
 <h3>Channel 9</h3>
-<ul>
-	<li><a href="https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-Toolbox-Entity-Framework-Part-1">Visual Studio Toolbox: Entity Framework Part 1</a></li>
-	<li><a href="https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/WEB-106">Top 10 Entity Framework Features Every Developer Should Know</a></li>
-    <li><a href="https://channel9.msdn.com/Events/TechEd/NorthAmerica/2014/DEV-B417">ntity Framework: Building Applications with Entity Framework 6</a></li>
-    <li><a href="https://channel9.msdn.com/Events/Ignite/2016/BRK2184">Access data in .NET Core 1.0 with Entity Framework</a></li>
-    <li><a href="https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Entity-Framework-Core">Entity Framework Core</a></li>
-    <li><a href="https://channel9.msdn.com/Events/Build/2016/B852">Entity Framework Core 1.0</a></li>
-    <li><a href="https://channel9.msdn.com/Events/dotnetConf/2017/T221">What's New in Entity Framework Core 2.0</a></li>
-    <li><a href="https://channel9.msdn.com//Blogs/EF/Code-First-to-Existing-Database-EF6-1-Onwards-/">Code First to Existing Database (EF6.1 Onwards)</a></li>
-</ul>
+<table>
+	<thead>
+		<tr>
+			<th>Videos</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+{% for video in site.data.videos %}
+	{% if video.Kind == "Channel9" %}
+		<tr>
+			<td>
+                <iframe width='560' height='315' src="https://channel9.msdn.com/{{ video.ID }}/player?format=smooth" mozallowfullscreen='true' webkitallowfullscreen='true' allowFullScreen frameBorder="0"></iframe>
+			</td>
+			<td>
+				<h3>{{ video.Title }}</h3>
+				{{ video.Description }}
+			</td>
+		</tr>
+	{% endif %}
+{% endfor %}		
+	</tbody>
+</table>
+
 <h3>Others</h3>
 <ul>
 	<li><a href="https://codewithmosh.teachable.com/p/entity-framework/?coupon_code=HALFOFF">Entity Framework 6 in Depth</a></li>
