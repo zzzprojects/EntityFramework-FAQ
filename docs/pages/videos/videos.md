@@ -11,7 +11,7 @@ permalink: videos
 	</thead>
 	<tbody>
 {% for video in site.data.videos %}
-	{% if video.Kind == "YouTube" %}
+	{% if video.Kind == "YouTube" and video.Pinned == "1" %}
 		<tr>
 			<td>
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.ID }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
