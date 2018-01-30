@@ -161,3 +161,63 @@ permalink: blogs
 </table>
 
 <a href="{{ site.github.url }}/one-unicorn-blog">See more OneUnicorn's posts...</a>
+
+<h2>MitchelSellers's Blog</h2>
+
+<table>
+	<tbody>
+{% for blog in site.data.blogs %}
+	{% if blog.Kind == "MitchelSellers" %}
+		<tr>
+			<td>
+				<h3><a href="{{ blog.Url }}">{{ blog.Title }}</a></h3>
+				{{ blog.Description }}
+			</td>
+		</tr>
+	{% endif %}
+{% endfor %}
+				
+	</tbody>
+</table>
+
+<a href="{{ site.github.url }}/mitchel-sellers-blog">See more MitchelSellers's posts...</a>
+
+<h2>eCanarys's Blog</h2>
+
+<table>
+	<tbody>
+{% for blog in site.data.blogs %}
+	{% if blog.Kind == "eCanarys" %}
+		<tr>
+			<td>
+				<h3><a href="{{ blog.Url }}">{{ blog.Title }}</a></h3>
+				{{ blog.Description }}
+			</td>
+		</tr>
+	{% endif %}
+{% endfor %}
+				
+	</tbody>
+</table>
+
+<a href="{{ site.github.url }}/ecanarys-blog">See more eCanarys's posts...</a>
+
+<h2>General's Blog</h2>
+
+<table>
+	<tbody>
+{% for blog in site.data.blogs %}
+	{% if blog.Kind == "General" %}
+		<tr>
+			<td>
+				<h3><a href="{{ blog.Url }}">{{ blog.Title }}</a></h3>
+				{{ blog.Description }}
+			</td>
+		</tr>
+	{% endif %}
+{% endfor %}
+				
+	</tbody>
+</table>
+
+<a href="{{ site.github.url }}/general-blog">See more posts...</a>
