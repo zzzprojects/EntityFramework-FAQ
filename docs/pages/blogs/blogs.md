@@ -202,26 +202,6 @@ permalink: blogs
 
 <a href="{{ site.github.url }}/ecanarys-blog">See more eCanarys's posts...</a>
 
-<h2>General's Blog</h2>
-
-<table>
-	<tbody>
-{% for blog in site.data.blogs %}
-	{% if blog.Kind == "General" and blog.Pinned == "1" %}
-		<tr>
-			<td>
-				<h3><a href="{{ blog.Url }}">{{ blog.Title }}</a></h3>
-				{{ blog.Description }}
-			</td>
-		</tr>
-	{% endif %}
-{% endfor %}
-				
-	</tbody>
-</table>
-
-<a href="{{ site.github.url }}/general-blog">See more posts...</a>
-
 <h2>Gil Fink's Blog</h2>
 
 <table>
@@ -241,3 +221,43 @@ permalink: blogs
 </table>
 
 <a href="{{ site.github.url }}/gil-fink-blog">See more Gil Fink's posts...</a>
+
+<h2>Prashant Brall's Blog</h2>
+
+<table>
+	<tbody>
+{% for blog in site.data.blogs %}
+	{% if blog.Kind == "PrashantBrall" and blog.Pinned == "1" %}
+		<tr>
+			<td>
+				<h3><a href="{{ blog.Url }}">{{ blog.Title }}</a></h3>
+				{{ blog.Description }}
+			</td>
+		</tr>
+	{% endif %}
+{% endfor %}
+				
+	</tbody>
+</table>
+
+<a href="{{ site.github.url }}/prashant-brall-blog">See more Prashant Brall's posts...</a>
+
+<h2>General's Blog</h2>
+
+<table>
+	<tbody>
+{% for blog in site.data.blogs %}
+	{% if blog.Kind == "General" and blog.Pinned == "1" %}
+		<tr>
+			<td>
+				<h3><a href="{{ blog.Url }}">{{ blog.Title }}</a></h3>
+				{{ blog.Description }}
+			</td>
+		</tr>
+	{% endif %}
+{% endfor %}
+				
+	</tbody>
+</table>
+
+<a href="{{ site.github.url }}/general-blog">See more posts...</a>
