@@ -26,6 +26,9 @@ permalink: videos
 	</tbody>
 </table>
 
+
+<a href="{{ site.github.url }}/youtube-videos">more videos...</a>
+=======
 <ul>
 {% for video in site.data.videos %}
 	{% if video.Kind == "YouTube" %}
@@ -60,6 +63,39 @@ permalink: videos
 {% endfor %}		
 	</tbody>
 </table>
+
+
+<a href="{{ site.github.url }}/lynda-videos">more videos...</a>
+
+<h3>Channel 9</h3>
+<table>
+	<thead>
+		<tr>
+			<th>Videos</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+{% for video in site.data.videos %}
+	{% if video.Kind == "Channel9" and video.Pinned == "1" %}
+		<tr>
+			<td>
+                <iframe width='560' height='315' src="https://channel9.msdn.com/{{ video.ID }}/player?format=smooth" mozallowfullscreen='true' webkitallowfullscreen='true' allowFullScreen frameBorder="0"></iframe>
+			</td>
+			<td>
+				<h3>{{ video.Title }}</h3>
+				{{ video.Description }}
+			</td>
+		</tr>
+	{% endif %}
+{% endfor %}		
+	</tbody>
+</table>
+
+<a href="{{ site.github.url }}/channel9-videos">more videos...</a>
+
+<h3>Pluralsight</h3>
+
 <ul>
 {% for video in site.data.videos %}
 	{% if video.Kind == "Lynda" %}
@@ -69,6 +105,7 @@ permalink: videos
 	{% endif %}
 {% endfor %}
 </ul>
+
 
 
 <h3>Channel 9</h3>
@@ -104,6 +141,7 @@ permalink: videos
 	{% endif %}
 {% endfor %}
 </ul>
+
 
 <h3>Pluralsight</h3>
 <ul>
