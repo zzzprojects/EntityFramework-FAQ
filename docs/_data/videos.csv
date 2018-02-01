@@ -53,8 +53,8 @@ YouTube,zOjNbxvVZLU,"Linq + EntityFramework 5.1 + Lamda Expressions Beginner to 
 YouTube,NJMzZD_lr_M,"Entity Framework","The Entity Framework provides a class-based conceptual model that closely resembles entities and relationships in the real world, and includes an industrial-strength ORM (Object-Relational Mapping) tool that allows you to connect to a backend database.",
 YouTube,sAAKu_SsaoA,"C# SQLite Tutorial - 5. ADO.NET Database First Entity Framework Data Model","ADO.Net is the Entity Framework Data Model that will make the underlying connections and methods for our C# application in order to connect to our Local SQLite Database project.",
 YouTube,v3Tkk5JgfgM,"Entity Framework Core with SQLite for Xamarin Forms","Learn how to use Entity Framework Core with SQLite for Xamarin Forms to create CRUD operations on a database.",
-YouTube,,"","",
-YouTube,,"","",
+YouTube,W3KgVuotUpo,"Xamarine and SQLite using Entitiy Framework","Youll create a small application where you use SQLite as a database and use entity framework to work with the data",
+YouTube,Col_2RDI3_4,"MySQL In Asp.Net MVC CRUD Application Using Entity Framework","How to Create Asp.NET MVC With CRUD Operations Create Update Delete and View Using MySQL Server and Entity Framework.",
 Lynda,559185,https://www.lynda.com/ASP-NET-tutorials/Getting-Started-Entity-Framework-6-1-3/506475-2.html,Learning Entity Framework 6.1.3,"Get started with Entity Framework 6.1.3, including unit testing, CRUD operations, and code first from an existing database.",1
 Lynda,591532,https://www.lynda.com/Entity-Framework-tutorials/Learning-Entity-Framework-Core/559226-2.html,Learning Entity Framework Core,Learn how to improve code against existing databases (including less than desirable legacy databases) using Entity Framework Core.,1
 Lynda,560667,https://www.lynda.com/Entity-Framework-tutorials/Accessing-Existing-Databases-Entity-Framework-Core/510080-2.html,Accessing Existing Databases with Entity Framework Core,Learn how to improve code against existing databases (including less than desirable legacy databases) using Entity Framework Core.,1
