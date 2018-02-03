@@ -14,6 +14,7 @@ permalink: faq
 	<li><a href="{{ site.github.url }}/insert-records">Insert Records</a></li>
 	<li><a href="{{ site.github.url }}/fastest-way-to-insert">Fastest Way To Insert</a></li>
     <li><a href="{{ site.github.url }}/retrieve-id-of-inserted-entity">Retrieve Id of Inserted Entity</a></li>
+    <li><a href="{{ site.github.url }}/insert-multiple-entities">Insert Multiple Entities</a></li>
 </ul>
 <h3>Update</h3>
 <ul>
