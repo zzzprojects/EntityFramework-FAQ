@@ -61,4 +61,5 @@ permalink: faq
 <h3>General</h3>
 <ul>
 	<li><a href="{{ site.github.url }}/good-ef-tutorial">Good EF Tutorial</a></li>
+    <li><a href="{{ site.github.url }}/ef-code-first">EF Code First</a></li>
 </ul> 
