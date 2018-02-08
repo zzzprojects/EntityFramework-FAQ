@@ -25,6 +25,7 @@ permalink: faq
 <ul>
 	<li><a href="{{ site.github.url }}/delete-records">Delete Records</a></li>
 	<li><a href="{{ site.github.url }}/delete-without-loading">Delete Without Loading</a></li>
+    <li><a href="{{ site.github.url }}/delete-multiple-entities">Delete Multiple Entities</a></li>
 </ul>
 <h3>Merge</h3>	
 <ul>

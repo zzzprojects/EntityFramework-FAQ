@@ -12,6 +12,8 @@ fastest-way-to-insert,Fastest Way To Insert,Fastest Way To Insert,,Fastest Way T
 retrieve-id-of-inserted-entity,Retrieve Id of Inserted Entity,Retrieve Id of Inserted Entity,,Retrieve Id of Inserted Entity,,,
 update-without-loading,Update Without Loading,Update Without Loading,,Update Without Loading,,,
 delete-without-loading,Delete Without Loading,Delete Without Loading,,Delete Without Loading,,,
+insert-multiple-entities,Insert Multiple Entities,Insert Multiple Entities,,Insert Multiple Entities,,,
+delete-multiple-entities,Delete Multiple Entities,Delete Multiple Entities,,Delete Multiple Entities,,,
 merge-records,Merge Records,Merge Records,,Merge Records,,,
 include-with-where-clause,Include With Where Clause,Include With Where Clause,,Include With Where Clause,,,
 include-multiple-levels,Include Multiple Levels,Include Multiple Levels,,Include Multiple Levels,,,
