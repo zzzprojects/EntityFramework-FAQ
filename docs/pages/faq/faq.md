@@ -43,3 +43,22 @@ permalink: faq
 	<li><a href="{{ site.github.url }}/check-object-existence">Check Object Existence</a></li>
 	<li><a href="{{ site.github.url }}/linq-prevent-sql-injection">LINQ Prevent SQL Injection</a></li>
 </ul>
+<h3>Performance</h3>
+<ul>
+    <li><a href="{{ site.github.url }}/ef-performance">EF Performance</a></li>
+    <li><a href="{{ site.github.url }}/improve-ef-add-performance">Add</a></li>
+    <li><a href="{{ site.github.url }}/improve-ef-detect-changes-performance">DetectChanges</a></li>
+    <li><a href="{{ site.github.url }}/why-detect-changes-slow">Why DetectChanges slow?</a></li>
+    <li><a href="{{ site.github.url }}/improve-ef-include-performance">Include</a></li>
+    <li><a href="{{ site.github.url }}/improve-ef-insert-performance">Insert</a></li>
+    <li><a href="{{ site.github.url }}/improve-ef-save-changes-performance">SaveChanges</a></li>
+    <li><a href="{{ site.github.url }}/why-first-query-slow">Why First Query slow?</a></li>
+</ul>
+<h3>Connection</h3>
+<ul>
+    <li><a href="{{ site.github.url }}/change-connection-at-runtime">Change Connection at Runtime</a></li>
+</ul>
+<h3>General</h3>
+<ul>
+	<li><a href="{{ site.github.url }}/good-ef-tutorial">Good EF Tutorial</a></li>
+</ul> 

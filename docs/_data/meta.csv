@@ -23,6 +23,7 @@ check-object-existence,Check Object Existence,Check Object Existence,,Check Obje
 linq-prevent-sql-injection,LINQ Prevent SQL Injection,LINQ Prevent SQL Injection,,LINQ Prevent SQL Injection,,,
 change-connection-at-runtime,Change Connection at Runtime,Change Connection at Runtime,,Change Connection at Runtime,,,
 entity-type-has-no-key-defined,EntityType Has No Key Defined,EntityType Has No Key Defined,,EntityType Has No Key Defined,,,
+good-ef-tutorial,Good EF Tutorial,Good EF Tutorial,,Good EF Tutorial,,,
 problems,Problems,Problems,,Problems,,,
 not-found-in-object-state-manager,Not Found in ObjectStateManager,Not Found in ObjectStateManager,,Not Found in ObjectStateManager,,,
 concurrency,Concurrency,Concurrency,,Concurrency,,,
