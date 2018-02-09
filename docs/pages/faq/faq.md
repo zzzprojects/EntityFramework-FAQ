@@ -60,7 +60,9 @@ permalink: faq
 </ul>
 <h3>General</h3>
 <ul>
-	<li><a href="{{ site.github.url }}/good-ef-tutorial">Good EF Tutorial</a></li>
-    <li><a href="{{ site.github.url }}/ef-code-first">EF Code First</a></li>
-    <li><a href="{{ site.github.url }}/ef-database-first">EF Database First</a></li>
+	<li><a href="{{ site.github.url }}/good-ef-tutorial">Good Entity Framework Tutorial</a></li>
+    <li><a href="{{ site.github.url }}/ef-code-first">Entity Framework Code First</a></li>
+    <li><a href="{{ site.github.url }}/ef-database-first">Entity Framework Database First</a></li>
+    <li><a href="{{ site.github.url }}/code-first-vs-database-first">Code First vs Database First</a></li>
+    <li><a href="{{ site.github.url }}/where-to-download-entity-framework">Where to download Entity Framework</a></li>
 </ul> 

@@ -12,6 +12,10 @@ In Entity Framework, code first was introduced in Entity Framework 4.1. Code Fir
 
 Code-First APIs will create the database on the fly based on your entity classes and configuration. It can also update the database if the model changes, using a feature called Code First Migrations.
 
+ - Code First is very popular approach and has full control over the code rather than database activity. 
+ - In this approach, we can do all the database operations from the code and manual changes to database have been lost and everything is depended on the code.
+ - In this you need to create POCO entities as data model.
+
 ### Related links
 
 For further details please see the following links.
