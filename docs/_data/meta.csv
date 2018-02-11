@@ -30,6 +30,7 @@ code-first-vs-database-first,Code First vs Database First,Code First vs Database
 where-to-download-entity-framework,Where to download Entity Framework,Where to download Entity Framework,,Where to download Entity Framework,,,
 ef-version-history,EF Version History,EF Version History,,EF Version History,,,
 supported-database-providers,Supported Database Providers,Supported Database Providers,,Supported Database Providers,,,
+ef-vs-linq-to-sql,Entity Framework vs LINQ to SQL,Entity Framework vs LINQ to SQL,,Entity Framework vs LINQ to SQL,,,
 problems,Problems,Problems,,Problems,,,
 not-found-in-object-state-manager,Not Found in ObjectStateManager,Not Found in ObjectStateManager,,Not Found in ObjectStateManager,,,
 concurrency,Concurrency,Concurrency,,Concurrency,,,
