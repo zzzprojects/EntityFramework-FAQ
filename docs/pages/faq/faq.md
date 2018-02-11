@@ -66,4 +66,5 @@ permalink: faq
     <li><a href="{{ site.github.url }}/code-first-vs-database-first">Code First vs Database First</a></li>
     <li><a href="{{ site.github.url }}/where-to-download-entity-framework">Where to download Entity Framework</a></li>
     <li><a href="{{ site.github.url }}/ef-version-history">Entity Framework Version History</a></li>
+    <li><a href="{{ site.github.url }}/supported-database-providers">Supported Database Providers</a></li>
 </ul> 
