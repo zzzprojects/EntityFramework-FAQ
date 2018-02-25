@@ -74,4 +74,8 @@ permalink: faq
     <li><a href="{{ site.github.url }}/ef-vs-dapper">Entity Framework vs Dapper</a></li>
     <li><a href="{{ site.github.url }}/ef-vs-nhibernate">Entity Framework vs NHibernate</a></li>
 </ul>
+<h3>Async</h3>
+<ul>
+    <li><a href="{{ site.github.url }}/why-ef-async-methods-are-slow">Why EF Async Methods are Slow</a></li>
+</ul>
 
