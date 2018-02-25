@@ -71,6 +71,7 @@ permalink: faq
 <h3>Versus ORM</h3>
 <ul>
     <li><a href="{{ site.github.url }}/ef-vs-linq-to-sql">Entity Framework vs LINQ to SQL</a></li>
-    <li><a href="{{ site.github.url }}/ef-vs-linq-to-sql">Entity Framework vs Dapper</a></li>
+    <li><a href="{{ site.github.url }}/ef-vs-dapper">Entity Framework vs Dapper</a></li>
+    <li><a href="{{ site.github.url }}/ef-vs-nhibernate">Entity Framework vs NHibernate</a></li>
 </ul>
 
