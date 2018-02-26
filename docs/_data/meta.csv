@@ -34,6 +34,7 @@ ef-vs-linq-to-sql,Entity Framework vs LINQ to SQL,Entity Framework vs LINQ to SQ
 ef-vs-dapper,Entity Framework vs Dapper,Entity Framework vs Dapper,,Entity Framework vs Dapper,,,
 ef-vs-nhibernate,Entity Framework vs NHibernate,Entity Framework vs NHibernate,,Entity Framework vs NHibernate,,,
 why-ef-async-methods-are-slow,Why EF Async Methods are Slow,Why EF Async Methods are Slow,,Why EF Async Methods are Slow,,,
+what-is-dbcontext,What is DbContext,What is DbContext,,What is DbContext,,,
 problems,Problems,Problems,,Problems,,,
 not-found-in-object-state-manager,Not Found in ObjectStateManager,Not Found in ObjectStateManager,,Not Found in ObjectStateManager,,,
 concurrency,Concurrency,Concurrency,,Concurrency,,,

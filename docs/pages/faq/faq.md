@@ -78,4 +78,8 @@ permalink: faq
 <ul>
     <li><a href="{{ site.github.url }}/why-ef-async-methods-are-slow">Why EF Async Methods are Slow</a></li>
 </ul>
+<h3>DbContext</h3>
+<ul>
+    <li><a href="{{ site.github.url }}/what-is-dbcontext">What is DbContext</a></li>
+</ul>
 
