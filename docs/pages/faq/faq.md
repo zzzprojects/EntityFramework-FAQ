@@ -42,6 +42,7 @@ permalink: faq
 	<li><a href="{{ site.github.url }}/view-generated-sql">View Generated Sql</a></li>
 	<li><a href="{{ site.github.url }}/check-object-existence">Check Object Existence</a></li>
 	<li><a href="{{ site.github.url }}/linq-prevent-sql-injection">LINQ Prevent SQL Injection</a></li>
+    <li><a href="{{ site.github.url }}/subtract-two-dates">Subtract Two Dates</a></li>
 </ul>
 <h3>Performance</h3>
 <ul>
