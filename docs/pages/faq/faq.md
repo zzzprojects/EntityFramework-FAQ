@@ -87,4 +87,8 @@ permalink: faq
 <ul>
     <li><a href="{{ site.github.url }}/ef-pending-changes">EF Pending Changes</a></li>
 </ul>
+<h3>Transaction</h3>
+<ul>
+    <li><a href="{{ site.github.url }}/how-ef-transaction-works">How EF Transaction Works</a></li>
+</ul>
 
