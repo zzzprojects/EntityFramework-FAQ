@@ -83,4 +83,8 @@ permalink: faq
 <ul>
     <li><a href="{{ site.github.url }}/what-is-dbcontext">What is DbContext</a></li>
 </ul>
+<h3>Change Tracker</h3>
+<ul>
+    <li><a href="{{ site.github.url }}/ef-pending-changes">EF Pending Changes</a></li>
+</ul>
 
