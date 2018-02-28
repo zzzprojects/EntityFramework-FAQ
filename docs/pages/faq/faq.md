@@ -35,6 +35,7 @@ permalink: faq
 <ul>
 	<li><a href="{{ site.github.url }}/include-with-where-clause">Include With Where Clause</a></li>
 	<li><a href="{{ site.github.url }}/include-multiple-levels">Include Multiple Levels</a></li>
+    <li><a href="{{ site.github.url }}/when-to-use-include">When to Use Include</a></li>
 </ul>
 <h3>LINQ</h3>
 <ul>
