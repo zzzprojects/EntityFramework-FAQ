@@ -96,4 +96,8 @@ permalink: faq
 <ul>
     <li><a href="{{ site.github.url }}/how-to-mock-data">How to Mock Data</a></li>
 </ul>
+<h3>Inheritance</h3>
+<ul>
+    <li><a href="{{ site.github.url }}/tpc">Table Per Concrete</a></li>
+</ul>
 
