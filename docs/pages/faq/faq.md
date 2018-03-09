@@ -99,5 +99,6 @@ permalink: faq
 <h3>Inheritance</h3>
 <ul>
     <li><a href="{{ site.github.url }}/tpc">Table Per Concrete</a></li>
+    <li><a href="{{ site.github.url }}/tpt">Table Per Type</a></li>
 </ul>
 

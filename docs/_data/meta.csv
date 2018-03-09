@@ -41,6 +41,7 @@ how-ef-transaction-works,How EF Transaction Works,How EF Transaction Works,,How 
 when-to-use-include,When to Use Include,When to Use Include,,When to Use Include,,,
 how-to-mock-data,How to Mock Data,How to Mock Data,,How to Mock Data,,,
 tpc,Table Per Concrete,Table Per Concrete,,Table Per Concrete,,,
+tpt,Table Per Type,Table Per Type,,Table Per Type,,,
 problems,Problems,Problems,,Problems,,,
 not-found-in-object-state-manager,Not Found in ObjectStateManager,Not Found in ObjectStateManager,,Not Found in ObjectStateManager,,,
 concurrency,Concurrency,Concurrency,,Concurrency,,,
