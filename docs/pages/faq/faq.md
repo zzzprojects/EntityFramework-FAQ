@@ -100,5 +100,6 @@ permalink: faq
 <ul>
     <li><a href="{{ site.github.url }}/tpc">Table Per Concrete</a></li>
     <li><a href="{{ site.github.url }}/tpt">Table Per Type</a></li>
+    <li><a href="{{ site.github.url }}/tph">Table Per Hierarchy</a></li>
 </ul>
 
