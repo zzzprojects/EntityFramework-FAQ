@@ -106,3 +106,7 @@ permalink: faq
 <ul>
     <li><a href="{{ site.github.url }}/stored-procedure-within-ef">EF - Stored Procedure</a></li>
 </ul>
+<h3>Validation</h3>
+<ul>
+    <li><a href="{{ site.github.url }}/how-to-see-ef-errors">How to see Entity Framework Errors</a></li>
+</ul>
