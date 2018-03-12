@@ -4,7 +4,7 @@ permalink: how-to-see-ef-errors
 
 ## How to see Entity Framework Errors?
 
-There are certain cases where your program throws some exception but from the exception message you won't be able understand what is actually casuing this exception. For example have a look at this simpe example where we have Blog class.
+There are certain cases where your program throws some exception, but with the exception message, you won't be able to understand what is actually causing this exception. For example, have a look at this simple example where we have Blog class.
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -38,7 +38,7 @@ using (var context = new BloggingContext())
 
 {% endhighlight %}
 
-When you execute you will see the following exception.
+When you execute, you will see the following exception.
  
 `System.Data.Entity.Validation.DbEntityValidationException: 'Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.'`
  
@@ -52,7 +52,7 @@ Now you can see that the exception doesn't give you any hint about the actual pr
 
 ## Answer
 
-To see the actual errror or the cause of the error, we need to use the catch the exception and then write out the errors to log file or console depending upon your application.
+To see the actual error or the cause of the error, we need to use the catch the exception and then write out the errors to log file or console depending upon your application.
 
 {% include template-example.html %} 
 {% highlight csharp %}
@@ -74,7 +74,7 @@ using (var context = new BloggingContext())
     {
         foreach (var eve in e.EntityValidationErrors)
         {
-            Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+            Console.WriteLine("Entity of type \"{0}\" in the state \"{1}\" has the following validation errors:",
                 eve.Entry.Entity.GetType().Name, eve.Entry.State);
             foreach (var ve in eve.ValidationErrors)
             {
@@ -97,10 +97,10 @@ using (var context = new BloggingContext())
 
 EntityValidationErrors is a collection which represents the entities which couldn't be validated successfully, and the inner collection ValidationErrors per entity is a list of errors on property level.
 
-Now when the exception occurs you will see the following message in your log file or console.
+Now when the exception occurs, you will see the following message in your log file or console.
 
 
-***Entity of type "Blog" in state "Added" has the following validation errors:***
+***Entity of type "Blog" in the state "Added" has the following validation errors:***
  - ***Property: "Url", Error: "The field Url must be a string with a maximum length of 10."***
  - ***Property: "Url", Value: "https://blogs.msdn.microsoft.com/dotnet/", Error: "The field Url must be a string with a maximum length of 10."***
 
