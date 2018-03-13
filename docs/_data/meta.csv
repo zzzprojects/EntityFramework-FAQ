@@ -61,6 +61,7 @@ improve-ef-include-performance,Improve EF Include Performance,Improve EF Include
 improve-ef-insert-performance,Improve EF Insert Performance,Improve EF Insert Performance,,Improve EF Insert Performance,,,
 improve-ef-save-changes-performance,Improve EF SaveChanges Performance,Improve EF SaveChanges Performance,,Improve EF SaveChanges Performance,,,
 why-first-query-slow,Why First Query is slow?,Why First Query is slow?,,Why First Query is slow?,,,
+data-reader-already-open,DataReader already Open,DataReader already Open,,DataReader already Open,,,
 glossary,Glossary,Glossary,,Glossary,,,
 third-party-libraries,Third Party Libraries,Third Party Libraries,,Third Party Libraries,,,
 audit,Audit,Audit,,Audit,,,
