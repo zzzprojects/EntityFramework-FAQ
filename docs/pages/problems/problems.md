@@ -23,3 +23,11 @@ permalink: problems
 <ul>
 	<li><a href="{{ site.github.url }}/cannot-construct-entity">Cannot Construct Entity</a></li>
 </ul>
+<h3>Model</h3>
+<ul>
+    <li><a href="{{ site.github.url }}/entity-type-has-no-key-defined">EntityType Has No Key Defined</a></li>
+</ul>
+<h3>DataReader</h3>
+<ul>
+	<li><a href="{{ site.github.url }}/data-reader-already-open">DataReader already Open</a></li>
+</ul>

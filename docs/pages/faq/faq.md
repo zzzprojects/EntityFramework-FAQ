@@ -102,4 +102,11 @@ permalink: faq
     <li><a href="{{ site.github.url }}/tpt">Table Per Type</a></li>
     <li><a href="{{ site.github.url }}/tph">Table Per Hierarchy</a></li>
 </ul>
-
+<h3>Stored Procedure</h3>
+<ul>
+    <li><a href="{{ site.github.url }}/stored-procedure-within-ef">EF - Stored Procedure</a></li>
+</ul>
+<h3>Validation</h3>
+<ul>
+    <li><a href="{{ site.github.url }}/how-to-see-ef-errors">How to see Entity Framework Errors</a></li>
+</ul>
