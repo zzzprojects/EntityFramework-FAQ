@@ -4,12 +4,15 @@ permalink: index
 ---
 
 <!-- hero !-->
-<div class="layout-angle">
-	<div class="top-triangle wow slideInRight" data-wow-duration="1.5s"></div>
-	<div class="layout-angle-inner">
-        <div class="hero">
-        	<div class="container">
-        		<div class="row">
+<div class="rotator rotator-dark mb-5">
+	<div class="rotator-header">
+		<div class="rotator-header-inner wow slideInRight"></div>
+	</div>
+	<div class="rotator-body">
+		<div class="rotator-body-inner">
+			<div class="section-header">
+			<div class="container index-faq">
+				<div class="row">
 					<div class="col-md-6 col-lg-6">
 						<div class="jumbotron">
 							<h2 class="display-4">FAQ</h2>
@@ -28,7 +31,7 @@ permalink: index
 							<hr class="my-4">
 							<p>Start learning Entity Framework using problems and exceptions people often encouters.</p>
 							<p class="lead">
-								<a class="btn btn-lg btn-z" href="problems" role="button">Learn more</a>
+								<a class="btn btn-primary btn-z" href="problems" role="button">Learn more</a>
 							</p>
 						</div>
 					</div>
@@ -41,7 +44,7 @@ permalink: index
 							<hr class="my-4">
 							<p>Start learning about which library you can use to enhance Entity Framework.</p>
 							<p class="lead">
-								<a class="btn btn-lg btn-z" href="third-party-libraries" role="button">Learn more</a>
+								<a class="btn btn-primary btn-z" href="third-party-libraries" role="button">Learn more</a>
 							</p>
 						</div>
 					</div>
@@ -57,39 +60,11 @@ permalink: index
 						</div>
 					</div>
 				</div>
-        	</div>	
-        </div>
-	</div>
-	<div class="bottom-triangle-outer">
-		<div class="bottom-triangle wow slideInLeft" data-wow-duration="1.5s"></div>
-	</div>
-</div>
-<style>
-.hero {
-	background: transparent;
-}
-.hero .row {
-	color: #000;
-}
-
-</style>
-
-
-
-
-
-
-<!-- features !-->
-<div class="features">
-
-	<div class="container">
-		
-		<!-- more-feature !-->
-		<div class="more">
-			<a href="{{ site.github.url }}/faq" class="btn btn-z btn-xl" role="button">
-				<i class="fa fa-book"></i>&nbsp;Read more FAQs
-			</a>
+			</div>
+			</div>
 		</div>
-		
+	</div>
+	<div class="rotator-footer">
+		<div class="rotator-footer-inner wow slideInLeft"></div>
 	</div>
 </div>

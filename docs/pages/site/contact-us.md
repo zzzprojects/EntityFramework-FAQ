@@ -50,7 +50,7 @@ Just contact us back again, and we will make sure we won't miss it again!
 </div>
 </div>
 		<div class="col-lg-4 order-1 order-lg-2">
-			<div class="card card-layout-z1 wow slideInRight">
+			<div class="card card-box card-box-light card-box-nav wow slideInRight">
 				<div class="card-header">
 					<h2>Contact Info</h2>
 				</div>
