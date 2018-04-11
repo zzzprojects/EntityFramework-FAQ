@@ -30,9 +30,9 @@ code-first-vs-database-first,Code First vs Database First,Code First vs Database
 where-to-download-entity-framework,Where to download Entity Framework,Where to download Entity Framework,,Where to download Entity Framework,,,,container-doc,section-article
 ef-version-history,EF Version History,EF Version History,,EF Version History,,,,container-doc,section-article
 supported-database-providers,Supported Database Providers,Supported Database Providers,,Supported Database Providers,,,,container-doc,section-article
-ef-vs-linq-to-sql,Entity Framework vs LINQ to SQL,Entity Framework vs LINQ to SQL,,Entity Framework vs LINQ to SQL,,,,container-doc,section-article
-ef-vs-dapper,Entity Framework vs Dapper,Entity Framework vs Dapper,,Entity Framework vs Dapper,,,,container-doc,section-article
-ef-vs-nhibernate,Entity Framework vs NHibernate,Entity Framework vs NHibernate,,Entity Framework vs NHibernate,,,,container-doc,section-article
+entity-framework-vs-linq-to-sql,Entity Framework vs LINQ to SQL,Entity Framework vs LINQ to SQL,,Entity Framework vs LINQ to SQL,,,,container-doc,section-article
+entity-framework-vs-dapper,Entity Framework vs Dapper,Entity Framework vs Dapper,,Entity Framework vs Dapper,,,,container-doc,section-article
+entity-framework-vs-nhibernate,Entity Framework vs NHibernate,Entity Framework vs NHibernate,,Entity Framework vs NHibernate,,,,container-doc,section-article
 why-ef-async-methods-are-slow,Why EF Async Methods are Slow,Why EF Async Methods are Slow,,Why EF Async Methods are Slow,,,,container-doc,section-article
 what-is-dbcontext,What is DbContext,What is DbContext,,What is DbContext,,,,container-doc,section-article
 subtract-two-dates,Subtract Two Dates,Subtract Two Dates,,Subtract Two Dates,,,,container-doc,section-article
