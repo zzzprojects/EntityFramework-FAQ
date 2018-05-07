@@ -1,6 +1,4 @@
----
-permalink: insert-records
----
+# Entity Framework - Insert Records
 
 ## How to do a Bulk Insert?
 
@@ -10,9 +8,8 @@ Inserting thousand of entities for an initial load or a file importation is a ty
 
 SaveChanges requires one database round-trip for every entity to insert. So if you need to insert 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-using (var ctx = new CustomerContext())
+
+```csharpusing (var ctx = new CustomerContext())
 {
     List<Customer> customers = new List<Customer>();
     
@@ -28,9 +25,7 @@ using (var ctx = new CustomerContext())
 
     ctx.SaveChanges();
 }
-
-{% endhighlight %}
-
+```
 ### StackOverflow Related Questions
 
  - [How to do a Bulk Insert - Linq to Entities](https://stackoverflow.com/questions/1609153/how-to-do-a-bulk-insert-linq-to-entities)
@@ -40,9 +35,8 @@ using (var ctx = new CustomerContext())
 
 [Entity Framework Extensions](http://entityframework-extensions.net/) library adds the BulkInsert extension method to the DbContext. **BulkInsert** requires the minimum database round-trips as compared to **SaveChanges**.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var ctx = new CustomerContext())
 {
     List<Customer> customers = new List<Customer>();
@@ -57,7 +51,5 @@ using (var ctx = new CustomerContext())
     
     ctx.BulkInsert(customers);
 }
-
-{% endhighlight %}
-
+```
 [Learn more](http://entityframework-extensions.net/bulk-insert)

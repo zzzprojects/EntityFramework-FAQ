@@ -1,6 +1,4 @@
----
-permalink: ef-vs-nhibernate
----
+# Entity Framework vs NHibernate
 
 ## Entity Framework vs NHibernate? 
 

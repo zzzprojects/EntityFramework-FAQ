@@ -1,6 +1,4 @@
----
-permalink: third-party-libraries
----
+# Entity Framework - Third Party Libraries
 
 ## Introduction
 

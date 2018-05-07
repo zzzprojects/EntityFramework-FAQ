@@ -1,6 +1,4 @@
----
-permalink: check-object-existence
----
+# Entity Framework - Check Object Existence
 
 ## How to check if an object exists in the database?
 
@@ -15,13 +13,11 @@ What is the best way performance wise to check if the object exists in the datab
 
 For IEnumerable<T>, using **Any()** method is the fastest way to check if the object exists in the database. It only has to look at one iteration and will return as soon as it finds a match.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-using (var context = new CustomerContext())
+
+```csharpusing (var context = new CustomerContext())
 {
     if(context.Customers.Any(c => c.Id == 1))
     {
         //match
     }  
-}
-{% endhighlight %}
+}```

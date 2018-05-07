@@ -1,6 +1,4 @@
----
-permalink: deferred-query
----
+# Entity Framework - Deferred Query
 
 ## Introduction
 
@@ -23,15 +21,12 @@ Deferred Query allows you to defer immediate query execution from a LINQ method,
  - [Entity Framework second level cache](https://stackoverflow.com/questions/35549009/entity-framework-second-level-cache)
 
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// using Z.EntityFramework.Plus; // Don't forget to include this.
+
+```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
 var ctx = new EntitiesContext();
 
 // The count is deferred and cached.
-var count = ctx.Customers.DeferredCount().FromCache();
-{% endhighlight %}
-
+var count = ctx.Customers.DeferredCount().FromCache();```
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

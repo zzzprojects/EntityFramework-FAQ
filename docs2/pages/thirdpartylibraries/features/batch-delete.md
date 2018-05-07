@@ -1,6 +1,4 @@
----
-permalink: batch-delete
----
+# Entity Framework - Batch Delete
 
 ## Introduction
 
@@ -21,9 +19,8 @@ For **HUGE** performance gains, everything is executed on the database side. To 
  - [How to Delete multiple records in Linq to Entity?](https://stackoverflow.com/questions/20452652/how-to-delete-multiple-records-in-linq-to-entity?noredirect=1&lq=1)
  - [Bulk-deleting in LINQ to Entities](https://stackoverflow.com/questions/869209/bulk-deleting-in-linq-to-entities?noredirect=1&lq=1)
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// using Z.EntityFramework.Plus; // Don't forget to include this.
+
+```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
 
 // DELETE all users inactive for 2 years
 ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
@@ -31,9 +28,7 @@ ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
 
 // DELETE using a BatchSize
 ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
-         .Delete(x => x.BatchSize = 1000);
-{% endhighlight %}
-
+         .Delete(x => x.BatchSize = 1000);```
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

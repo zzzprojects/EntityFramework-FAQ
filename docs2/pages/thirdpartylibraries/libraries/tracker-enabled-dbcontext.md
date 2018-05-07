@@ -1,6 +1,4 @@
----
-permalink: tracker-enabled-dbcontext 
----
+# Entity Framework - Tracker Enabled DbContext
 
 ## Definition
 
@@ -26,9 +24,8 @@ With the recent introduction of Fluent API, it gives you more power to change/en
 
 To track any entity, put the annotation **[TrackChanges]** to that entity. But if you don't want to track the Text property, just add the annotation **[SkipTracking]**.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 [TrackChanges]
 public class Comment
 {
@@ -41,8 +38,7 @@ public class Comment
 
     public virtual Blog ParentBlog { get; set; }
 }
-
-{% endhighlight %} 
+``` 
 
 This entity will have 3 columns in table. Id, Text and ParentBlogId. Although entity framework works even if you don't have the property 'ParentBlogId', this library will require you to have it if you wish to track foreign keys.
 
@@ -50,15 +46,13 @@ This entity will have 3 columns in table. Id, Text and ParentBlogId. Although en
 
 If you don't like to put attributes on your entities, you can use the fluent api to configure tracking as following example.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 EntityTracker
     .TrackAllProperties<NormalModel>()
     .Except(x => x.Description)
     .And(x => x.Id);
-
-{% endhighlight %} 
+``` 
 
 ***Note that if you use both, annotations and fluent api, and they are conflicting for an entity or property, fluent api configuration will be considered high priority***
 

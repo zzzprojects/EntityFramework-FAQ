@@ -1,6 +1,4 @@
----
-permalink: dynamic-query
----
+# Entity Framework - Dynamic Query
 
 ## Introduction
 
@@ -27,9 +25,8 @@ Dynamic Query allows you to perform dynamic where clause, select, order by, with
  - [How to Dynamically build Select as relates to Linq & Entity Framework](https://stackoverflow.com/questions/44441338/how-to-dynamically-build-select-as-relates-to-linq-entity-framework)
  - [Using dynamic linq in EF Linq to Entities](https://stackoverflow.com/questions/28721888/using-dynamic-linq-in-ef-linq-to-entities)
 
-{% include template-example.html %} 
-{% highlight csharp %}
-var customersList1 = context.Customers
+
+```csharpvar customersList1 = context.Customers
     .OrderByDynamic(c => "c.Name")
     .ToList();
 
@@ -38,9 +35,7 @@ var customersList2 = context.Customers
     .Where(c => "c.Invoices.Count > 0")
     .OrderByDescendingDynamic(c => "c.Invoices.Count")
     .ToList();
-
-{% endhighlight %}
-
+```
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

@@ -1,6 +1,4 @@
----
-permalink: ef-version-history
----
+# Entity Framework - EF Version History
 
 ## Entity Framework Version History 
 
@@ -46,14 +44,11 @@ EF6.1.2 is mostly about bug fixes; We also accepted a couple of noteworthy chang
  
 - Query cache parameters can be configured from the app/web.configuration file
 
-{% include template-example.html %} 
-{% highlight csharp %}
-     <entityFramework> 
+
+```csharp     <entityFramework> 
         <queryCache size='1000' cleaningIntervalInSeconds='-1'/> 
      </entityFramework>
-
-{% endhighlight %}
-
+```
 - SqlFile and SqlResource methods on DbMigration allow you to run a SQL script stored as a file or embedded resource. 
 
 ### [Entity Framework 6.1.1](https://www.nuget.org/packages/EntityFramework/6.1.1)

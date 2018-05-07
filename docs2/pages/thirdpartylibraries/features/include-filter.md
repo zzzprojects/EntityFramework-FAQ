@@ -1,6 +1,4 @@
----
-permalink: include-filter
----
+# Entity Framework - Include Filter
 
 ## Introduction
 
@@ -26,9 +24,8 @@ IncludeFilter allows you to add a method similar to EF Include but with a predic
  - [How to filter "Include" entities in entity framework?](https://stackoverflow.com/questions/39636952/how-to-filter-include-entities-in-entity-framework)
  - [How to filter child collections Entity Framework](https://stackoverflow.com/questions/39046597/how-to-filter-child-collections-entity-framework)
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// using Z.EntityFramework.Plus; // Don't forget to include this.
+
+```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
 var ctx = new EntitiesContext();
 
 // LOAD orders and the first 10 active related entities.
@@ -36,9 +33,7 @@ var list = ctx.Orders.IncludeFilter(x => x.Items.Where(y => !y.IsSoftDeleted)
                                                .OrderBy(y => y.Date)
                                                .Take(10))
                                                .ToList();
-
-{% endhighlight %}
-
+```
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

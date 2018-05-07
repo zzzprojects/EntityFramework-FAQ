@@ -1,6 +1,4 @@
----
-permalink: good-ef-tutorial
----
+# Entity Framework - Good EF Tutorial
 
 ## What are good Entity Framework Tutorial?  
 

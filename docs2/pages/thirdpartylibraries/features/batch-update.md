@@ -1,6 +1,4 @@
----
-permalink: batch-update
----
+# Entity Framework - Batch Update
 
 ## Introduction
 
@@ -21,15 +19,12 @@ For **HUGE** performance gains, everything is executed on the database side. To 
  - [Entity Framework update/insert multiple entities](https://stackoverflow.com/questions/39656794/entity-framework-update-insert-multiple-entities)
  - [Batch update on object list using EntityFramework 6 and Linq](https://stackoverflow.com/questions/30738697/batch-update-on-object-list-using-entityframework-6-and-linq)
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// using Z.EntityFramework.Plus; // Don't forget to include this.
+
+```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
 
 // UPDATE all users inactive for 2 years
 ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
-         .Update(x => new User() { IsSoftDeleted = 1 });
-{% endhighlight %}
-
+         .Update(x => new User() { IsSoftDeleted = 1 });```
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

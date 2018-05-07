@@ -1,6 +1,4 @@
----
-permalink: tph
----
+# Entity Framework - Table Per Hierarchy
 
 ## What is Inheritance Type in Entity Framework?  
 
@@ -30,9 +28,8 @@ TPH inheritance uses one database table to maintain data for all of the entity t
 
 You don't have to do anything special in Code First to enable TPH; it's the default inheritance mapping strategy. Here is the very simple model which contains one abstract class `Person` and two non-abstract classes `Student` and `Teacher`. `Student` and `Teacher` classes inherit the Person class.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 public abstract class Person
 {
     public int Id { get; set; }
@@ -53,14 +50,11 @@ public class InheritanceMappingContext : DbContext
 {
     public DbSet<Person> People { get; set; }
 }
-
-{% endhighlight %}
-
+```
 Let's add some new records to the database.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var context = new InheritanceMappingContext())
 {
     Student student = new Student()
@@ -80,9 +74,7 @@ using (var context = new InheritanceMappingContext())
 
     context.SaveChanges();
 }
-
-{% endhighlight %}
-
+```
 As you can see in the DB schema, Code First has added all the properties in one table and also added a discriminator column to distinguish between persistent classes. 
 
 <img src="{{ site.github.url }}/images/tph-db-schema.png">
@@ -96,18 +88,14 @@ TPH has one major problem, Columns for properties declared by subclasses will be
 #### View Generated SQL
 
 Let's examine SQL query that returns a list of all the students and teachers.
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 var query = context.People.ToString();
-
-{% endhighlight %}
-
+```
 This query generated the following SQL statements that were executed in the database.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 SELECT 
     [Extent1].[Discriminator] AS [Discriminator], 
     [Extent1].[Id] AS [Id], 
@@ -116,7 +104,5 @@ SELECT
     [Extent1].[HireDate] AS [HireDate]
     FROM [dbo].[People] AS [Extent1]
     WHERE [Extent1].[Discriminator] IN (N'Student',N'Teacher')
-
-{% endhighlight %}
-
+```
 For more information see [Inheritance with EF Code First: Part 1 - Table per Hierarchy (TPH)](https://weblogs.asp.net/manavi/inheritance-mapping-strategies-with-entity-framework-code-first-ctp5-part-1-table-per-hierarchy-tph)

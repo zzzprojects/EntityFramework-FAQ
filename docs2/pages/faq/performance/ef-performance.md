@@ -1,6 +1,4 @@
----
-permalink: ef-performance
----
+# Entity Framework - Improve Entity Framework Performance
 
 ## Improve Entity Framework Performance
 

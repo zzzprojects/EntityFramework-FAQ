@@ -1,6 +1,4 @@
----
-permalink: use-linq-dynamically
----
+# Entity Framework - Use LINQ Dynamically
 
 ## How to use LINQ dynamically? 
 
@@ -23,9 +21,8 @@ Traditionally these types of dynamic query scenarios are often handled by concat
 
 It allows you to express LINQ queries using extension methods that take string arguments instead of type-safe language operators.  
 
-{% include template-example.html %} 
-{% highlight csharp %}
-using (var context = new CustomerContext())
+
+```csharpusing (var context = new CustomerContext())
 {
     var customersList1 = context.Customers
         .OrderBy("Name")
@@ -36,29 +33,23 @@ using (var context = new CustomerContext())
         .OrderBy("Invoices.Count descending")
         .ToList();    
 }
-
-{% endhighlight %}
-
+```
 ### Eval-Expression.NET
 
 [Eval-Expression.NET](https://github.com/zzzprojects/Eval-Expression.NET) library allows you to evaluate, compile, and execute C# code and as well as an expression at runtime. The library also contains extension method for dynamic LINQ.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-using (var context = new CustomerContext())
+
+```csharpusing (var context = new CustomerContext())
 {
     var invoices = context.Invoices
         .Where(i => "i.Items.Count > 0")
         .ToList();    
 }
-
-{% endhighlight %}
-
+```
 #### OrderByDynamic and OrderByDescendingDynamic
 
-{% include template-example.html %} 
-{% highlight csharp %}
-using (var context = new CustomerContext())
+
+```csharpusing (var context = new CustomerContext())
 {
     var customersList1 = context.Customers
         .OrderByDynamic(c => "c.Name")
@@ -70,7 +61,5 @@ using (var context = new CustomerContext())
         .OrderByDescendingDynamic(c => "c.Invoices.Count")
         .ToList();    
 }
-
-{% endhighlight %}
-
+```
 [Learn more](http://eval-expression.net/linq-dynamic-example)

@@ -1,6 +1,4 @@
----
-permalink: problems
----
+# Entity Framework - Problems
 
 ## Troubleshooting
 

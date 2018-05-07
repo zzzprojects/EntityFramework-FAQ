@@ -1,6 +1,4 @@
----
-permalink: retrieve-id-of-inserted-entity
----
+# Entity Framework - Retrieve Id of Inserted Entity
 
 ## How can I get Id of inserted entity? 
 
@@ -15,9 +13,8 @@ I have a problem with Entity Framework in Asp.net. I want to get the Id value wh
 
 It is pretty easy. If you are using DB generated Ids (like `IDENTITY` in MS SQL) you just need to add entity to the contexct and call SaveChanges on that context. Id will be automatically filled for you.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var context = new MyContext())
 {
     Student student = new Student()
@@ -29,7 +26,5 @@ using (var context = new MyContext())
 
   int id = student.Id;
 }
-
-{% endhighlight %}
-
+```
 Entity framework by default follows each `INSERT` with SELECT `SCOPE_IDENTITY()` when auto-generated Ids are used.

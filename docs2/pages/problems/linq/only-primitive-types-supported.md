@@ -1,22 +1,17 @@
----
-permalink: only-primitive-types-supported
----
+# Entity Framework - Only Primitive Types Supported
 
 ## Exception: Unable to create a constant value of type [Object]. Only primitive types or enumeration types are supported in this context.
 
 Using lambda expression, there are certain things that you can express in C#, but Entity Framework doesn't know how to convert it to SQL. For example, retrieve all the invoices of any particular customer.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-using (var context = new CustomerContext())
+
+```csharpusing (var context = new CustomerContext())
 {
     var invoices = context.Invoices
         .Where(i => i.Customer == customer)
         .ToList();
 }
-
-{% endhighlight %}
-
+```
 In this example, entity framework is trying to convert a whole customer object equality into a database query. 
 
 ### StackOverflow Related Questions
@@ -27,14 +22,11 @@ In this example, entity framework is trying to convert a whole customer object e
 ## Solution
 
 The easiest solution to handle this exception is to query data in entity framework queries using constant values, much like SQL queries by comparing the IDs of the object and not the object itself in Where method.
-{% include template-example.html %} 
-{% highlight csharp %}
-using (var context = new CustomerContext())
+
+```csharpusing (var context = new CustomerContext())
 {
     var invoices = context.Invoices
         .Where(i => i.Customer.Id == customer.Id)
         .ToList();
 }
-
-{% endhighlight %}
-
+```

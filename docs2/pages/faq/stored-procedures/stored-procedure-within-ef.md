@@ -1,6 +1,4 @@
----
-permalink: stored-procedure-within-ef
----
+# Entity Framework - Stored Procedure
 
 ## How to work with stored procedure within Entity Framework? 
 
@@ -19,23 +17,20 @@ Entity Framework allows you to use stored procedures to perform predefined logic
 
 We have a very simple database which contains one table, and you can create this table using the following SQL.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 CREATE TABLE [dbo].[Blogs] (
     [BlogId] INT            IDENTITY (1, 1) NOT NULL,
     [Name]   NVARCHAR (MAX) NULL,
     [Url]    NVARCHAR (MAX) NULL,
     CONSTRAINT [PK_dbo.Blogs] PRIMARY KEY CLUSTERED ([BlogId] ASC)
 );
-
-{% endhighlight %} 
+``` 
 
 Select New Query and enter the following code in T-SQL editor to add a stored procedure in your database, which will return the blog based on its Id.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = 
    OBJECT_ID(N'[dbo].[GetBlog]') AND type in (N'P', N'PC'))
 
@@ -50,8 +45,7 @@ BEGIN
    '
 END
 GO
-
-{% endhighlight %} 
+``` 
 
 The `GetBlog` stored procedure take `BlogId` as a parameter and will return the Blog.
 
@@ -61,13 +55,11 @@ Execute the SQL command, and you will see a stored procedure **"GetBlog"** is ad
 
 Let's add create a new project and add new item select ADO.NET Entity Data Model. Use EF Designer from database and EF will generate all the required classes for you. You can simply call the GetBlog stored procedure using context.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-using ( var context = new BloggingContextDbEntities())
+
+```csharpusing ( var context = new BloggingContextDbEntities())
 {
     var blogId = 1;
     var blog = context.GetBlog(blogId).FirstOrDefault();
-}
-{% endhighlight %} 
+}``` 
 
 It will return the blog where Id is 1. 

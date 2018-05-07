@@ -1,23 +1,18 @@
----
-permalink: data-reader-already-open
----
+# Entity Framework - DataReader already Open
 
 ## Exception: There is already an open DataReader associated with this Command which must be closed first
 
 When executing the following code.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 foreach (var blog in blogs)
 {
     blog.Name += " updated";
     blog.Url += " updated";
     context.SaveChanges();
 }
-
-{% endhighlight %}
-
+```
 It gives the following exception.
 
 `InvalidOperationException: There is already an open DataReader associated with this Command which must be closed first.`
@@ -47,9 +42,8 @@ This can happen if you execute a query while iterating over the results from ano
 
 Adding .ToList() to the collection using in foreach loop will likely solve the problem.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 var blogList = blogs.ToList();
 foreach (var blog in blogList)
 {
@@ -57,22 +51,17 @@ foreach (var blog in blogList)
     blog.Url += " updated";
     context.SaveChanges();
 }
-
-{% endhighlight %}
-
+```
 ### Solution 3
 
 Call SaveChanges() outside foreach loop
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 foreach (var blog in blogs)
 {
     blog.Name += " updated";
     blog.Url += " updated";
 }
 context.SaveChanges();
-
-{% endhighlight %}
-
+```

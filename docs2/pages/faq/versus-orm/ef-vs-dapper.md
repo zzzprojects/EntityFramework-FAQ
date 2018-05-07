@@ -1,6 +1,4 @@
----
-permalink: ef-vs-dapper
----
+# Entity Framework vs Dapper
 
 ## Entity Framework vs Dapper? 
 

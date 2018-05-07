@@ -1,6 +1,4 @@
----
-permalink: future
----
+# Entity Framework - Future
 
 ## Introduction
 
@@ -18,9 +16,8 @@ Future feature allows you to batches multiple LINQ queries to be executed in one
  - [Entity Framework Future Value](https://www.google.com/search?q=entity+framework+future+value)
 
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// using Z.EntityFramework.Plus; // Don't forget to include this.
+
+```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
 var ctx = new EntitiesContext();
 
 // CREATE a pending list of future queries
@@ -33,9 +30,7 @@ var futureStates = db.States.Where(x => x.IsActive).Future();
 var countries = futureCountries.ToList();
 
 // futureStates is already resolved and contains the result
-var states = futureStates.ToList();
-{% endhighlight %}
-
+var states = futureStates.ToList();```
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

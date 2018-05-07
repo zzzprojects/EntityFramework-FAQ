@@ -1,6 +1,4 @@
----
-permalink: how-to-mock-data
----
+# Entity Framework - How to Mock Data
 
 ## How to mock data and write unit tests with Entity Framework?
  
@@ -26,9 +24,8 @@ The best approach for unit testing Entity Framework is mocking in memory by usin
 
 A simple modification is enough to make Entity Framework use a fake in-memory database.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 public List<Customer> GetAllCustomers()
 {
     using(MyContext context = Effort.ObjectContextFactory.CreateTransient<MyContext>())
@@ -36,18 +33,15 @@ public List<Customer> GetAllCustomers()
         return context.Customers.ToList();
     }
 }
-
-{% endhighlight %}
-
+```
 The term Transient refers to the lifecycle of the underlying in-memory database. [Click here for more information about Entity Framework Effort](http://entityframework-effort.net/overview)
 
 ### Moq
 
 Moq is the only mocking library for .NET developed from scratch to take full advantage of .NET Linq expression trees and lambda expressions, which makes it the most productive, type-safe and refactoring-friendly mocking library available.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 public List<Customer> GetAllCustomers()
 {
     var mockSet = new Mock<DbSet<Customer>>();
@@ -62,18 +56,15 @@ public List<Customer> GetAllCustomers()
     var service = new CustomerService(mockContext.Object);
     return service.GetAllCustomers();
 }
-
-{% endhighlight %}
-
+```
 [Click here for more information about Moq](https://github.com/Moq/moq4)
 
 ### NSubstitute 
 
 NSubstitute is designed as a friendly substitute for .NET mocking libraries.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 public List<Customer> GetAllCustomers()
 {
     IDbSet<Customer> customerDbSet = Substitute.For<IDbSet<Customer>>();
@@ -87,9 +78,7 @@ public List<Customer> GetAllCustomers()
 
     return repositoryContext.Customers.ToList();
 }
-
-{% endhighlight %}
-
+```
 This provides us with an IDbSet<Customer> fake that we can return from an IRepositoryContext fake.
 
 [Click here for more information about NSubstitute](http://nsubstitute.github.io/help/getting-started/)

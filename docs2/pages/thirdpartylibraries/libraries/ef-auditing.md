@@ -1,6 +1,4 @@
----
-permalink: ef-auditing 
----
+# EF Auditing
 
 ## Definition
 
@@ -8,9 +6,8 @@ permalink: ef-auditing
 
 Derive you context from AuditDbContext.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 public partial class MyContext : AuditingDbContext
 {
     public MyContext() : base("MyContextDB")
@@ -22,22 +19,17 @@ public partial class MyContext : AuditingDbContext
     public DbSet<Invoice> Invoices { get; set; }
     public DbSet<InvoiceItem> InvoiceItems { get; set; }
 }
-
-{% endhighlight %}
-
+```
 Use the overloaded SaveChange(string userName) instead of the standard SaveChanges().
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var context = new EnumTestContext())
 {
     // code here
     context.SaveChanges("UserName");
 }
-
-{% endhighlight %}
-
+```
 ## Requirements
 
 ### Entity Framework Version

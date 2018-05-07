@@ -1,6 +1,4 @@
----
-permalink: system-linq-dynamic 
----
+# Entity Framework - System.Linq.Dynamic
 
 ## Definition
 
@@ -10,15 +8,12 @@ permalink: system-linq-dynamic
 
 The Dynamic Expression API is brought into scope by using (importing) the System.Linq.Dynamic namespace. Below is an example of applying the Dynamic Expression API to a LINQ to SQL data source.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-var query =
+
+```csharpvar query =
     db.Customers.
     Where("City = @@0 and Orders.Count >= @@1", "London", 10).
     OrderBy("CompanyName").
-    Select("new(CompanyName as Name, Phone)");
-{% endhighlight %}
-
+    Select("new(CompanyName as Name, Phone)");```
 Note that expressions in the query are strings that could have been dynamically constructed at run-time.
 
 

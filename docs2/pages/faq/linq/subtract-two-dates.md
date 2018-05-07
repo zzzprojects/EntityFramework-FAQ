@@ -1,14 +1,11 @@
----
-permalink: subtract-two-dates
----
+# Entity Framework - Subtract Two Dates
 
 ## How to subtract two dates? 
 
 How to determine the number of days between 2 dates using LINQ with Entity Framework? Let's take a look at a very simple example where we want to retrieve all those orders which are placed in the last 100 days.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var ctx = new MyContext())
 {
     int noOfDays = 100;
@@ -16,9 +13,7 @@ using (var ctx = new MyContext())
         .Where(s => DateTime.Now.Subtract(s.Date).TotalDays > noOfDays)
         .ToList();
 }
-
-{% endhighlight %}
-
+```
 when you execute the above code, then it will throw the following exception.
 
 `System.NotSupportedException: LINQ to Entities does not recognize the method 'System.TimeSpan Subtract(System.DateTime)' method, and this method cannot be translated into a store expression.`
@@ -31,9 +26,8 @@ when you execute the above code, then it will throw the following exception.
 
 The easiet way to subtract two dates using LINQ is to define a `DateTime` variable that represents the old date, then use that `DateTime` variable in where portion of the LINQ query.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var ctx = new MyContext())
 {
     int noOfDays = 1000;
@@ -43,5 +37,4 @@ using (var ctx = new MyContext())
         .Where(s => s.Date > oldDate)
         .ToList();
 }
-
-{% endhighlight %}
+```

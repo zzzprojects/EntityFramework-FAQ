@@ -1,6 +1,4 @@
----
-permalink: filter
----
+# Entity Framework - Filter
 
 ## Introduction
 
@@ -26,18 +24,15 @@ Filter allows you to filter data from the DbContext with predefined filters.
 
  - [Filter all tables on Context Level](https://stackoverflow.com/questions/39934051/filter-all-tables-on-context-level)
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// using Z.EntityFramework.Plus; // Don't forget to include this.
+
+```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
 var ctx = new EntitiesContext();
 
 ctx.Filter<Post>(q => q.Where(x => !x.IsSoftDeleted));
 
 // SELECT * FROM Post WHERE IsSoftDeleted = false
 var list = ctx.Posts.ToList();
-
-{% endhighlight %}
-
+```
 ## Supported Libraries
 
 

@@ -1,17 +1,13 @@
----
-permalink: ef-extesnsions 
----
-
+# Entity Framework Extensions
 ## Definition
 
 **Entity Framework Extensions** is a library that dramatically improves EF performances by using bulk and batch operations.
 
 People using this library often report performance enhancement by 50x times and more!
 
-{% include template-example.html %} 
 
-{% highlight csharp %}
-// Easy to use
+
+```csharp// Easy to use
 context.BulkSaveChanges();
 context.BulkInsert(list);
 context.BulkUpdate(list);
@@ -20,9 +16,7 @@ context.BulkMerge(list);
 
 // Easy to customize
 context.BulkMerge(customers, options => 
-	options.ColumnPrimaryKeyExpression = customer => customer.Code);
-{% endhighlight %}
-
+	options.ColumnPrimaryKeyExpression = customer => customer.Code);```
 ## BulkSaveChanges Method
 
 **BulkSaveChanges** method is the upgraded version of **SaveChanges**.
@@ -40,8 +34,7 @@ BulkSaveChanges supports everything:
 - Etc.
 
 {% include template-example.html title='BulkSaveChanges Examples' %} 
-{% highlight csharp %}
-context.Customers.AddRange(listToAdd); // add
+```csharpcontext.Customers.AddRange(listToAdd); // add
 context.Customers.RemoveRange(listToRemove); // remove
 listToModify.ForEach(x => x.DateModified = DateTime.Now); // modify
 
@@ -49,9 +42,7 @@ listToModify.ForEach(x => x.DateModified = DateTime.Now); // modify
 context.BulkSaveChanges();
 
 // Easy to customize
-context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
-{% endhighlight %}
-
+context.BulkSaveChanges(bulk => bulk.BatchSize = 100);```
 ### Performance Comparisons
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |
@@ -73,8 +64,7 @@ Bulk Operations Available:
 - [BulkMerge](/bulk-merge) (UPSERT operation)
 
 {% include template-example.html title='Bulk Operations Examples' %} 
-{% highlight csharp %}
-// Easy to use
+```csharp// Easy to use
 context.BulkInsert(list);
 context.BulkUpdate(list);
 context.BulkDelete(list);
@@ -82,9 +72,7 @@ context.BulkMerge(list);
 
 // Easy to customize
 context.BulkMerge(customers, options => 
-	options.ColumnPrimaryKeyExpression = customer => customer.Code; });
-{% endhighlight %}
-
+	options.ColumnPrimaryKeyExpression = customer => customer.Code; });```
 ### Performance Comparisons
 
 | Operations      | 1,000 Entities | 2,000 Entities | 5,000 Entities |

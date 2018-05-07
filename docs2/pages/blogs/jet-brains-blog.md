@@ -1,10 +1,9 @@
+# Entity Framework - JetBrains Blog
+
 @using Z.Websites.Web.Models
 @{
     var model = (EntityFrameworkFaq)ViewBag.EntityFrameworkFaq;
 }
----
-permalink: blogs
----
 
 <h2>JetBrains Blog</h2>
 

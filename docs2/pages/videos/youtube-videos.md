@@ -1,11 +1,10 @@
+# Entity Framework - YouTube Videos
+
 @using Z.Websites.Web.Models
 @{
     var model = (EntityFrameworkFaq)ViewBag.EntityFrameworkFaq;
 }
 
----
-permalink: youtube-videos
----
 <h2>YouTube</h2>
 <table>
     <thead>

@@ -1,6 +1,4 @@
----
-permalink: ef-extended 
----
+# Entity Framework Extended
 
 ## Definition
 
@@ -21,21 +19,17 @@ A current limitation of the Entity Framework is that to update or delete an enti
 
 ### Deleting
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 //delete all users where FirstName matches
 context.Users
     .Where(u => u.FirstName == "firstname")
     .Delete();
-
-{% endhighlight %}
-
+```
 ### Update
 
-{% include template-example.html %} 
-{% highlight csharp %}
-//update all tasks with status of 1 to status of 2
+
+```csharp//update all tasks with status of 1 to status of 2
 context.Tasks
     .Where(t => t.StatusId == 1)
     .Update(t => new Task { StatusId = 2 });
@@ -43,9 +37,7 @@ context.Tasks
 //example of using an IQueryable as the filter for the update
 var users = context.Users.Where(u => u.FirstName == "firstname");
 context.Users.Update(users, u => new User {FirstName = "newfirstname"});
-
-{% endhighlight %}
-
+```
 ## Future Queries
 
 Future queries are created with the following extension methods...
@@ -54,9 +46,8 @@ Future queries are created with the following extension methods...
  - FutureFirstOrDefault()
  - FutureCount()
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 // build up queries
 var q1 = db.Users
     .Where(t => t.EmailAddress == "one@test.com")
@@ -68,16 +59,13 @@ var q2 = db.Tasks
 
 // this triggers the loading of all the future queries
 var users = q1.ToList();
-
-{% endhighlight %}
-
+```
 ## Query Result Cache
 
 To cache query results, use the FromCache extension method. Below is a sample caching query results. Just construct the LINQ query as you usually would, then append the FromCache extension.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 //query is cached using the default settings
 var tasks = db.Tasks
     .Where(t => t.CompleteDate == null)
@@ -86,9 +74,7 @@ var tasks = db.Tasks
 //query result is now cached 300 seconds
 var tasks = db.Tasks
     .Where(t => t.AssignedId == myUserId && t.CompleteDate == null)
-    .FromCache(CachePolicy.WithDurationExpiration(TimeSpan.FromSeconds(300)));
-{% endhighlight %}
-
+    .FromCache(CachePolicy.WithDurationExpiration(TimeSpan.FromSeconds(300)));```
 ## Audit Log
 
 The Audit Log feature will capture the changes to entities anytime they are submitted to the database. 
@@ -101,9 +87,8 @@ The AuditLog can be customized via attributes on the entities or via a Fluent Co
 
 ### Fluent Configuration
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 // config audit when your application is starting up...
 var auditConfiguration = AuditConfiguration.Default;
 
@@ -118,22 +103,17 @@ auditConfiguration.IsAuditable<Task>()
 
 // set the display member when status is a foreign key
 auditConfiguration.IsAuditable<Status>()
-    .DisplayMember(t => t.Name);
-{% endhighlight %}
-
+    .DisplayMember(t => t.Name);```
 ### Create an Audit Log
 
-{% include template-example.html %} 
-{% highlight csharp %}
-var db = new TrackerContext();
+
+```csharpvar db = new TrackerContext();
 var audit = db.BeginAudit();
 
 // make some updates ...
 
 db.SaveChanges();
-var log = audit.LastLog;
-{% endhighlight %}
-
+var log = audit.LastLog;```
 ## Requirements
 
 ### Entity Framework Version

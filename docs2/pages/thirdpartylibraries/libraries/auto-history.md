@@ -1,6 +1,4 @@
----
-permalink: auto-history 
----
+# Entity Framework - AutoHistory
 
 ## Definition
 
@@ -12,9 +10,8 @@ AutoHistory records all the data changing history in a table named `AutoHistorie
 
 To enable the automatic recording change history, override the **OnModelCreating** method in your DbContext class and call **EnableAutoHistory()** extension method with ModelBuilder object.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-public class BloggingContext : DbContext
+
+```csharppublic class BloggingContext : DbContext
 {
     public BloggingContext(DbContextOptions<BloggingContext> options)
         : base(options)
@@ -28,23 +25,18 @@ public class BloggingContext : DbContext
         // enable auto history functionality.
         modelBuilder.EnableAutoHistory();
     }
-}
-{% endhighlight %}
-
+}```
 ## Ensure AutoHistory
 
 To ensure the automatic history, call **EnsureAutoHistory()** extension method with DbContext object.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var context = new BloggingContext())
 {
     context.EnsureAutoHistory();
     // code here
-}
-{% endhighlight %}
-
+}```
 ## Requirements
 
 ### Entity Framework Version

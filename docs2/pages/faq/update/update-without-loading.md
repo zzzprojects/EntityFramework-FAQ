@@ -1,6 +1,4 @@
----
-permalink: update-without-loading
----
+# Entity Framework - Update Without Loading
 
 ## How to update without loading entities in the context?
 
@@ -18,9 +16,8 @@ Updating entities using SaveChanges requires typically to load them first in the
  - UPDATE all rows from the database using a LINQ Query without loading entities in the context.
  - An UPDATE statement is built using the LINQ expression and directly executed in the database.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 // UPDATE all customers that are inactive for more than two years
 context.Customers
     .Where(x => x.Actif && x.LastLogin < DateTime.Now.AddYears(-2))
@@ -28,9 +25,7 @@ context.Customers
 	
 // UPDATE customers by id
 context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {Actif = false});
-
-{% endhighlight %}
-
+```
 ### Performance Comparisons
 
 |Operations	     |1,000 Entitie  |2,000 Entities |5,000 Entities|

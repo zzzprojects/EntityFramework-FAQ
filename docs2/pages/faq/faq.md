@@ -1,6 +1,4 @@
----
-permalink: faq
----
+# Entity Framework - FAQ
 
 ## FAQ
 <h3>SaveChanges</h3>

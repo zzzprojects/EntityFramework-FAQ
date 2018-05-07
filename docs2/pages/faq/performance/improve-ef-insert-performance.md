@@ -1,14 +1,11 @@
----
-permalink: improve-ef-insert-performance
----
+# Entity Framework - Improve EF Insert Performance
 
 ## How to Improve Entity Framework Insert Performance?
 
 When you want to insert hundreds, thousands, or millions of entities, and your application suffers from performances issues.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-using (var ctx = new CustomerContext())
+
+```csharpusing (var ctx = new CustomerContext())
 {
     List<Customer> customers = new List<Customer>();
     
@@ -23,9 +20,7 @@ using (var ctx = new CustomerContext())
     ctx.Customers.AddRange(customers);
 
     ctx.SaveChanges();
-}
-{% endhighlight %}
-
+}```
 The DbContext.SaveChanges is a poor choice for BULK operations as far as performance is concerned. Once you get beyond a few thousand records, the SaveChanges method really starts to break down.
 
 ### StackOverflow Related Questions
@@ -58,9 +53,8 @@ The most significant and recommended solution is BulkInsert provided by [Entity 
  3. USE BulkInsert
  4. Done!
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var ctx = new CustomerContext())
 {
     // 1. CREATE a list
@@ -80,9 +74,7 @@ using (var ctx = new CustomerContext())
     
     // 4. Done!
 }
-
-{% endhighlight %}
-
+```
 ### Alternative to BulkInsert
 
 There are some free third-party libraries alternative to Entity Framework Extensions, they are not hard to find, but we don't recommend them since they work with the simple scenario but fail at supporting complex type, inheritance, and association.

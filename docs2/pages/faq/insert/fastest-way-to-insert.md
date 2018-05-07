@@ -1,6 +1,4 @@
----
-permalink: fastest-way-to-insert
----
+# Entity Framework - Fastest Way To Insert
 
 ## What's the fastest way to insert?
 
@@ -31,9 +29,8 @@ There are many solutions to insert many records in the fastest way, but the most
  3. USE BulkInsert
  4. Done!
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var ctx = new CustomerContext())
 {
     // 1. CREATE a list
@@ -53,9 +50,7 @@ using (var ctx = new CustomerContext())
     
     // 4. Done!
 }
-
-{% endhighlight %}
-
+```
 ### Alternative to BulkInsert
 
 There are some free third-party libraries alternative to Entity Framework Extensions, they are not hard to find, but we don't recommend them since they work with the simple scenario but fail at supporting complex type, inheritance, and association.

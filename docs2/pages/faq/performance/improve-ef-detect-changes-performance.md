@@ -1,14 +1,11 @@
----
-permalink: improve-ef-detect-changes-performance
----
+# Entity Framework - Improve EF DetectChanges Performance
 
 ## How to Improve Entity Framework DetectChanges Performance?
 
 When you track multiple entities in your context, then your application will suffer from performance issues causing by Entity Framework DetectChanges method.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-using (var ctx = new CustomerContext())
+
+```csharpusing (var ctx = new CustomerContext())
 {
     foreach(var line in lines)
     {
@@ -20,9 +17,7 @@ using (var ctx = new CustomerContext())
     }
     
     ctx.SaveChanges();
-}
-{% endhighlight %}
-
+}```
 ### StackOverflow Related Questions
 
  - [WebAPI EF update 30,000 rows of data is very slow](https://stackoverflow.com/questions/38925835/webapi-ef-update-30-000-rows-of-data-is-very-slow/38938259)
@@ -62,9 +57,8 @@ More tracking entities your context contains, slower the DetectChanges method is
  3. CALL SaveChanges
  4. Done!
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// 1. CREATE batchSize variable
+
+```csharp// 1. CREATE batchSize variable
 int batchSize = 1000;
 
 var ctx = new CustomerContext();
@@ -85,9 +79,7 @@ for (int i = 0; i < lines.Count; i++)
 // 3. CALL SaveChanges
 ctx.SaveChanges();
 
-// 4. Done!
-{% endhighlight %}
-
+// 4. Done!```
 ### Reduce the number of DetectChanges
 
 When adding multiple entities, you should always use Entity Framework AddRange once with a list instead of calling various time the Add method.
@@ -116,9 +108,8 @@ When adding multiple entities, you should always use Entity Framework AddRange o
  4. SaveChanges
  5. Done!
 
-{% include template-example.html %} 
-{% highlight csharp %}
-using (var ctx = new CustomerContext())
+
+```csharpusing (var ctx = new CustomerContext())
 {
     // 1. CREATE a list
     List<Customer> customers = new List<Customer>();
@@ -139,9 +130,7 @@ using (var ctx = new CustomerContext())
     ctx.SaveChanges();
     
     // 5. Done!
-}
-{% endhighlight %}
-
+}```
 ### SET AutoDetectChanges to false
 
 When adding multiple entities, if you cannot use AddRange, set Entity Framework AutoDetectChanges to false
@@ -170,9 +159,8 @@ By disabling AutoDetectChanges, the DetectChanges method will only be invoked wh
  3. SaveChanges
  4. Done!
 
-{% include template-example.html %} 
-{% highlight csharp %}
-using (var ctx = new CustomerContext())
+
+```csharpusing (var ctx = new CustomerContext())
 {
     // 1. SET AutoDetectChangesEnabled = false
     ctx.Configuration.AutoDetectChangesEnabled = false;
@@ -191,7 +179,5 @@ using (var ctx = new CustomerContext())
     ctx.SaveChanges();
     
     // 4. Done!
-}
-{% endhighlight %}
-
+}```
 

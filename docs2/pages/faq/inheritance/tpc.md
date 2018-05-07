@@ -1,6 +1,4 @@
----
-permalink: tpc
----
+# Entity Framework - Table Per Concrete
 
 ## What is Inheritance Type in Entity Framework?  
 
@@ -25,9 +23,8 @@ In Table per Concrete type, we use exactly one table for each (nonabstract) clas
 
 Here is the very simple model which contains one abstract class `Person` and two non-abstract classes `Student` and `Teacher`. `Student` and `Teacher` classes inherit the Person class.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 public abstract class Person
 {
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -44,14 +41,11 @@ public class Teacher : Person
 {
     public DateTime HireDate { get; set; }
 }
-
-{% endhighlight %}
-
+```
 Now let's specify a separate table for each of the subclasses and tell Entity Framework Code First that map all inherited properties to this table as well.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 public class InheritanceMappingContext : DbContext
 {
     public DbSet<Person> People { get; set; }
@@ -71,9 +65,7 @@ public class InheritanceMappingContext : DbContext
         });
     }
 }
-
-{% endhighlight %}
-
+```
 #### Important Note:
 
  - SQL Server's `int` identity columns don't work very well together with TPC since there will be duplicate entity keys when inserting in subclasses tables with all having the same identity seed.
@@ -84,9 +76,8 @@ public class InheritanceMappingContext : DbContext
 `EntityMappingConfiguration` class has **MapInheritedProperties** method which is responsible for all the mapping. Our TPC mapping is ready, and we can try adding new records to the database.
 
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var context = new InheritanceMappingContext())
 {
     Student student = new Student()
@@ -108,9 +99,7 @@ using (var context = new InheritanceMappingContext())
 
     context.SaveChanges();
 }
-
-{% endhighlight %}
-
+```
 As you can see, the SQL schema is not aware of the inheritance. We have mapped two unrelated tables to a more expressive class structure. 
 
 <img src="{{ site.github.url }}/images/tpc-db-schema.png">
@@ -121,18 +110,14 @@ If the base class were concrete, then an additional table would be needed to hol
 
 Let's examine SQL for a simple query in TPC mapping. 
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 var query = context.People.ToString();
-
-{% endhighlight %}
-
+```
 This query generated the following SQL statements that being executed in the database.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 SELECT 
     CASE WHEN ([UnionAll1].[C2] = 1) THEN '0X0X' ELSE '0X1X' END AS [C1], 
     [UnionAll1].[Id] AS [C2], 
@@ -154,7 +139,5 @@ SELECT
         CAST(NULL AS datetime2) AS [C1], 
         cast(1 as bit) AS [C2]
         FROM [dbo].[Students] AS [Extent2]) AS [UnionAll1]
-
-{% endhighlight %}
-
+```
 For more information see [Inheritance with EF Code First: Part 3 - Table per Concrete Type (TPC)](https://weblogs.asp.net/manavi/inheritance-mapping-strategies-with-entity-framework-code-first-ctp5-part-3-table-per-concrete-type-tpc-and-choosing-strategy-guidelines)

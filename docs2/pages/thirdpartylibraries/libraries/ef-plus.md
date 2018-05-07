@@ -1,6 +1,4 @@
----
-permalink: ef-plus 
----
+# Entity Framework Plus
 
 ## Definition
 
@@ -30,9 +28,8 @@ Batch Operations method allow performing **UPDATE** or **DELETE** operation dire
 
 Everything is executed on the database side to let you get the best performance available.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// using Z.EntityFramework.Plus; // Don't forget to include this.
+
+```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
 
 // DELETE all users which has been inactive for 2 years
 ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
@@ -41,17 +38,14 @@ ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
 // DELETE using a BatchSize
 ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
          .Delete(x => x.BatchSize = 1000);
-
-{% endhighlight %}
-
+```
 
 ## Audit
 
 Allow to track changes easily, exclude/include entity or property, and autosave audit entries in the database.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// using Z.EntityFramework.Plus; // Don't forget to include this.
+
+```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
 
 var ctx = new EntityContext();
 // ... ctx changes ...
@@ -68,18 +62,13 @@ foreach(var entry in entries)
     {
     }
 }
-
-{% endhighlight %}
-
+```
 AutoSave audit in your database
 
-{% include template-example.html %} 
-{% highlight csharp %}
-AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
+
+```csharpAuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
     (context as EntityContext).AuditEntries.AddRange(audit.Entries);
-
-{% endhighlight %}
-
+```
 ## Requirements
 
 ### Entity Framework Version

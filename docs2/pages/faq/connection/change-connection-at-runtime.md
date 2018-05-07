@@ -1,6 +1,4 @@
----
-permalink: change-connection-at-runtime
----
+# Entity Framework - Change Connection at Runtime
 
 ## How to change the connection at runtime? 
 
@@ -15,20 +13,16 @@ When multiple databases exist and you need to perform database operations on dif
 
 ***DbContext** has a constructor overload that accepts the name of a connection string or a connection string itself. Implement your own version and pass it to the base constructor.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-public CustomerContext( string connectionString) 
+
+```csharppublic CustomerContext( string connectionString) 
         : base(connectionString)
 {
 }
-
-{% endhighlight %}
-
+```
 Then simply pass the name of a configured connection string or a connection string itself when you instantiate your DbContext.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-using (var context = new CustomerContext("connection string 1"))
+
+```csharpusing (var context = new CustomerContext("connection string 1"))
 {
     //code here
 }
@@ -37,5 +31,4 @@ using (var context = new CustomerContext("connection string 2"))
 {
     //code here
 }
-
-{% endhighlight %}
+```

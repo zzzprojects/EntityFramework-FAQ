@@ -1,6 +1,4 @@
----
-permalink: entity-framework-vs-linq-to-sql
----
+# Entity Framework vs LINQ to SQL
 
 ## Entity Framework vs LINQ to SQL? 
 

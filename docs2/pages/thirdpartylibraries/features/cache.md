@@ -1,6 +1,4 @@
----
-permalink: cache
----
+# Entity Framework - Cache
 
 ## Introduction
 
@@ -26,9 +24,8 @@ Cache library allow you to cache the result of a LINQ query, usually in the memo
  - [Entity Framework second level cache](https://stackoverflow.com/questions/35549009/entity-framework-second-level-cache)
 
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// using Z.EntityFramework.Plus; // Don't forget to include this.
+
+```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
 var ctx = new EntitiesContext();
 
 // The first call perform a database round trip
@@ -36,9 +33,7 @@ var countries1 = ctx.Countries.FromCache().ToList();
 
 // Subsequent calls will take the value from the memory instead
 var countries2 = ctx.Countries.FromCache().ToList();
-
-{% endhighlight %}
-
+```
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

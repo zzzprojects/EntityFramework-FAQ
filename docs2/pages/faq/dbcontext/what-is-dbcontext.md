@@ -1,6 +1,4 @@
----
-permalink: what-is-dbcontext
----
+# Entity Framework - What is DbContext
 
 ## What is DbContext? 
 
@@ -26,14 +24,12 @@ DbContext is an important class in Entity Framework API. It is a bridge between 
  - If you are using the EF Designer, Entity Framework will generate the context. 
  - But if you are using the Code First approach, you will typically write the context yourself.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 public class MyContext : DbContext
 {
     public MyContext() : base("name = MyContextDB") { }
     public virtual DbSet<Student> Students { get; set; }
     public DbSet<Course> Courses { get; set; }
 }
-
-{% endhighlight %}
+```

@@ -1,6 +1,4 @@
----
-permalink: audit-net 
----
+# Entity Framework - Audit.NET
 
 ## Definition
 
@@ -14,17 +12,14 @@ The **AuditScope** is the central object of this framework. It encapsulates an a
 
 Create an Audit Scope by calling the static AuditScope.Create method.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-Order order = Db.GetOrder(orderId);
+
+```csharpOrder order = Db.GetOrder(orderId);
 using (AuditScope.Create("Order:Update", () => order))
 {
     order.Status = -1;
     order.OrderItems = null;
     order = Db.OrderUpdate(order);
-}
-{% endhighlight %}
-
+}```
  - The first parameter of the Create method is an event type name intended to identify and group the events. 
  - The second is the delegate to obtain the object to track (target object), and this object is passed as a `Func<object>` to allow the library inspect the value at the beginning and at the disposal of the scope. 
  - It is not mandatory to supply a target object, pass `null` when you don't want to track a specific object.
@@ -35,9 +30,8 @@ The AuditScope object has a Discard() method to allow the user to discard an eve
 
 For example, if you want to avoid saving the audit event when an exception is thrown:
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var scope = AuditScope.Create("SomeEvent", () => someTarget))
 {
     try
@@ -51,9 +45,7 @@ using (var scope = AuditScope.Create("SomeEvent", () => someTarget))
         scope.Discard();
     }
 }
-
-{% endhighlight %}
-
+```
 
 ## Requirements
 

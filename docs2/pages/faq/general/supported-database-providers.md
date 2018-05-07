@@ -1,6 +1,4 @@
----
-permalink: supported-database-providers
----
+# Entity Framework - Supported Database Providers
 
 ## What database provider are supported in Entity Framework?  
 

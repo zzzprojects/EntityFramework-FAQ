@@ -1,6 +1,4 @@
----
-permalink: code-first-vs-database-first
----
+# Entity Framework - Code First vs Database First
 
 ## Code First vs Database First 
 

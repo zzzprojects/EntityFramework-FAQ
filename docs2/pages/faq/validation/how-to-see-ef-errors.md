@@ -1,14 +1,11 @@
----
-permalink: how-to-see-ef-errors
----
+# Entity Framework - How to see Entity Framework Errors
 
 ## How to see Entity Framework Errors?
 
 There are certain cases where your program throws some exception, but with the exception message, you won't be able to understand what is actually causing this exception. For example, have a look at this simple example where we have Blog class.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 class Blog
     {
         public int BlogId { get; set; }
@@ -16,14 +13,11 @@ class Blog
         [StringLength(10)]
         public string Url { get; set; }
     }
-
-{% endhighlight %}
-
+```
 Now let's add a blog to the database.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var context = new BloggingContext())
 {
     var blog = new Blog()
@@ -35,9 +29,7 @@ using (var context = new BloggingContext())
     context.Blogs.Add(blog);
     context.SaveChanges();
 }
-
-{% endhighlight %}
-
+```
 When you execute, you will see the following exception.
  
 `System.Data.Entity.Validation.DbEntityValidationException: 'Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.'`
@@ -54,9 +46,8 @@ Now you can see that the exception doesn't give you any hint about the actual pr
 
 To see the actual error or the cause of the error, we need to use the catch the exception and then write out the errors to log file or console depending upon your application.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var context = new BloggingContext())
 {
     try
@@ -92,9 +83,7 @@ using (var context = new BloggingContext())
         }
     }
 }
-
-{% endhighlight %}
-
+```
 EntityValidationErrors is a collection which represents the entities which couldn't be validated successfully, and the inner collection ValidationErrors per entity is a list of errors on property level.
 
 Now when the exception occurs, you will see the following message in your log file or console.

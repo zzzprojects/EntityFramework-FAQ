@@ -1,10 +1,9 @@
+# Entity Framework - Prashant Brall's Blog
+
 @using Z.Websites.Web.Models
 @{
     var model = (EntityFrameworkFaq)ViewBag.EntityFrameworkFaq;
 }
----
-permalink: blogs
----
 
 <h2>Prashant Brall's Blog</h2>
 

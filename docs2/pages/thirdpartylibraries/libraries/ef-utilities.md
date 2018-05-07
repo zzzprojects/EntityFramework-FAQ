@@ -1,6 +1,4 @@
----
-permalink: ef-utilities 
----
+# Entity Framework Utilities
 
 ## Definition
 
@@ -14,26 +12,22 @@ Entity Framework is quite fast in many cases, but doing CRUD operations over man
 
 A simpler API for working with disconnected entities and only updating single values. It is useful if you want to update a value on an entity without roundtripping the database. A typical use case could be to update the number of reads of a blogpost. 
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var db = new YourDbContext())
 {
       db.AttachAndModify(new BlogPost { ID = postId }).Set(x => x.Reads, 10);
       db.SaveChanges();
 }
-
-{% endhighlight %}
-
+```
 ### IncludeEFU
 
 The standard EF Include is slow to use. The reason is that it cross joins the child records against the parent which means you load a significant amount of duplicate data. It means more data to transfer, more data to parse, more memory etc.
 
 Include EFU, on the other hand, runs two parallel queries and stitch the data together in memory.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-//A very basic query:
+
+```csharp//A very basic query:
 var result = db.Contacts
 .IncludeEFU(db, c => c.PhoneNumbers)
 .ToList();
@@ -45,9 +39,7 @@ var result = db.Contacts
     .OrderBy(p => p.ContactId)
     .ThenByDescending(p => p.Number))
     .ToList();
-
-{% endhighlight %}
-
+```
 ## Batch Operations
 
 Batch Operations methods all work outside the normal EF pipeline and are located on the EFBatchOperation class. 
@@ -62,40 +54,33 @@ Batch Operations methods all work outside the normal EF pipeline and are located
 
 Delete all Entities matching the predicate, instead of loading them into memory then delete them one by one. **EntityFramework.Utilities** helper method will create a SQL Query that removes all items in one single call to the database.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var db = new YourDbContext())
 {
     var count = EFBatchOperation.For(db, db.BlogPosts)
             .Where(b => b.Created < upper && b.Created > lower && b.Title == "T2.0")
             .Delete();
 }
-
-{% endhighlight %}
-
+```
 ### Batch Insert
 
 Insert many entities in a very efficient way instead of adding them one by one as you usually would do with EF.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var db = new YourDbContext())
 {
     EFBatchOperation.For(db, db.BlogPosts).InsertAll(list);
-}
-{% endhighlight %}
-
+}```
 ### Batch Update Entities
 
 Batch Update works just like **Batch Insert** and you can choose exactly which columns to update too.
 
 For example, load all items from the database and update them.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 var commentsFromDb = db.Comments.AsNoTracking().ToList();
 var rand = new Random();
 foreach (var item in commentsFromDb)
@@ -103,9 +88,7 @@ foreach (var item in commentsFromDb)
     item.Reads = rand.Next(0, 9999999);
 }
 EFBatchOperation.For(db, db.Comments).UpdateAll(commentsFromDb, x => x.ColumnsToUpdate(c => c.Reads));
-
-{% endhighlight %}
-
+```
 ## Requirements: Entity Framework Version
 
 ### EF 4-5

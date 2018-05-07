@@ -1,10 +1,10 @@
+# Entity Framework - Channel9 Videos
+
 @using Z.Websites.Web.Models
 @{
     var model = (EntityFrameworkFaq)ViewBag.EntityFrameworkFaq;
 }
----
-permalink: channel9-videos
----
+
 <h2>Channel 9</h2>
 <table>
     <thead>

@@ -1,6 +1,4 @@
----
-permalink: bulk-save-changes
----
+# Entity Framework - BulkSaveChanges
 
 ## Introduction
 
@@ -33,17 +31,14 @@ So if you want to save (add, modify or remove) 10,000 entities, 10,000 database 
  - [Entity Framework Bulk Insert Throws KeyNotFoundException error](https://stackoverflow.com/questions/32225183/entity-framework-bulk-insert-throws-keynotfoundexception-error/37969443#37969443)
  - [Bulk insert from a csv file using Entity Framework](https://stackoverflow.com/questions/36725006/bulk-insert-from-a-csv-file-using-entity-framework)
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// using Z.EntityFramework.Extensions; // Don't forget to include this.
+
+```csharp// using Z.EntityFramework.Extensions; // Don't forget to include this.
 
 // Easy to use
 context.BulkSaveChanges();
 
 // Easy to customize
-context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
-{% endhighlight %}
-
+context.BulkSaveChanges(bulk => bulk.BatchSize = 100);```
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

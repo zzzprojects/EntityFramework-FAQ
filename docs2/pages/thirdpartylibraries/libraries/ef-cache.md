@@ -1,6 +1,4 @@
----
-permalink: ef-cache 
----
+# Entity Framework Cache
 
 ## Definition
 
@@ -15,9 +13,8 @@ This library is filling the gap by enabling caching of query results for Entity 
 
 To use EntityFramework.Cache in your application, you need first configure EF using code-based configuration. 
 
-{% include template-example.html %} 
-{% highlight csharp %}
-public class Configuration : DbConfiguration
+
+```csharppublic class Configuration : DbConfiguration
 {
   public Configuration()
   {
@@ -32,19 +29,14 @@ public class Configuration : DbConfiguration
         (s, _) => new CachingProviderServices(s, transactionHandler, 
           cachingPolicy));
   }
-}
-{% endhighlight %}
-
+}```
 In the latest version, you can also use the new static EntityFrameworkCache.Initialize() method to configure EF to use EFCache. The Initialize method should be invoked before EF is used. 
 
 For example, to initialize EFCache with the built-in InMemoryCache you can use the following code:
 
-{% include template-example.html %} 
-{% highlight csharp %}
-EntityFrameworkCache.Initialize(new InMemoryCache());
 
-{% endhighlight %}
-## Requirements
+```csharpEntityFrameworkCache.Initialize(new InMemoryCache());
+```## Requirements
 
 ### Entity Framework Version
 

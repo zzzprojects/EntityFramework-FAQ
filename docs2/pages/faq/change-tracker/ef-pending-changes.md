@@ -1,6 +1,4 @@
----
-permalink: ef-pending-changes
----
+# Entity Framework - EF Pending Changes
 
 ## How can I see pending changes? 
 
@@ -16,9 +14,8 @@ Sometimes when I execute SaveChanges(), the Entity Framework performs unexpected
 
 Entity Framework has a `ChangeTracker` property in DbContext class which provides access to features of the context that deal with change tracking of entities..
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var ctx = new MyContext())
 {
     //code here
@@ -32,7 +29,5 @@ using (var ctx = new MyContext())
     var deletedEntries = ctx.ChangeTracker.Entries()
         .Where(e => e.State == EntityState.Deleted).ToList();
 }
-
-{% endhighlight %}
-
+```
 The `Entries()` method returns DbEntityEntry objects for all the entities tracked by this context.

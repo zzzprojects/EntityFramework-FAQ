@@ -1,6 +1,4 @@
----
-permalink: ef-code-first
----
+# Entity Framework - EF Code First
 
 ## What is Entity Framework Code First? 
 

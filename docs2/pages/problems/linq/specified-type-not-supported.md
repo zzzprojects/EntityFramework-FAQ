@@ -1,14 +1,11 @@
----
-permalink: specified-type-not-supported
----
+# Entity Framework - Specified Type Not Supported
 
 ## Exception: The specified type member '[MemberName]' is not supported in LINQ to Entities
 
 Entity Framework cannot convert some data types to SQL such as DateTime.Date.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-using (var context = new CustomerContext())
+
+```csharpusing (var context = new CustomerContext())
 {
     var fromDate = DateTime.Now.AddDays(-7).Date;
     var customers = context.Customers
@@ -16,9 +13,7 @@ using (var context = new CustomerContext())
             .Where(c => c.Invoices.Any(i => i.Date.Date >= fromDate)
             .FirstOrDefault();
 }
-
-{% endhighlight %}
-
+```
 ### StackOverflow Related Questions
 
  - [The specified type member 'Date' is not supported in LINQ](https://stackoverflow.com/questions/28381268/the-specified-type-member-date-is-not-supported-in-linq)
@@ -27,9 +22,8 @@ using (var context = new CustomerContext())
 ## Solution
 
 The easiest solution to handle this exception is to use **DbFunctions.TruncateTime** method
-{% include template-example.html %} 
-{% highlight csharp %}
-using (var context = new CustomerContext())
+
+```csharpusing (var context = new CustomerContext())
 {
     var fromDate = DateTime.Now.AddDays(-7).Date;
     var customers = context.Customers
@@ -37,6 +31,4 @@ using (var context = new CustomerContext())
             .Where(c => c.Invoices.Any(i => DbFunctions.TruncateTime(i.Date) >= fromDate)
             .FirstOrDefault();
 }
-
-{% endhighlight %}
-
+```

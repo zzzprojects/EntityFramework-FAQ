@@ -1,6 +1,4 @@
----
-permalink: delete-without-loading
----
+# Entity Framework - Delete Without Loading
 
 ## How to delete without loading entities in the context? 
 
@@ -17,15 +15,12 @@ Deleting entities using SaveChanges requires typically to load them first in the
  - DELETE all rows from the database using a LINQ Query without loading entities in the context.
  - A DELETE statement is built using the LINQ expression and directly executed in the database.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// DELETE all customers that are inactive
+
+```csharp// DELETE all customers that are inactive
 context.Customers.Where(x => !x.IsActif).DeleteFromQuery();
 
 // DELETE customers by id
-context.Customers.Where(x => x.ID == userId).DeleteFromQuery();
-{% endhighlight %}
-
+context.Customers.Where(x => x.ID == userId).DeleteFromQuery();```
 ### Performance Comparisons
 
 |Operations	     |1,000 Entitie  |2,000 Entities |5,000 Entities|

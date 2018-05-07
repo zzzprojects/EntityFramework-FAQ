@@ -1,6 +1,4 @@
----
-permalink: ef-database-first
----
+# Entity Framework - EF Database First
 
 ## What is Entity Framework Database First? 
 

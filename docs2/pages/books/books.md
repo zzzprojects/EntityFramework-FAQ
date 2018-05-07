@@ -1,11 +1,10 @@
+# Entity Framework Books
+
 @using Z.Websites.Web.Models
 @{
     var model = (EntityFrameworkFaq)ViewBag.EntityFrameworkFaq;
 
 }
----
-permalink: books
----
 
 <h2>Amazon</h2>
 

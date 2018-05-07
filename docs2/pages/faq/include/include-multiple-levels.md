@@ -1,6 +1,4 @@
----
-permalink: include-multiple-levels
----
+# Entity Framework - Include Multiple Levels
 
 ## How to Include multiple levels? 
 
@@ -20,43 +18,36 @@ The Include() method allows the required depth of eager loading to be specified 
 
 #### Using Lambda Expression
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var context = new MyContext())
 {
     var customers = context.Customers
             .Include(i => i.Invoices.Select(it => it.Items))
             .ToList();
 }
-
-{% endhighlight %}
-
+```
 The above example will load all customers, their related invoices, and the items of each invoice.
 
 #### Using String Path
 
 Load all customers, all their related invoices, and all items of each invoice using a string to specify the relationships.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var context = new MyContext())
 {
     var customers = context.Customers
             .Include("Invoices.Items"))
             .ToList();
 }
-
-{% endhighlight %}
-
+```
 ### Entity Framework Core
 
 EF Core has a new extension method **ThenInclude()**. You can drill down thru relationships to include multiple levels of related data using the ThenInclude method.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var context = new MyContext())
 {
     var customers = context.Customers
@@ -64,5 +55,4 @@ using (var context = new MyContext())
                 .ThenInclude(it => it.Items))
             .ToList();
 }
-
-{% endhighlight %}
+```

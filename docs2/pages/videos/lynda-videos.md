@@ -1,10 +1,10 @@
+# Entity Framework - Lynda Videos
+
 @using Z.Websites.Web.Models
 @{
     var model = (EntityFrameworkFaq)ViewBag.EntityFrameworkFaq;
 }
----
-permalink: lynda-videos
----
+
 <h2>Lynda </h2>
 <table>
     <thead>

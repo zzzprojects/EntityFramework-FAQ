@@ -1,6 +1,4 @@
----
-permalink: tpt
----
+# Entity Framework - Table Per Type
 
 ## What is Inheritance Type in Entity Framework?  
 
@@ -29,9 +27,8 @@ Table-per-type inheritance uses a separate table in the database to maintain dat
 
 We can create a TPT mapping simply by placing Table attribute on the subclasses to specify the mapped table name. Here is the very simple model which contains one abstract class `Person` and two non-abstract classes `Student` and `Teacher`. `Student` and `Teacher` classes inherit the Person class.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 public abstract class Person
 {
     public int Id { get; set; }
@@ -54,28 +51,22 @@ public class InheritanceMappingContext : DbContext
 {
     public DbSet<Person> People { get; set; }
 }
-
-{% endhighlight %}
-
+```
 If you prefer fluent API, then you can create a TPT mapping by using ToTable() method:
 
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 protected override void OnModelCreating(DbModelBuilder modelBuilder)
 {
     modelBuilder.Entity<Student>().ToTable("Students");
     modelBuilder.Entity<Teacher>().ToTable("Teachers");
 }
-
-{% endhighlight %}
-
+```
 Our TPT mapping is ready, and we can try adding new records to the database.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var context = new InheritanceMappingContext())
 {
     Student student = new Student()
@@ -95,9 +86,7 @@ using (var context = new InheritanceMappingContext())
 
     context.SaveChanges();
 }
-
-{% endhighlight %}
-
+```
 As you can see, the base class and subclasses have its own table. The table for subclasses contains columns only for each noninherited property along with a primary key that is also a foreign key of the base class table. 
 
 <img src="{{ site.github.url }}/images/tpt-db-schema.png">
@@ -105,18 +94,14 @@ As you can see, the base class and subclasses have its own table. The table for 
 #### View Generated SQL
 
 Let's examine SQL query that returns a list of all the students.
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 var query = context.People.OfType<Student>().ToString();
-
-{% endhighlight %}
-
+```
 This query generated the following SQL statements that were executed in the database.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 SELECT 
     '0X0X' AS [C1], 
     [Extent1].[Id] AS [Id], 
@@ -124,9 +109,7 @@ SELECT
     [Extent1].[EnrollmentDate] AS [EnrollmentDate]
     FROM  [dbo].[Students] AS [Extent1]
     INNER JOIN [dbo].[People] AS [Extent2] ON [Extent1].[Id] = [Extent2].[Id]
-
-{% endhighlight %}
-
+```
 #### TPT Advantages
 
  - The primary advantage of this strategy is that the SQL schema is normalized. 

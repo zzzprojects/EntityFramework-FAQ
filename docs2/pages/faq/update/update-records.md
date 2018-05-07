@@ -1,6 +1,4 @@
----
-permalink: update-records
----
+# Entity Framework - Update Records
 
 ## How to Bulk Update?
 
@@ -17,17 +15,14 @@ SaveChanges requires one database round-trip for every entity to update. So if y
 
 [Entity Framework Extensions](http://entityframework-extensions.net/) library adds the BulkUpdate extension method to the DbContext. **BulkUpdate** offers great customization and requires the minimum database round-trips as compared to **SaveChanges**.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// Easy to use
+
+```csharp// Easy to use
 context.BulkUpdate(list);
 
 // Easy to customize
 context.BulkUpdate(customers, options => 
         options.ColumnPrimaryKeyExpression = customer => customer.Code);
-
-{% endhighlight %}
-
+```
 All rows that match the entity key are considered as existing and are UPDATED in the database.
 
 ### Performance Comparisons

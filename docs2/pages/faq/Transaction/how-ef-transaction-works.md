@@ -1,6 +1,4 @@
----
-permalink: how-ef-transaction-works
----
+# Entity Framework - How EF Transaction Works
 
 ## How Entity Framework Transaction Works?  
 
@@ -20,9 +18,8 @@ In Entity Framework 6, when you call SaveChanges() to insert, delete, or update 
 
 In EF 6 and EF Core, you can use multiple SaveChanges within a single transaction as shown below;
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 using (var context = new MyContext())
 {
     using (var dbContextTransaction = context.Database.BeginTransaction())
@@ -38,5 +35,4 @@ using (var context = new MyContext())
         }
     }
  }
-
-{% endhighlight %}
+```

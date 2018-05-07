@@ -1,21 +1,16 @@
----
-permalink: preserve-insert-order
----
+# Entity Framework - Preserve Insert Order
 
 ## How to Preserve Insert Order? 
 
 The Entity Framework doesn't insert the records in the following order.
 
-{% include template-example.html %} 
-{% highlight csharp %}
 
+```csharp
 dbContext.SomeTables1.Add(object1)
 dbContext.SomeTables2.AddRange(objectArray2)
 dbContext.SomeTables3.AddRange(objectArray3)
 dbContext.SaveChanges();
-
-{% endhighlight %}
-
+```
 But it inserts them in a random order. To insert them in the same order, I have to call SaveChanges() after each addition. This is not an efficient solution and in my case, it is taking 10 seconds to do all my inserts, while the random order with one save takes around 3 seconds.
 
 ### StackOverflow Related Questions

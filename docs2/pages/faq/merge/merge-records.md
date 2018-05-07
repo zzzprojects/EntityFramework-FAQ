@@ -1,6 +1,4 @@
----
-permalink: merge-records
----
+# Entity Framework - Merge Records
 
 ## How to Bulk Merge?
 
@@ -17,17 +15,14 @@ if you save 10,000 entities, 20,000 database round-trip will be performed which 
 
 [Entity Framework Extensions](http://entityframework-extensions.net/) library adds the BulkMerge extension method to the DbContext. **BulkMerge** offers great customization and requires the minimum database round-trips as compared to **SaveChanges**.
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// Easy to use
+
+```csharp// Easy to use
 ctx.BulkMerge(list);
 
 // Easy to customize
 context.BulkMerge(customers, options => 
         options.ColumnPrimaryKeyExpression = customer => customer.Code);
-
-{% endhighlight %}
-
+```
 **MERGE** all entities from the database. A merge is an **UPSERT** operation, all rows that match the entity key are considered as existing and are **UPDATED**, other rows are considered as new rows and are **INSERTED** in the database.
 
 ### Performance Comparisons

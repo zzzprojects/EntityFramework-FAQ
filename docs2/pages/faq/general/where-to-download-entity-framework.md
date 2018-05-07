@@ -1,6 +1,4 @@
----
-permalink: where-to-download-entity-framework
----
+# Entity Framework - Where to download Entity Framework
 
 ## Where to download Entity Framework? 
 

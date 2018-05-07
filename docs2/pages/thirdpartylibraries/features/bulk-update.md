@@ -1,6 +1,4 @@
----
-permalink: bulk-update
----
+# Entity Framework - Bulk Update
 
 ## Introduction
 
@@ -29,17 +27,14 @@ So if you want to modify 10,000 entities, 10,000 database round trip will be req
  - [EF 6 performance while updating multiple records with different values in same table](https://stackoverflow.com/questions/37652873/ef-6-performance-while-updating-multiple-records-with-different-values-in-same-t)
  - [Properly and efficiently update hundreds of records in sql server db table from .net c# application loop](https://stackoverflow.com/questions/37397671/properly-and-efficiently-update-hundreds-of-records-in-sql-server-db-table-from)
 
-{% include template-example.html %} 
-{% highlight csharp %}
-// using Z.EntityFramework.Extensions; // Don't forget to include this.
+
+```csharp// using Z.EntityFramework.Extensions; // Don't forget to include this.
 
 // Easy to use
 context.BulkUpdate(list);
 
 // Easy to customize
-context.BulkUpdate(list, bulk => bulk.BatchSize = 100);
-{% endhighlight %}
-
+context.BulkUpdate(list, bulk => bulk.BatchSize = 100);```
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

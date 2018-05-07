@@ -1,12 +1,11 @@
+# Entity Framework - Glossary
+
 @using Z.Websites.Web.Models
 @{
     var model = (EntityFrameworkFaq)ViewBag.EntityFrameworkFaq;
 
 }
 
----
-permalink: glossary
----
 @{
     string glossary_category = "defaut";
     bool begin = true;
