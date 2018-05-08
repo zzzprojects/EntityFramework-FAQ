@@ -33,13 +33,16 @@ So if you want to add 10,000 entities, 10,000 database round trip will be requir
 
 
 
-```csharp// using Z.EntityFramework.Extensions; // Don't forget to include this.
+```csharp
+// using Z.EntityFramework.Extensions; // Don't forget to include this.
 
 // Easy to use
 context.BulkInsert(list);
 
 // Easy to customize
-context.BulkInsert(list, bulk => bulk.BatchSize = 100);```
+context.BulkInsert(list, bulk => bulk.BatchSize = 100);
+```
+
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

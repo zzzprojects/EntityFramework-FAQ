@@ -27,7 +27,8 @@ Now when you execute the above example, you will see that it will retrieve the c
 There are different ways to solve this issue, let's use the projection query.
 
 
-```csharpusing (var context = new MyContext())
+```csharp
+using (var context = new MyContext())
 {
     var fromDate = DateTime.Now.AddDays(-7);
 
@@ -39,7 +40,9 @@ There are different ways to solve this issue, let's use the projection query.
                 Invoices = c.Invoices.Where(i => i.Date >= fromDate)
             })
             .ToList();
-}```
+}
+```
+
 Now you will see that you have an anonymous type which has two properties, c, and Invoices. 
 
 A property called c is of type Customer, and it has all the invoices, the other property Invoices will have only those invoices which are generated in the last seven days.
@@ -51,14 +54,17 @@ A property called c is of type Customer, and it has all the invoices, the other 
 Entity Framework Plus [Query IncludeFilter](http://entityframework-plus.net/query-include-filter) feature allow filtering related entities. This library makes this a lot easier.
 
 
-```csharpusing (var context = new MyContext())
+```csharp
+using (var context = new MyContext())
 {
     var fromDate = DateTime.Now.AddDays(-7);
 
     var customer = context.Customers.Where(c => c.Id == 1)
             .IncludeFilter(c => c.Invoices.Where(i => i.Date >= fromDate))
             .ToList();
-}```
+}
+```
+
 The **IncludeFilter** method works the same as **Include** method but lets you use LINQ Queryable extension methods as part of the query to filter related entities.
 
 [Learn more](http://entityframework-plus.net)

@@ -5,7 +5,8 @@
 When you track multiple entities in your context, then your application will suffer from performance issues causing by Entity Framework DetectChanges method.
 
 
-```csharpusing (var ctx = new CustomerContext())
+```csharp
+using (var ctx = new CustomerContext())
 {
     foreach(var line in lines)
     {
@@ -17,7 +18,9 @@ When you track multiple entities in your context, then your application will suf
     }
     
     ctx.SaveChanges();
-}```
+}
+```
+
 ### StackOverflow Related Questions
 
  - [WebAPI EF update 30,000 rows of data is very slow](https://stackoverflow.com/questions/38925835/webapi-ef-update-30-000-rows-of-data-is-very-slow/38938259)
@@ -58,7 +61,8 @@ More tracking entities your context contains, slower the DetectChanges method is
  4. Done!
 
 
-```csharp// 1. CREATE batchSize variable
+```csharp
+// 1. CREATE batchSize variable
 int batchSize = 1000;
 
 var ctx = new CustomerContext();
@@ -79,7 +83,9 @@ for (int i = 0; i < lines.Count; i++)
 // 3. CALL SaveChanges
 ctx.SaveChanges();
 
-// 4. Done!```
+// 4. Done!
+```
+
 ### Reduce the number of DetectChanges
 
 When adding multiple entities, you should always use Entity Framework AddRange once with a list instead of calling various time the Add method.
@@ -109,7 +115,8 @@ When adding multiple entities, you should always use Entity Framework AddRange o
  5. Done!
 
 
-```csharpusing (var ctx = new CustomerContext())
+```csharp
+using (var ctx = new CustomerContext())
 {
     // 1. CREATE a list
     List<Customer> customers = new List<Customer>();
@@ -130,7 +137,9 @@ When adding multiple entities, you should always use Entity Framework AddRange o
     ctx.SaveChanges();
     
     // 5. Done!
-}```
+}
+```
+
 ### SET AutoDetectChanges to false
 
 When adding multiple entities, if you cannot use AddRange, set Entity Framework AutoDetectChanges to false
@@ -160,7 +169,8 @@ By disabling AutoDetectChanges, the DetectChanges method will only be invoked wh
  4. Done!
 
 
-```csharpusing (var ctx = new CustomerContext())
+```csharp
+using (var ctx = new CustomerContext())
 {
     // 1. SET AutoDetectChangesEnabled = false
     ctx.Configuration.AutoDetectChangesEnabled = false;
@@ -179,5 +189,6 @@ By disabling AutoDetectChanges, the DetectChanges method will only be invoked wh
     ctx.SaveChanges();
     
     // 4. Done!
-}```
+}
+```
 

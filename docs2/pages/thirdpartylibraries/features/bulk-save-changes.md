@@ -32,13 +32,16 @@ So if you want to save (add, modify or remove) 10,000 entities, 10,000 database 
  - [Bulk insert from a csv file using Entity Framework](https://stackoverflow.com/questions/36725006/bulk-insert-from-a-csv-file-using-entity-framework)
 
 
-```csharp// using Z.EntityFramework.Extensions; // Don't forget to include this.
+```csharp
+// using Z.EntityFramework.Extensions; // Don't forget to include this.
 
 // Easy to use
 context.BulkSaveChanges();
 
 // Easy to customize
-context.BulkSaveChanges(bulk => bulk.BatchSize = 100);```
+context.BulkSaveChanges(bulk => bulk.BatchSize = 100);
+```
+
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

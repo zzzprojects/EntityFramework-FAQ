@@ -13,13 +13,16 @@ The **AuditScope** is the central object of this framework. It encapsulates an a
 Create an Audit Scope by calling the static AuditScope.Create method.
 
 
-```csharpOrder order = Db.GetOrder(orderId);
+```csharp
+Order order = Db.GetOrder(orderId);
 using (AuditScope.Create("Order:Update", () => order))
 {
     order.Status = -1;
     order.OrderItems = null;
     order = Db.OrderUpdate(order);
-}```
+}
+```
+
  - The first parameter of the Create method is an event type name intended to identify and group the events. 
  - The second is the delegate to obtain the object to track (target object), and this object is passed as a `Func<object>` to allow the library inspect the value at the beginning and at the disposal of the scope. 
  - It is not mandatory to supply a target object, pass `null` when you don't want to track a specific object.

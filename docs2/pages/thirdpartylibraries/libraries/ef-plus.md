@@ -29,7 +29,8 @@ Batch Operations method allow performing **UPDATE** or **DELETE** operation dire
 Everything is executed on the database side to let you get the best performance available.
 
 
-```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
+```csharp
+// using Z.EntityFramework.Plus; // Don't forget to include this.
 
 // DELETE all users which has been inactive for 2 years
 ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
@@ -45,7 +46,8 @@ ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
 Allow to track changes easily, exclude/include entity or property, and autosave audit entries in the database.
 
 
-```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
+```csharp
+// using Z.EntityFramework.Plus; // Don't forget to include this.
 
 var ctx = new EntityContext();
 // ... ctx changes ...
@@ -63,12 +65,15 @@ foreach(var entry in entries)
     }
 }
 ```
+
 AutoSave audit in your database
 
 
-```csharpAuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
+```csharp
+AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
     (context as EntityContext).AuditEntries.AddRange(audit.Entries);
 ```
+
 ## Requirements
 
 ### Entity Framework Version

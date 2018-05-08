@@ -30,4 +30,5 @@ using (var ctx = new MyContext())
         .Where(e => e.State == EntityState.Deleted).ToList();
 }
 ```
+
 The `Entries()` method returns DbEntityEntry objects for all the entities tracked by this context.

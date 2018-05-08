@@ -42,6 +42,7 @@ public class Teacher : Person
     public DateTime HireDate { get; set; }
 }
 ```
+
 Now let's specify a separate table for each of the subclasses and tell Entity Framework Code First that map all inherited properties to this table as well.
 
 
@@ -66,6 +67,7 @@ public class InheritanceMappingContext : DbContext
     }
 }
 ```
+
 #### Important Note:
 
  - SQL Server's `int` identity columns don't work very well together with TPC since there will be duplicate entity keys when inserting in subclasses tables with all having the same identity seed.
@@ -100,6 +102,7 @@ using (var context = new InheritanceMappingContext())
     context.SaveChanges();
 }
 ```
+
 As you can see, the SQL schema is not aware of the inheritance. We have mapped two unrelated tables to a more expressive class structure. 
 
 <img src="{{ site.github.url }}/images/tpc-db-schema.png">
@@ -114,6 +117,7 @@ Let's examine SQL for a simple query in TPC mapping.
 ```csharp
 var query = context.People.ToString();
 ```
+
 This query generated the following SQL statements that being executed in the database.
 
 
@@ -140,4 +144,5 @@ SELECT
         cast(1 as bit) AS [C2]
         FROM [dbo].[Students] AS [Extent2]) AS [UnionAll1]
 ```
+
 For more information see [Inheritance with EF Code First: Part 3 - Table per Concrete Type (TPC)](https://weblogs.asp.net/manavi/inheritance-mapping-strategies-with-entity-framework-code-first-ctp5-part-3-table-per-concrete-type-tpc-and-choosing-strategy-guidelines)

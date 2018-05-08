@@ -14,10 +14,12 @@ What is the best way performance wise to check if the object exists in the datab
 For IEnumerable<T>, using **Any()** method is the fastest way to check if the object exists in the database. It only has to look at one iteration and will return as soon as it finds a match.
 
 
-```csharpusing (var context = new CustomerContext())
+```csharp
+using (var context = new CustomerContext())
 {
     if(context.Customers.Any(c => c.Id == 1))
     {
         //match
     }  
-}```
+}
+```

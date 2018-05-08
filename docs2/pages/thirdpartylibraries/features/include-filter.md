@@ -34,6 +34,7 @@ var list = ctx.Orders.IncludeFilter(x => x.Items.Where(y => !y.IsSoftDeleted)
                                                .Take(10))
                                                .ToList();
 ```
+
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

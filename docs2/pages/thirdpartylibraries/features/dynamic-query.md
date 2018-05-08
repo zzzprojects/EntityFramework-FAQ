@@ -26,7 +26,8 @@ Dynamic Query allows you to perform dynamic where clause, select, order by, with
  - [Using dynamic linq in EF Linq to Entities](https://stackoverflow.com/questions/28721888/using-dynamic-linq-in-ef-linq-to-entities)
 
 
-```csharpvar customersList1 = context.Customers
+```csharp
+var customersList1 = context.Customers
     .OrderByDynamic(c => "c.Name")
     .ToList();
 
@@ -36,6 +37,7 @@ var customersList2 = context.Customers
     .OrderByDescendingDynamic(c => "c.Invoices.Count")
     .ToList();
 ```
+
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

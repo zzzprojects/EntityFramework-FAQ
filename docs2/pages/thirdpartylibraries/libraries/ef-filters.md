@@ -18,13 +18,16 @@ Filters are used to define a predicate that will be applied to every entity in a
 The FilterInterceptor must be registered with Entity Framework, either through a DbConfiguration class:
 
 
-```csharppublic class ExampleConfiguration : DbConfiguration
+```csharp
+public class ExampleConfiguration : DbConfiguration
 {
     public ExampleConfiguration()
     {
         AddInterceptor(new FilterInterceptor());
     }
-}```
+}
+```
+
 Or through the OnModelCreating method:
 
 
@@ -32,7 +35,9 @@ Or through the OnModelCreating method:
 protected override void OnModelCreating(DbModelBuilder modelBuilder)
 {
     DbInterception.Add(new FilterInterceptor());
-}```
+}
+```
+
 ## Define Filters
 
 ### Single Entity
@@ -40,9 +45,12 @@ protected override void OnModelCreating(DbModelBuilder modelBuilder)
 Filters are first defined, then configured. You define the filter against a single entity:
 
 
-```csharpmodelBuilder.Entity<Listing>()
+```csharp
+modelBuilder.Entity<Listing>()
     .Filter("ActiveListings", c => c.Condition<ListingStatus>(
-        listing => listing.Status == ListingStatus.Active));```
+        listing => listing.Status == ListingStatus.Active));
+```
+
 ### Set of Entities
 
 Filters are also defined against a set of entities that match a type (interface or base class):
@@ -52,6 +60,7 @@ Filters are also defined against a set of entities that match a type (interface 
 modelBuilder.Conventions.Add(
     FilterConvention.Create<IAgencyEntity, int>("Agency", (e, agencyId) => e.AgencyId == agencyId);
 ```
+
 ### Enable Filters
 
 Filters are then enabled and parameter values filled in on a DbContext basis:
@@ -62,12 +71,16 @@ dbContext.EnableFilter("ActiveListings");
 dbContext.EnableFilter("Agency")
     .SetParameter("agencyId", _userContext.CurrentUser.AgencyId);
 ```
+
 ### Disable Filters
 
 Filters are disabled by default, and you can disable them selectively after enabling:
 
 
-```csharpdbContext.DisableFilter("ActiveListings");```
+```csharp
+dbContext.DisableFilter("ActiveListings");
+```
+
 The filter names must be unique, and filter parameter names are matched by the parameter name you supply to the filter definition's expression.
 
 ## Requirements

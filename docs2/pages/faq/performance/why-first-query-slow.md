@@ -17,7 +17,8 @@ Entity Framework loads very slow for the first time because on the first query E
 It will cache the code-first pipeline mapping and store it in a XML file. The next time your application starts, EF will deserialize this cached mapping file which significantly reduces startup time. The cached DbModelStore can be enabled with the following lines of code.
 
 
-```csharppublic class MyContextConfiguration : DbConfiguration
+```csharp
+public class MyContextConfiguration : DbConfiguration
 {
     public MyContextConfiguration()
     {
@@ -53,7 +54,9 @@ It will cache the code-first pipeline mapping and store it in a XML file. The ne
             return base.TryLoad(contextType);
         }
     }
-}```
+}
+```
+
 [Learn more about Cached DbModelStore](https://gist.github.com/davidroth/9886349)
 
 ### Generate Pre-compiled Views

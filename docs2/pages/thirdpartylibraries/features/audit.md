@@ -30,7 +30,8 @@ Entity Framework saves entities in a database but doesn't let you easily track c
  - [Audit Log to Maintain History Against Records using Repository Pattern.](https://stackoverflow.com/questions/35177121/audit-log-to-maintain-history-against-records-using-repository-pattern)
 
 
-```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
+```csharp
+// using Z.EntityFramework.Plus; // Don't forget to include this.
 
 // AutoSave audit in a database
 AuditManager.DefaultConfiguration.AutoSavePreAction = (context, audit) =>
@@ -51,6 +52,7 @@ foreach(var entry in entries)
     }
 }
 ```
+
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

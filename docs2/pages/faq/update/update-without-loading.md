@@ -26,6 +26,7 @@ context.Customers
 // UPDATE customers by id
 context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {Actif = false});
 ```
+
 ### Performance Comparisons
 
 |Operations	     |1,000 Entitie  |2,000 Entities |5,000 Entities|

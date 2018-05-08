@@ -26,13 +26,16 @@ So if you want to modify 10,000 entities, 10,000 database round trip will be req
  - [Performance of Entity Framework](https://stackoverflow.com/questions/37204130/performance-of-entity-framework)
 
 
-```csharp// using Z.EntityFramework.Extensions; // Don't forget to include this.
+```csharp
+// using Z.EntityFramework.Extensions; // Don't forget to include this.
 
 // Easy to use
 context.BulkDelete(list);
 
 // Easy to customize
-context.BulkDelete(list, bulk => bulk.BatchSize = 100);```
+context.BulkDelete(list, bulk => bulk.BatchSize = 100);
+```
+
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

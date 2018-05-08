@@ -51,6 +51,7 @@ public class InheritanceMappingContext : DbContext
     public DbSet<Person> People { get; set; }
 }
 ```
+
 Let's add some new records to the database.
 
 
@@ -75,6 +76,7 @@ using (var context = new InheritanceMappingContext())
     context.SaveChanges();
 }
 ```
+
 As you can see in the DB schema, Code First has added all the properties in one table and also added a discriminator column to distinguish between persistent classes. 
 
 <img src="{{ site.github.url }}/images/tph-db-schema.png">
@@ -92,6 +94,7 @@ Let's examine SQL query that returns a list of all the students and teachers.
 ```csharp
 var query = context.People.ToString();
 ```
+
 This query generated the following SQL statements that were executed in the database.
 
 
@@ -105,4 +108,5 @@ SELECT
     FROM [dbo].[People] AS [Extent1]
     WHERE [Extent1].[Discriminator] IN (N'Student',N'Teacher')
 ```
+
 For more information see [Inheritance with EF Code First: Part 1 - Table per Hierarchy (TPH)](https://weblogs.asp.net/manavi/inheritance-mapping-strategies-with-entity-framework-code-first-ctp5-part-1-table-per-hierarchy-tph)

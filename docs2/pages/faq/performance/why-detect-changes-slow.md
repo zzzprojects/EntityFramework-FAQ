@@ -11,7 +11,8 @@ Entity Framework does a great job detect all changes for us, but in exchange, we
 Let look at this simple example to check the time taken when adding a different number of records, such as 1 record, 10, 100, 10000 records, etc.
  
 
-```csharpusing (var ctx = new EF6.CustomerContext())
+```csharp
+using (var ctx = new EF6.CustomerContext())
 {
 	for(int i = 0; i < lines.Count; i++)
 	{
@@ -19,6 +20,7 @@ Let look at this simple example to check the time taken when adding a different 
 	}
 }
 ```
+
 Imagine the Add method is called every time you add a new entity.
 
 #### Performance Comparisons

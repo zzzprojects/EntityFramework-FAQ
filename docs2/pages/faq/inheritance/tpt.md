@@ -52,6 +52,7 @@ public class InheritanceMappingContext : DbContext
     public DbSet<Person> People { get; set; }
 }
 ```
+
 If you prefer fluent API, then you can create a TPT mapping by using ToTable() method:
 
 
@@ -63,6 +64,7 @@ protected override void OnModelCreating(DbModelBuilder modelBuilder)
     modelBuilder.Entity<Teacher>().ToTable("Teachers");
 }
 ```
+
 Our TPT mapping is ready, and we can try adding new records to the database.
 
 
@@ -87,6 +89,7 @@ using (var context = new InheritanceMappingContext())
     context.SaveChanges();
 }
 ```
+
 As you can see, the base class and subclasses have its own table. The table for subclasses contains columns only for each noninherited property along with a primary key that is also a foreign key of the base class table. 
 
 <img src="{{ site.github.url }}/images/tpt-db-schema.png">
@@ -98,6 +101,7 @@ Let's examine SQL query that returns a list of all the students.
 ```csharp
 var query = context.People.OfType<Student>().ToString();
 ```
+
 This query generated the following SQL statements that were executed in the database.
 
 
@@ -110,6 +114,7 @@ SELECT
     FROM  [dbo].[Students] AS [Extent1]
     INNER JOIN [dbo].[People] AS [Extent2] ON [Extent1].[Id] = [Extent2].[Id]
 ```
+
 #### TPT Advantages
 
  - The primary advantage of this strategy is that the SQL schema is normalized. 

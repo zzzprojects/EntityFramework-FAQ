@@ -16,11 +16,14 @@ Deleting entities using SaveChanges requires typically to load them first in the
  - A DELETE statement is built using the LINQ expression and directly executed in the database.
 
 
-```csharp// DELETE all customers that are inactive
+```csharp
+// DELETE all customers that are inactive
 context.Customers.Where(x => !x.IsActif).DeleteFromQuery();
 
 // DELETE customers by id
-context.Customers.Where(x => x.ID == userId).DeleteFromQuery();```
+context.Customers.Where(x => x.ID == userId).DeleteFromQuery();
+```
+
 ### Performance Comparisons
 
 |Operations	     |1,000 Entitie  |2,000 Entities |5,000 Entities|

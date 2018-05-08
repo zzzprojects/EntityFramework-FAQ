@@ -27,7 +27,8 @@ So if you want to modify 10,000 entities, 10,000 database round trip will be req
  - [Insert/Update bulk data to sql table in entity framework](https://stackoverflow.com/questions/37749818/insert-update-bulk-data-to-sql-table-in-entity-framework)
 
 
-```csharp// using Z.EntityFramework.Extensions; // Don't forget to include this.
+```csharp
+// using Z.EntityFramework.Extensions; // Don't forget to include this.
 
 // Easy to use
 context.BulkMerge(list);
@@ -35,6 +36,7 @@ context.BulkMerge(list);
 // Easy to customize
 context.BulkMerge(list, bulk => bulk.BatchSize = 100);
 ```
+
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

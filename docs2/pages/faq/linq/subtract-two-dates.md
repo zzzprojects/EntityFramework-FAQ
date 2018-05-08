@@ -14,6 +14,7 @@ using (var ctx = new MyContext())
         .ToList();
 }
 ```
+
 when you execute the above code, then it will throw the following exception.
 
 `System.NotSupportedException: LINQ to Entities does not recognize the method 'System.TimeSpan Subtract(System.DateTime)' method, and this method cannot be translated into a store expression.`

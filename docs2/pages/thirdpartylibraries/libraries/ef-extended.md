@@ -26,6 +26,7 @@ context.Users
     .Where(u => u.FirstName == "firstname")
     .Delete();
 ```
+
 ### Update
 
 
@@ -38,6 +39,7 @@ context.Tasks
 var users = context.Users.Where(u => u.FirstName == "firstname");
 context.Users.Update(users, u => new User {FirstName = "newfirstname"});
 ```
+
 ## Future Queries
 
 Future queries are created with the following extension methods...
@@ -60,6 +62,7 @@ var q2 = db.Tasks
 // this triggers the loading of all the future queries
 var users = q1.ToList();
 ```
+
 ## Query Result Cache
 
 To cache query results, use the FromCache extension method. Below is a sample caching query results. Just construct the LINQ query as you usually would, then append the FromCache extension.
@@ -103,17 +106,22 @@ auditConfiguration.IsAuditable<Task>()
 
 // set the display member when status is a foreign key
 auditConfiguration.IsAuditable<Status>()
-    .DisplayMember(t => t.Name);```
+    .DisplayMember(t => t.Name);
+```
+
 ### Create an Audit Log
 
 
-```csharpvar db = new TrackerContext();
+```csharp
+var db = new TrackerContext();
 var audit = db.BeginAudit();
 
 // make some updates ...
 
 db.SaveChanges();
-var log = audit.LastLog;```
+var log = audit.LastLog;
+```
+
 ## Requirements
 
 ### Entity Framework Version

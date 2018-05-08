@@ -11,7 +11,8 @@ AutoHistory records all the data changing history in a table named `AutoHistorie
 To enable the automatic recording change history, override the **OnModelCreating** method in your DbContext class and call **EnableAutoHistory()** extension method with ModelBuilder object.
 
 
-```csharppublic class BloggingContext : DbContext
+```csharp
+public class BloggingContext : DbContext
 {
     public BloggingContext(DbContextOptions<BloggingContext> options)
         : base(options)
@@ -25,7 +26,9 @@ To enable the automatic recording change history, override the **OnModelCreating
         // enable auto history functionality.
         modelBuilder.EnableAutoHistory();
     }
-}```
+}
+```
+
 ## Ensure AutoHistory
 
 To ensure the automatic history, call **EnsureAutoHistory()** extension method with DbContext object.
@@ -36,7 +39,9 @@ using (var context = new BloggingContext())
 {
     context.EnsureAutoHistory();
     // code here
-}```
+}
+```
+
 ## Requirements
 
 ### Entity Framework Version

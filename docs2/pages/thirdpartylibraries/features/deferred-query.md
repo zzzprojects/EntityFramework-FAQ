@@ -22,11 +22,14 @@ Deferred Query allows you to defer immediate query execution from a LINQ method,
 
 
 
-```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
+```csharp
+// using Z.EntityFramework.Plus; // Don't forget to include this.
 var ctx = new EntitiesContext();
 
 // The count is deferred and cached.
-var count = ctx.Customers.DeferredCount().FromCache();```
+var count = ctx.Customers.DeferredCount().FromCache();
+```
+
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

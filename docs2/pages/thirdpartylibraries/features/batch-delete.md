@@ -20,7 +20,8 @@ For **HUGE** performance gains, everything is executed on the database side. To 
  - [Bulk-deleting in LINQ to Entities](https://stackoverflow.com/questions/869209/bulk-deleting-in-linq-to-entities?noredirect=1&lq=1)
 
 
-```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
+```csharp
+// using Z.EntityFramework.Plus; // Don't forget to include this.
 
 // DELETE all users inactive for 2 years
 ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
@@ -28,7 +29,9 @@ ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
 
 // DELETE using a BatchSize
 ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
-         .Delete(x => x.BatchSize = 1000);```
+         .Delete(x => x.BatchSize = 1000);
+```
+
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

@@ -14,15 +14,18 @@ When multiple databases exist and you need to perform database operations on dif
 ***DbContext** has a constructor overload that accepts the name of a connection string or a connection string itself. Implement your own version and pass it to the base constructor.
 
 
-```csharppublic CustomerContext( string connectionString) 
+```csharp
+public CustomerContext( string connectionString) 
         : base(connectionString)
 {
 }
 ```
+
 Then simply pass the name of a configured connection string or a connection string itself when you instantiate your DbContext.
 
 
-```csharpusing (var context = new CustomerContext("connection string 1"))
+```csharp
+using (var context = new CustomerContext("connection string 1"))
 {
     //code here
 }

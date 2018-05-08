@@ -20,6 +20,7 @@ public partial class MyContext : AuditingDbContext
     public DbSet<InvoiceItem> InvoiceItems { get; set; }
 }
 ```
+
 Use the overloaded SaveChange(string userName) instead of the standard SaveChanges().
 
 
@@ -30,6 +31,7 @@ using (var context = new EnumTestContext())
     context.SaveChanges("UserName");
 }
 ```
+
 ## Requirements
 
 ### Entity Framework Version

@@ -20,11 +20,14 @@ For **HUGE** performance gains, everything is executed on the database side. To 
  - [Batch update on object list using EntityFramework 6 and Linq](https://stackoverflow.com/questions/30738697/batch-update-on-object-list-using-entityframework-6-and-linq)
 
 
-```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
+```csharp
+// using Z.EntityFramework.Plus; // Don't forget to include this.
 
 // UPDATE all users inactive for 2 years
 ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
-         .Update(x => new User() { IsSoftDeleted = 1 });```
+         .Update(x => new User() { IsSoftDeleted = 1 });
+```
+
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

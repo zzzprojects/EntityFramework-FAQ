@@ -4,8 +4,8 @@
 
 When you want to insert hundreds, thousands, or millions of entities, and your application suffers from performances issues.
 
-
-```csharpusing (var ctx = new CustomerContext())
+```csharp
+using (var ctx = new CustomerContext())
 {
     List<Customer> customers = new List<Customer>();
     
@@ -20,7 +20,9 @@ When you want to insert hundreds, thousands, or millions of entities, and your a
     ctx.Customers.AddRange(customers);
 
     ctx.SaveChanges();
-}```
+}
+```
+
 The DbContext.SaveChanges is a poor choice for BULK operations as far as performance is concerned. Once you get beyond a few thousand records, the SaveChanges method really starts to break down.
 
 ### StackOverflow Related Questions
@@ -75,6 +77,7 @@ using (var ctx = new CustomerContext())
     // 4. Done!
 }
 ```
+
 ### Alternative to BulkInsert
 
 There are some free third-party libraries alternative to Entity Framework Extensions, they are not hard to find, but we don't recommend them since they work with the simple scenario but fail at supporting complex type, inheritance, and association.

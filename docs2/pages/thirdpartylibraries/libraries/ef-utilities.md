@@ -20,6 +20,7 @@ using (var db = new YourDbContext())
       db.SaveChanges();
 }
 ```
+
 ### IncludeEFU
 
 The standard EF Include is slow to use. The reason is that it cross joins the child records against the parent which means you load a significant amount of duplicate data. It means more data to transfer, more data to parse, more memory etc.
@@ -27,7 +28,8 @@ The standard EF Include is slow to use. The reason is that it cross joins the ch
 Include EFU, on the other hand, runs two parallel queries and stitch the data together in memory.
 
 
-```csharp//A very basic query:
+```csharp
+//A very basic query:
 var result = db.Contacts
 .IncludeEFU(db, c => c.PhoneNumbers)
 .ToList();
@@ -40,6 +42,7 @@ var result = db.Contacts
     .ThenByDescending(p => p.Number))
     .ToList();
 ```
+
 ## Batch Operations
 
 Batch Operations methods all work outside the normal EF pipeline and are located on the EFBatchOperation class. 
@@ -63,6 +66,7 @@ using (var db = new YourDbContext())
             .Delete();
 }
 ```
+
 ### Batch Insert
 
 Insert many entities in a very efficient way instead of adding them one by one as you usually would do with EF.
@@ -72,7 +76,9 @@ Insert many entities in a very efficient way instead of adding them one by one a
 using (var db = new YourDbContext())
 {
     EFBatchOperation.For(db, db.BlogPosts).InsertAll(list);
-}```
+}
+```
+
 ### Batch Update Entities
 
 Batch Update works just like **Batch Insert** and you can choose exactly which columns to update too.
@@ -89,6 +95,7 @@ foreach (var item in commentsFromDb)
 }
 EFBatchOperation.For(db, db.Comments).UpdateAll(commentsFromDb, x => x.ColumnsToUpdate(c => c.Reads));
 ```
+
 ## Requirements: Entity Framework Version
 
 ### EF 4-5

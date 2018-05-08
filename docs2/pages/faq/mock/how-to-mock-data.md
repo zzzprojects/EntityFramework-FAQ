@@ -34,6 +34,7 @@ public List<Customer> GetAllCustomers()
     }
 }
 ```
+
 The term Transient refers to the lifecycle of the underlying in-memory database. [Click here for more information about Entity Framework Effort](http://entityframework-effort.net/overview)
 
 ### Moq
@@ -57,6 +58,7 @@ public List<Customer> GetAllCustomers()
     return service.GetAllCustomers();
 }
 ```
+
 [Click here for more information about Moq](https://github.com/Moq/moq4)
 
 ### NSubstitute 
@@ -79,6 +81,7 @@ public List<Customer> GetAllCustomers()
     return repositoryContext.Customers.ToList();
 }
 ```
+
 This provides us with an IDbSet<Customer> fake that we can return from an IRepositoryContext fake.
 
 [Click here for more information about NSubstitute](http://nsubstitute.github.io/help/getting-started/)

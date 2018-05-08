@@ -28,13 +28,16 @@ So if you want to modify 10,000 entities, 10,000 database round trip will be req
  - [Properly and efficiently update hundreds of records in sql server db table from .net c# application loop](https://stackoverflow.com/questions/37397671/properly-and-efficiently-update-hundreds-of-records-in-sql-server-db-table-from)
 
 
-```csharp// using Z.EntityFramework.Extensions; // Don't forget to include this.
+```csharp
+// using Z.EntityFramework.Extensions; // Don't forget to include this.
 
 // Easy to use
 context.BulkUpdate(list);
 
 // Easy to customize
-context.BulkUpdate(list, bulk => bulk.BatchSize = 100);```
+context.BulkUpdate(list, bulk => bulk.BatchSize = 100);
+```
+
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

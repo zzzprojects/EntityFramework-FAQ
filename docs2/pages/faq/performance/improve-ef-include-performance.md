@@ -4,8 +4,8 @@
 
 Entity Framework does a great job to generate SQL. However, they are often very far to be optimized.
 
-
-```csharpusing (var ctx = new CustomerContext())
+```csharp
+using (var ctx = new CustomerContext())
 {
     var customers = ctx.Customers
         .Include(x => x.Orders.Select(y => y.Items.Select(z => z.Product))
@@ -14,6 +14,7 @@ Entity Framework does a great job to generate SQL. However, they are often very 
         .ToList();
 }
 ```
+
 ### StackOverflow Related Questions
 
  - [Entity Framework Include performance](https://stackoverflow.com/questions/40155092/entity-framework-include-performance)
@@ -46,8 +47,8 @@ You don't have to include everything in the same query, the divide and conquer s
  1. SPLIT the queries in multiple smaller queries
  2. Done!
 
-
-```csharpusing (var ctx = new CustomerContext())
+```csharp
+using (var ctx = new CustomerContext())
 {
     // 1. SPLIT the queries into multiple smaller queries
     var customers = ctx.Customers
@@ -65,6 +66,7 @@ You don't have to include everything in the same query, the divide and conquer s
     // 2. Done!
 }
 ```
+
 ### USE EF+ Query IncludeOptimized (**Recommended**)
 
 [Entity Framework Plus](/ef-plus) library contains IncludeOptimized extension method which under the hood also split the query into multiples queries but way more:
@@ -91,7 +93,8 @@ You don't have to include everything in the same query, the divide and conquer s
  2. Done!
  
 
-```csharpusing (var ctx = new CustomerContext())
+```csharp
+using (var ctx = new CustomerContext())
 {
     // 1. CHANGE all Include by IncludeOptimized
     var customers = ctx.Customers
@@ -101,7 +104,8 @@ You don't have to include everything in the same query, the divide and conquer s
             .ToList();
                        
     // 2. Done!
-}```
+}
+```
 
 ### SQL Generated for Include vs IncludeOptimized
 

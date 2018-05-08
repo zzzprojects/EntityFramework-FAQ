@@ -9,7 +9,8 @@ Inserting thousand of entities for an initial load or a file importation is a ty
 SaveChanges requires one database round-trip for every entity to insert. So if you need to insert 10000 entities, then 10000 database round-trips will be performed which is **INSANELY** slow.
 
 
-```csharpusing (var ctx = new CustomerContext())
+```csharp
+using (var ctx = new CustomerContext())
 {
     List<Customer> customers = new List<Customer>();
     
@@ -26,6 +27,7 @@ SaveChanges requires one database round-trip for every entity to insert. So if y
     ctx.SaveChanges();
 }
 ```
+
 ### StackOverflow Related Questions
 
  - [How to do a Bulk Insert - Linq to Entities](https://stackoverflow.com/questions/1609153/how-to-do-a-bulk-insert-linq-to-entities)
@@ -52,4 +54,5 @@ using (var ctx = new CustomerContext())
     ctx.BulkInsert(customers);
 }
 ```
+
 [Learn more](http://entityframework-extensions.net/bulk-insert)

@@ -5,7 +5,8 @@
 When you overuse the Add() method for multiple entities, your application suffers from performance issues.
 
 
-```csharpusing (var ctx = new CustomerContext())
+```csharp
+using (var ctx = new CustomerContext())
 {
     foreach(var line in lines)
     {
@@ -15,7 +16,9 @@ When you overuse the Add() method for multiple entities, your application suffer
     }
     
     ctx.SaveChanges();
-}```
+}
+```
+
 ### StackOverflow Related Questions
 
  - [WebAPI EF update 30,000 rows of data is very slow](https://stackoverflow.com/questions/38925835/webapi-ef-update-30-000-rows-of-data-is-very-slow/38938259)
@@ -62,7 +65,8 @@ When adding multiple entities, you should always use Entity Framework AddRange o
  5. Done!
 
 
-```csharpusing (var ctx = new CustomerContext())
+```csharp
+using (var ctx = new CustomerContext())
 {
     // 1. CREATE a list
     List<Customer> customers = new List<Customer>();
@@ -83,7 +87,9 @@ When adding multiple entities, you should always use Entity Framework AddRange o
     ctx.SaveChanges();
     
     // 5. Done!
-}```
+}
+```
+
 ### SET AutoDetectChanges to false
 
 When adding multiple entities, if you cannot use AddRange, set Entity Framework AutoDetectChanges to false
@@ -113,7 +119,8 @@ By disabling AutoDetectChanges, the DetectChanges method will only be invoked wh
  4. Done!
 
 
-```csharpusing (var ctx = new CustomerContext())
+```csharp
+using (var ctx = new CustomerContext())
 {
     // 1. SET AutoDetectChangesEnabled = false
     ctx.Configuration.AutoDetectChangesEnabled = false;
@@ -132,7 +139,9 @@ By disabling AutoDetectChanges, the DetectChanges method will only be invoked wh
     ctx.SaveChanges();
     
     // 4. Done!
-}```
+}
+```
+
 ### SPLIT SaveChanges into multiple batches
 
 This solution is not recommended. When adding multiple entities, split entities with a batch size in multiple different contexts.
@@ -163,7 +172,8 @@ More tracking entities your context contains, slower the DetectChanges method is
 
 
 
-```csharp// 1. CREATE a batchSize variable
+```csharp
+// 1. CREATE a batchSize variable
 int batchSize = 1000;
 
 var ctx = new CustomerContext();
@@ -184,4 +194,5 @@ for (int i = 0; i < lines.Count; i++)
 // 3. CALL SaveChanges
 ctx.SaveChanges();
 
-// 4. Done!```
+// 4. Done!
+```

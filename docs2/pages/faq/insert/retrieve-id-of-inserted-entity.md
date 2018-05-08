@@ -27,4 +27,5 @@ using (var context = new MyContext())
   int id = student.Id;
 }
 ```
+
 Entity framework by default follows each `INSERT` with SELECT `SCOPE_IDENTITY()` when auto-generated Ids are used.

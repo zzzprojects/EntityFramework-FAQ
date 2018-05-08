@@ -23,6 +23,7 @@ using (var ctx = new CustomerContext())
     ctx.SaveChanges();
 }
 ```
+
 ### StackOverflow Related Questions
 
  - [Entity framework performance issue, saveChanges is very slow](https://stackoverflow.com/questions/21272763/entity-framework-performance-issue-savechanges-is-very-slow)
@@ -64,6 +65,7 @@ using (var ctx = new CustomerContext())
     ctx.BulkSaveChanges();
 }
 ```
+
 [Learn more](http://entityframework-extensions.net/tutorial-bulk-savechanges)
 
 ## Improve BulkSaveChanges
@@ -74,6 +76,7 @@ BulkSaveChanges is already very fast, but you can make it even faster by simply 
 ```csharp
 EntityFrameworkManager.DefaultEntityFrameworkPropagationValue = false;
 ```
+
 When turning off this option, the library does no longer use the methods from Entity Framework but internal methods from our [Entity Framework Extensions](http://entityframework-extensions.net/) library.
 
 [Learn more](http://entityframework-extensions.net/improve-bulk-savechanges)

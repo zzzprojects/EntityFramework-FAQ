@@ -25,7 +25,8 @@ Cache library allow you to cache the result of a LINQ query, usually in the memo
 
 
 
-```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
+```csharp
+// using Z.EntityFramework.Plus; // Don't forget to include this.
 var ctx = new EntitiesContext();
 
 // The first call perform a database round trip
@@ -34,6 +35,7 @@ var countries1 = ctx.Countries.FromCache().ToList();
 // Subsequent calls will take the value from the memory instead
 var countries2 = ctx.Countries.FromCache().ToList();
 ```
+
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

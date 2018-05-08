@@ -35,6 +35,7 @@ public class Item
     public virtual Invoice Invoice { get; set; }
 }
 ```
+
  - Lazy loading is the process whereby an entity or collection of entities is automatically loaded from the database. 
  - Lazy loading is enabled by default in Entity Framework, and we can mark specific navigation properties or even whole entities as lazy by making them virtual.
 
@@ -55,6 +56,7 @@ using (var context = new MyContext())
     }
 }
 ```
+
 If you look at the generated SQL, then you will see that one SQL query is executed for retrieving customers and then for each customer, another query is executed for retrieving the Invoices related to that customer. So, it means, if you have 1000 customers in your database then EF will execute 1000 queries for retrieving invoices for that 1000 customers.
 
 EF generates the following query for retrieving customers.
@@ -66,16 +68,19 @@ SELECT
     [Extent1].[Name] AS [Name]
     FROM [dbo].[Customers] AS [Extent1]
 ```
+
 And the following query is generated for retrieving invoices of a specific customer.
 
 
-```csharpSELECT
+```sql
+SELECT
     [Extent1].[Id] AS [Id],
     [Extent1].[Date] AS [Date],
     [Extent1].[CustomerId] AS [CustomerId]
     FROM [dbo].[Invoices] AS [Extent1]
     WHERE [Extent1].[CustomerId] = @@EntityKeyValue1
 ```
+
  - Lazy loading is a great mechanism but only if you know when and how to use it. 
  - But look at our example again. Now if you look at this example, then you will see the **select N+1 problem.** 
  - The problem is happening because the Lazy loading is enabled by default and when we are executing a single query and then N following queries (N is the number of parent entities) to query for something. 
@@ -102,10 +107,11 @@ using (var context = new MyContext())
     }
 }
 ```
+
 In the above example, we are telling EF explicitly that besides Customers we also need their Invoices. The following is the SQL generated query:
 
 
-```csharp
+```sql
 SELECT
     [Project1].[Id] AS [Id],
     [Project1].[Name] AS [Name],
@@ -125,4 +131,5 @@ SELECT
     )  AS [Project1]
     ORDER BY [Project1].[Id] ASC, [Project1].[C1] ASC
 ```
+
 As you can see that Entity Framework has used `LEFT OUTER JOIN` clause to get all needed data. Another important point is that using Include method in the context which supports lazy loading can prevent the n+1 problem.

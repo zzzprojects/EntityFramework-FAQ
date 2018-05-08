@@ -19,11 +19,14 @@ Now the question is how the generated SQL statements look like and how we can vi
 The simple way of viewing the SQL generated is to use reflection to create an **ObjectQuery** object and then call the **ToTraceString()** method to actually store the query results.
 
 
-```csharpusing (var context = new CustomerContext())
+```csharp
+using (var context = new CustomerContext())
 {
     var query = context.Customers.Where(c => c.Id == 1); 
     var sql = ((System.Data.Objects.ObjectQuery)query).ToTraceString();  
-}```
+}
+```
+
 ### EF SQL Logging
 
 Entity Framework team added support for interception and logging of generated SQL in EF6. The DbContext.Database.Log property can be set to a delegate for any method that takes a string.
@@ -39,22 +42,28 @@ Entity Framework team added support for interception and logging of generated SQ
 #### Log SQL to Visual Studio Output panel.
 
 
-```csharpusing (var context = new CustomerContext())
+```csharp
+using (var context = new CustomerContext())
 {
     context.Database.Log = s => System.Diagnostics.Debug.WriteLine(s); 
     // query here ....  
-}```
+}
+```
+
 #### Log SQL to an External File
 
 
-```csharpusing (var context = new CustomerContext())
+```csharp
+using (var context = new CustomerContext())
 {
     using (var sqlLogFile = new StreamWriter("C:\\temp\\LogFile.txt"))
     {          
          context.Database.Log = sqlLogFile.Write;
          // query here ....
    }   
-}```
+}
+```
+
 Let's execute some examples and see the output on the console window.
 
 
@@ -77,10 +86,12 @@ SELECT
 
 Closed connection at 12/21/2017 6:01:00 PM +05:00
 ```
+
 Use some condition. 
 
 
-```csharpusing (var context = new CustomerContext())
+```csharp
+using (var context = new CustomerContext())
 {
     context.Database.Log = Console.Write;
     var customers = context.Customers
@@ -88,7 +99,9 @@ Use some condition.
         .Where(c => "c.Invoices.Count > 0")
         .OrderByDescendingDynamic(c => "c.Invoices.Count")
         .ToList();    
-}```
+}
+```
+
 #### Output
 
 

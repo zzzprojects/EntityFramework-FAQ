@@ -30,7 +30,9 @@ var futureStates = db.States.Where(x => x.IsActive).Future();
 var countries = futureCountries.ToList();
 
 // futureStates is already resolved and contains the result
-var states = futureStates.ToList();```
+var states = futureStates.ToList();
+```
+
 ## Supported Libraries
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|

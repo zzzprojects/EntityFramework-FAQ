@@ -56,10 +56,12 @@ Execute the SQL command, and you will see a stored procedure **"GetBlog"** is ad
 Let's add create a new project and add new item select ADO.NET Entity Data Model. Use EF Designer from database and EF will generate all the required classes for you. You can simply call the GetBlog stored procedure using context.
 
 
-```csharpusing ( var context = new BloggingContextDbEntities())
+```csharp
+using ( var context = new BloggingContextDbEntities())
 {
     var blogId = 1;
     var blog = context.GetBlog(blogId).FirstOrDefault();
-}``` 
+}
+``` 
 
 It will return the blog where Id is 1. 

@@ -27,6 +27,7 @@ using (var context = new MyContext())
             .ToList();
 }
 ```
+
 The above example will load all customers, their related invoices, and the items of each invoice.
 
 #### Using String Path
@@ -42,6 +43,7 @@ using (var context = new MyContext())
             .ToList();
 }
 ```
+
 ### Entity Framework Core
 
 EF Core has a new extension method **ThenInclude()**. You can drill down thru relationships to include multiple levels of related data using the ThenInclude method.
