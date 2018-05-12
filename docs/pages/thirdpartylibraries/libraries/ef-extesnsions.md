@@ -1,5 +1,5 @@
 ---
-permalink: ef-extesnsions 
+permalink: ef-extensions 
 ---
 
 ## Definition
