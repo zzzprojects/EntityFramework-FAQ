@@ -12,7 +12,7 @@ The Dynamic Expression API is brought into scope by using (importing) the System
 ```csharp
 var query =
     db.Customers.
-    Where("City = @@0 and Orders.Count >= @@1", "London", 10).
+    Where("City = @0 and Orders.Count >= @1", "London", 10).
     OrderBy("CompanyName").
     Select("new(CompanyName as Name, Phone)");
 ```

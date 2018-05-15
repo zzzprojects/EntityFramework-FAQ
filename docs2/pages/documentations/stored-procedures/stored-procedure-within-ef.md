@@ -36,12 +36,12 @@ IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id =
 
 BEGIN
 
-   EXEC dbo.sp_executesql @@statement = N'
+   EXEC dbo.sp_executesql @statement = N'
    CREATE PROCEDURE [dbo].[GetBlog]
-   @@BlogId int
+   @BlogId int
    AS
    SELECT * FROM dbo.Blogs 
-   WHERE BlogId = @@BlogId
+   WHERE BlogId = @BlogId
    '
 END
 GO

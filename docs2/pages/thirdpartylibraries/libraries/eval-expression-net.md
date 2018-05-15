@@ -20,7 +20,7 @@ Execute a C# expression and return the result.
 ```csharp
 int result = Eval.Execute<int>("X + Y", new { X = 1, Y = 2});
 
-int result = Eval.Execute<int>(@@"
+int result = Eval.Execute<int>(@"
     var list = new List<int>() { 1, 2, 3, 4, 5 };
     var filter = list.Where(x => x < 4);
     return filter.Sum(x => x);");

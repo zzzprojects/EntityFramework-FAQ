@@ -78,7 +78,7 @@ SELECT
     [Extent1].[Date] AS [Date],
     [Extent1].[CustomerId] AS [CustomerId]
     FROM [dbo].[Invoices] AS [Extent1]
-    WHERE [Extent1].[CustomerId] = @@EntityKeyValue1
+    WHERE [Extent1].[CustomerId] = @EntityKeyValue1
 ```
 
  - Lazy loading is a great mechanism but only if you know when and how to use it. 
