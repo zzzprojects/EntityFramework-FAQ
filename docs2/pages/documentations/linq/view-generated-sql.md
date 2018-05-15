@@ -34,11 +34,14 @@ Entity Framework team added support for interception and logging of generated SQ
 #### Log SQL to the Console.
 
 
-```csharpusing (var context = new CustomerContext())
+```csharp
+using (var context = new CustomerContext())
 {
     context.Database.Log = Console.Write; 
     // query here ....  
-}```
+}
+```
+
 #### Log SQL to Visual Studio Output panel.
 
 
@@ -67,11 +70,14 @@ using (var context = new CustomerContext())
 Let's execute some examples and see the output on the console window.
 
 
-```csharpusing (var context = new CustomerContext())
+```csharp
+using (var context = new CustomerContext())
 {
     context.Database.Log = Console.Write;
     var customers = context.Customers.ToList();    
-}```
+}
+```
+
 #### Output
 
 
@@ -145,5 +151,7 @@ SELECT
 -- Executing at 12/21/2017 6:02:44 PM +05:00
 -- Completed in 5 ms with result: SqlDataReader
 
-Closed connection at 12/21/2017 6:02:44 PM +05:00```
+Closed connection at 12/21/2017 6:02:44 PM +05:00
+```
+
 [Learn more](https://msdn.microsoft.com/en-us/library/dn469464(v=vs.113).aspx)
