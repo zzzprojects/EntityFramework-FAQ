@@ -6,13 +6,16 @@ Entity Framework can't filter data based on a property on the server side which 
 
 The following example is trying to filter the customers on TotalInvoices, but the TotalInvoices property is not mapped to database.
 
-```csharpusing (var context = new EnumTestContext())
+```csharp
+using (var context = new EnumTestContext())
 {
     var customers = context.Customers
         .Include(c => c.Invoices)
         .Where(c => c.TotalInvoices > 0)
         .ToList();
-}```
+}
+```
+
 ### StackOverflow Related Questions
 
  - [Only initializers, entity members, and entity navigation properties are supported](https://stackoverflow.com/questions/6919709/only-initializers-entity-members-and-entity-navigation-properties-are-supporte)
@@ -22,7 +25,8 @@ The following example is trying to filter the customers on TotalInvoices, but th
 The easiest solution to handle this exception is to filter the customers on the client side when the property is not mapped to the database. 
 
 
-```csharpusing (var context = new EnumTestContext())
+```csharp
+using (var context = new EnumTestContext())
 {
     var customers = context.Customers
         .Include(c => c.Invoices)
@@ -32,4 +36,5 @@ The easiest solution to handle this exception is to filter the customers on the 
         .ToList();
 }
 ```
+
 In this example, the data is first retrieved from the database, and then the data is filtered based on a property which is not mapped to the database.

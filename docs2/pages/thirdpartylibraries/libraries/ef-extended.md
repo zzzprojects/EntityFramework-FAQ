@@ -30,7 +30,8 @@ context.Users
 ### Update
 
 
-```csharp//update all tasks with status of 1 to status of 2
+```csharp
+//update all tasks with status of 1 to status of 2
 context.Tasks
     .Where(t => t.StatusId == 1)
     .Update(t => new Task { StatusId = 2 });

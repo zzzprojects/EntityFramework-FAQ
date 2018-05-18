@@ -112,7 +112,8 @@ using (var ctx = new CustomerContext())
 People looking at the SQL generated often become speechless.
 
 
-```csharpSELECT
+```csharp
+SELECT
 [UnionAll2].[ID] AS [C1],
 [UnionAll2].[ID1] AS [C2],
 [UnionAll2].[Code] AS [C3],
@@ -268,7 +269,9 @@ FROM [dbo].[EF6_Performance_Include_IncludeOptimized_Customer] AS [Extent8]
 INNER JOIN (SELECT [Extent9].[ID] AS [ID6], [Extent9].[Code] AS [Code6], [Extent9].[Customer_ID] AS [Customer_ID], [Extent10].[ID] AS [ID7], [Extent10].[Code] AS [Code7], [Extent10].[Shipping_ID] AS [Shipping_ID]
 FROM [dbo].[EF6_Performance_Include_IncludeOptimized_Shipping] AS [Extent9]
 LEFT OUTER JOIN [dbo].[EF6_Performance_Include_IncludeOptimized_ShippingItem] AS [Extent10] ON [Extent9].[ID] = [Extent10].[Shipping_ID] ) AS [Join6] ON [Extent8].[ID] = [Join6].[Customer_ID]) AS [UnionAll2]
-ORDER BY [UnionAll2].[ID1] ASC, [UnionAll2].[C1] ASC, [UnionAll2].[ID3] ASC, [UnionAll2].[C2] ASC, [UnionAll2].[C4] ASC, [UnionAll2].[C7] ASC, [UnionAll2].[C13] ASC, [UnionAll2].[C16] ASC```
+ORDER BY [UnionAll2].[ID1] ASC, [UnionAll2].[C1] ASC, [UnionAll2].[ID3] ASC, [UnionAll2].[C2] ASC, [UnionAll2].[C4] ASC, [UnionAll2].[C7] ASC, [UnionAll2].[C13] ASC, [UnionAll2].[C16] ASC
+```
+
 Did you really scroll down all the code to see all the SQL generated to execute this query?
 
 ***Suprised? Astonished? Flabbergasted?***
@@ -368,5 +371,7 @@ SELECT
 [Extent1].[Code] AS [Code],
 [Extent1].[CreatedDate] AS [CreatedDate]
 FROM [dbo].[EF6_Performance_Include_IncludeOptimized_Customer] AS [Extent1]
-ORDER BY [Extent1].[ID] ASC;```
+ORDER BY [Extent1].[ID] ASC;
+```
+
 That's for sure not the most optimized SQL, but it's already way more readable.

@@ -15,9 +15,8 @@ Future feature allows you to batches multiple LINQ queries to be executed in one
  - [Entity Framework Future Query](https://www.google.com/search?q=entity+framework+future+query)
  - [Entity Framework Future Value](https://www.google.com/search?q=entity+framework+future+value)
 
-
-
-```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
+```csharp
+// using Z.EntityFramework.Plus; // Don't forget to include this.
 var ctx = new EntitiesContext();
 
 // CREATE a pending list of future queries

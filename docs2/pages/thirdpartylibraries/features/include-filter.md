@@ -25,7 +25,8 @@ IncludeFilter allows you to add a method similar to EF Include but with a predic
  - [How to filter child collections Entity Framework](https://stackoverflow.com/questions/39046597/how-to-filter-child-collections-entity-framework)
 
 
-```csharp// using Z.EntityFramework.Plus; // Don't forget to include this.
+```csharp
+// using Z.EntityFramework.Plus; // Don't forget to include this.
 var ctx = new EntitiesContext();
 
 // LOAD orders and the first 10 active related entities.

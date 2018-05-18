@@ -5,7 +5,8 @@
 In Entity Framework, mapped entities represent database tables, and Entity Framework doesn't allow to project on a mapped entity in a LINQ to Entities query.  If you project on a mapped entity, then it will partially load an entity, which is not a valid state. EF won't have any clue how to handle when the entity is updated. 
 
 
-```csharpusing (var context = new CustomerContext())
+```csharp
+using (var context = new CustomerContext())
 {
     var customer = context.Customers.Where(c => c.Id == 1)
         .Select(c => new Customer()
@@ -38,9 +39,9 @@ using (var context = new CustomerContext())
         .FirstOrDefault();
 }
 ```
+
 ### DTO
 You can also project on Data Transfer Objects (DTO)
-
 
 ```csharp
 using (var context = new CustomerContext())
@@ -53,8 +54,8 @@ using (var context = new CustomerContext())
         .FirstOrDefault();
 }
 ```
-The DTO class will look like this.
 
+The DTO class will look like this.
 
 ```csharp
 public class CustomerDTO

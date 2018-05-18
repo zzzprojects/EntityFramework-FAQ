@@ -5,7 +5,8 @@
 Entity Framework cannot convert some data types to SQL such as DateTime.Date.
 
 
-```csharpusing (var context = new CustomerContext())
+```csharp
+using (var context = new CustomerContext())
 {
     var fromDate = DateTime.Now.AddDays(-7).Date;
     var customers = context.Customers
@@ -14,6 +15,7 @@ Entity Framework cannot convert some data types to SQL such as DateTime.Date.
             .FirstOrDefault();
 }
 ```
+
 ### StackOverflow Related Questions
 
  - [The specified type member 'Date' is not supported in LINQ](https://stackoverflow.com/questions/28381268/the-specified-type-member-date-is-not-supported-in-linq)
@@ -23,7 +25,8 @@ Entity Framework cannot convert some data types to SQL such as DateTime.Date.
 
 The easiest solution to handle this exception is to use **DbFunctions.TruncateTime** method
 
-```csharpusing (var context = new CustomerContext())
+```csharp
+using (var context = new CustomerContext())
 {
     var fromDate = DateTime.Now.AddDays(-7).Date;
     var customers = context.Customers
