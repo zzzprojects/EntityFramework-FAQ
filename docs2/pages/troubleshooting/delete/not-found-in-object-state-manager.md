@@ -4,7 +4,6 @@
 
 When an entity is fetched and deleted using different DbContext object, then it throws an exception **The object cannot be deleted because it was not found in the ObjectStateManager.**
 
-
 ```csharp
 Customer deletedCustomer = null;
 using (var context = new CustomerContext())
@@ -16,7 +15,9 @@ using (var context = new CustomerContext())
 {
     context.Customers.Remove(deletedCustomer);
     context.SaveChanges();
-}```
+}
+```
+
 In the above example, the customer entity is fetched in one DbContext instance, and then it is removed/deleted from the database in another DbContext instance.  
 ### StackOverflow Related Questions
 
@@ -28,16 +29,16 @@ To avoid the above exception, make sure that either entity is fetched and delete
  
 ### Use Same DbContext Instance
 
-
 ```csharp
 using (var context = new CustomerContext())
 {
     var deletedCustomer = context.Customers.Where(d => d.CustomerId == 3).FirstOrDefault();
     context.Customers.Remove(deletedCustomer);
     context.SaveChanges();
-}```
-### Attach Before Deleting
+}
+```
 
+### Attach Before Deleting
 
 ```csharp
 Customer deletedCustomer = null;
@@ -51,4 +52,5 @@ using (var context = new CustomerContext())
     context.Customers.Attach(deletedCustomer);
     context.Customers.Remove(deletedCustomer);
     context.SaveChanges();
-}```
+}
+```

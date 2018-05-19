@@ -78,7 +78,9 @@ var tasks = db.Tasks
 //query result is now cached 300 seconds
 var tasks = db.Tasks
     .Where(t => t.AssignedId == myUserId && t.CompleteDate == null)
-    .FromCache(CachePolicy.WithDurationExpiration(TimeSpan.FromSeconds(300)));```
+    .FromCache(CachePolicy.WithDurationExpiration(TimeSpan.FromSeconds(300)));
+```
+
 ## Audit Log
 
 The Audit Log feature will capture the changes to entities anytime they are submitted to the database. 
