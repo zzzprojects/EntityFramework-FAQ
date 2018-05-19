@@ -79,7 +79,7 @@ using (var context = new InheritanceMappingContext())
 
 As you can see in the DB schema, Code First has added all the properties in one table and also added a discriminator column to distinguish between persistent classes. 
 
-<img src="{{ site.github.url }}/images/tph-db-schema.png">
+<img src="https://raw.githubusercontent.com/zzzprojects/EntityFramework-FAQ/master/docs/images/tph-db-schema.png">
 
 TPH has one major problem, Columns for properties declared by subclasses will be nullable in the database.
 

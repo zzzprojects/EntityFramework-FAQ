@@ -105,7 +105,7 @@ using (var context = new InheritanceMappingContext())
 
 As you can see, the SQL schema is not aware of the inheritance. We have mapped two unrelated tables to a more expressive class structure. 
 
-<img src="{{ site.github.url }}/images/tpc-db-schema.png">
+<img src="https://raw.githubusercontent.com/zzzprojects/EntityFramework-FAQ/master/docs/images/tpc-db-schema.png">
 
 If the base class were concrete, then an additional table would be needed to hold instances of that class.
 
