@@ -7,20 +7,20 @@
 ## Features
 
 - Batch Operations
-  - [Batch Delete](/batch-delete)
-  - [Batch Update](/batch-update)
+  - [Batch Delete](http://entityframework-plus.net/batch-delete)
+  - [Batch Update](http://entityframework-plus.net/batch-update)
 - LINQ
-  - LINQ Dynamic
+  - [LINQ Dynamic](http://entityframework-plus.net/linq-dynamic)
 - Query
-  - [Cache](/cache)
-  - [Query Deferred](/deferred-query)
-  - Query DbSetFilter
-  - [Query Filter](/filter)
-  - [Query Future](/future)
-  - [Query IncludeFilter](/include-filter)
-  - [Query IncludeOptimized](/include-optimized)
+  - [Cache](http://entityframework-plus.net/query-cache)
+  - [Query Deferred](http://entityframework-plus.net/query-deferred)
+  - [Query DbSetFilter](http://entityframework-plus.net/query-db-set-filter)
+  - [Query Filter](http://entityframework-plus.net/query-filter)
+  - [Query Future](http://entityframework-plus.net/query-future)
+  - [Query IncludeFilter](http://entityframework-plus.net/query-include-filter)
+  - [Query IncludeOptimized](http://entityframework-plus.net/query-include-optimized)
 - Audit
-  - [Audit](/audit)
+  - [Audit](http://entityframework-plus.net/audit)
 
 ## Batch Operations
 
