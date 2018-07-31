@@ -2,7 +2,7 @@
 
 ## Introduction
 
-BulkDelete allows you to improve EF performance by deleting multiples entities with bulk operations.
+BulkDelete allows you to improve EF performance by deleting multiple entities with bulk operations.
 
 ## Why BulkDelete?
 
