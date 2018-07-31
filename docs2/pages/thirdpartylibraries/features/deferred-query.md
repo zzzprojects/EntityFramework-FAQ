@@ -2,13 +2,13 @@
 
 ## Introduction
 
-Deferred Query allows you to defer immediate query execution from a LINQ method, like First or Count, to allow others third party libraries to use their features like caching.
+Deferred Query allows you to defer immediate query execution from a LINQ method, like First or Count, to allow other third-party libraries to use their features like caching.
 
 ## Why Deferred Query?
 
 ### Common scenario:
 
- - Allow other third party libraries to use LINQ immediate method
+ - Allow other third-party libraries to use LINQ immediate method
 
 ## Google Related Searches
 
