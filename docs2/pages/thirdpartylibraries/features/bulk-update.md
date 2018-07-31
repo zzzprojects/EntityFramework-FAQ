@@ -2,7 +2,7 @@
 
 ## Introduction
 
-BulkUpdate allows you to improve EF performance by updating multiples entities with bulk operations.
+BulkUpdate allows you to improve EF performance by updating multiple entities with bulk operations.
 
 ## Why BulkUpdate?
 
