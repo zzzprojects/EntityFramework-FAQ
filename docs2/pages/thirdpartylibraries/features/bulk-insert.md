@@ -2,7 +2,7 @@
 
 ## Introduction
 
-BulkInsert allows you to improve EF performance by inserting multiples entities with bulk operations.
+BulkInsert allows you to improve EF performance by inserting multiple entities with bulk operations.
 
 ## Why BulkInsert?
 
