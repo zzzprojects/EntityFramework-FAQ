@@ -2,7 +2,7 @@
 
 ## Introduction
 
-BulkSaveChanges allows you to improve EF performance by saving multiples entities with bulk operations.
+BulkSaveChanges allows you to improve EF performance by saving multiple entities with bulk operations.
 
 ## Why BulkSaveChanges?
 
