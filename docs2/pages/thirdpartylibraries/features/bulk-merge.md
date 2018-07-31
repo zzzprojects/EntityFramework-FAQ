@@ -2,7 +2,7 @@
 
 ## Introduction
 
-BulkMerge allows you to improve EF performance by merging multiples entities with bulk operations.
+BulkMerge allows you to improve EF performance by merging multiple entities with bulk operations.
 
 ## Why BulkMerge?
 
