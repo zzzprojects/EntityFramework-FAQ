@@ -10,7 +10,7 @@ Entity Framework saves entities in a database but doesn't let you easily track c
 
 ### Common scenario:
 
- - To keep a history of change in a database or a log file
+ - To keep a history of changes in a database or a log file
  - Track What/Who/When a modification occurs
  - Show historical data changes in a grid
 
