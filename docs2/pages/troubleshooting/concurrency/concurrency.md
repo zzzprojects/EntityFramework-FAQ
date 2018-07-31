@@ -23,9 +23,9 @@ using (var context = new CustomerContext())
  - [Solution for: Store update, insert, or delete statement affected an unexpected number of rows (0)](https://stackoverflow.com/questions/6819813/solution-for-store-update-insert-or-delete-statement-affected-an-unexpected-n)
 ## Solution
 
-This exception can be used to warn another user that record has been modified and this the usual way of handling concurrency conflict.
+This exception can be used to warn another user that record has been modified and this is the usual way of handling concurrency conflict.
 
-But if there is requirement like not to show the warning in case of concurrency conflict and handle it with in the code itself.  You can do it too and the idea here is getting the current database value and setting them as the original values for the entity.
+But if there is a requirement like not to show the warning in case of concurrency conflict and handle it with in the code itself.  You can do it too and the idea here is getting the current database value and setting them as the original values for the entity.
 
 
 ```csharp
