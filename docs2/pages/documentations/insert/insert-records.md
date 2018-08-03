@@ -55,4 +55,6 @@ using (var ctx = new CustomerContext())
 }
 ```
 
+[Try it online](https://dotnetfiddle.net/Y1NxKL)
+
 [Learn more](http://entityframework-extensions.net/bulk-insert)

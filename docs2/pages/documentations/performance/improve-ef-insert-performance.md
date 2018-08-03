@@ -78,6 +78,8 @@ using (var ctx = new CustomerContext())
 }
 ```
 
+[Try it online](https://dotnetfiddle.net/Y1NxKL)
+
 ### Alternative to BulkInsert
 
 There are some free third-party libraries alternative to Entity Framework Extensions, they are not hard to find, but we don't recommend them since they work with the simple scenario but fail at supporting complex type, inheritance, and association.
