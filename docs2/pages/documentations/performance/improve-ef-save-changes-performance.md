@@ -22,6 +22,7 @@ using (var ctx = new CustomerContext())
     ctx.SaveChanges();
 }
 ```
+[Try it online](https://dotnetfiddle.net/0Bbdla)
 
 ### StackOverflow Related Questions
 

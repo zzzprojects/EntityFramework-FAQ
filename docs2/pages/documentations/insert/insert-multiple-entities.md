@@ -33,6 +33,7 @@ using (var ctx = new CustomerContext())
     ctx.SaveChanges();
 }
 ```
+[Try it online](https://dotnetfiddle.net/0Bbdla)
 
 AddRange adds the given collection of entities into context underlying the set with each entity being put into the Added state such that it will be inserted into the database when SaveChanges is called.
 
@@ -61,11 +62,12 @@ using (var ctx = new CustomerContext())
     }
     
     // 3. USE BulkInsert
-    ctx.BulkInsert();
+    ctx.BulkInsert(customers);
     
     // 4. Done!
 }
 ```
+[Try it online](https://dotnetfiddle.net/Y1NxKL)
 
 ### Alternative to BulkInsert
 
