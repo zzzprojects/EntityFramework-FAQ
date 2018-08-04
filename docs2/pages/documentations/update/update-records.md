@@ -26,6 +26,7 @@ context.BulkUpdate(customers, options =>
 ```
 
 [Try in online](https://dotnetfiddle.net/2PIVE8)
+
 All rows that match the entity key are considered as existing and are UPDATED in the database.
 
 ### Performance Comparisons
