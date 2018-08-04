@@ -31,7 +31,7 @@ There are different ways to solve this issue, let's use the projection query.
 
 
 ```csharp
-using (var context = new MyContext())
+using (var context = new EntityContext())
 {
     var fromDate = DateTime.Now.AddDays(-7);
 
@@ -59,7 +59,7 @@ Entity Framework Plus [Query IncludeFilter](http://entityframework-plus.net/quer
 
 
 ```csharp
-using (var context = new MyContext())
+using (var context = new EntityContext())
 {
     var fromDate = DateTime.Now.AddDays(-7);
 
