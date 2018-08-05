@@ -19,11 +19,13 @@ The RemoveRange method is used for deleting multiple objects from the database i
 ```csharp
 using (var ctx = new CustomerContext())
 {
-    var removedList = ctx.Students.Where(s => s.Id <= 5).ToList();
-    ctx.Customers.RemoveRange(removedList);
+    var list = context.Customers.Where(c => c.CustomerID <= 500).ToList();
+    ctx.Customers.RemoveRange(list);
     ctx.SaveChanges();
 }
 ```
+
+[Try it online](https://dotnetfiddle.net/hr5xAV)
 
 RemoveRange removes the given collection of entities from the context underlying the set with each entity being put into the Deleted state such that it will be deleted from the database when SaveChanges is called.
 
@@ -39,7 +41,9 @@ There are many solutions to delete many records in the fastest way, but the most
 ```csharp
 using (var ctx = new CustomerContext())
 {
-    var removedList = ctx.Students.Where(s => s.Id <= 5).ToList();
-    ctx.BulkDelete(removedList);
+    var list = context.Customers.Where(c => c.CustomerID <= 500).ToList();
+    ctx.BulkDelete(list);
 }
 ```
+
+[Try it online](https://dotnetfiddle.net/gZiNGK)

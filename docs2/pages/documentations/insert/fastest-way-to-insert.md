@@ -46,11 +46,13 @@ using (var ctx = new CustomerContext())
     }
     
     // 3. USE BulkInsert
-    ctx.BulkInsert(customer);
+    ctx.BulkInsert(customers);
     
     // 4. Done!
 }
 ```
+
+[Try it online](https://dotnetfiddle.net/Y1NxKL)
 
 ### Alternative to BulkInsert
 

@@ -20,13 +20,15 @@ The Include() method allows the required depth of eager loading to be specified 
 
 
 ```csharp
-using (var context = new MyContext())
+using (var context = new EntityContext())
 {
     var customers = context.Customers
             .Include(i => i.Invoices.Select(it => it.Items))
             .ToList();
 }
 ```
+
+[Try it online](https://dotnetfiddle.net/9AlM9G)
 
 The above example will load all customers, their related invoices, and the items of each invoice.
 
@@ -36,13 +38,15 @@ Load all customers, all their related invoices, and all items of each invoice us
 
 
 ```csharp
-using (var context = new MyContext())
+using (var context = new EntityContext())
 {
     var customers = context.Customers
-            .Include("Invoices.Items"))
+            .Include("Invoices.Items")
             .ToList();
 }
 ```
+
+[Try it online](https://dotnetfiddle.net/FyHHLD)
 
 ### Entity Framework Core
 

@@ -6,16 +6,19 @@ To retrieve some information from the database and also want to include related 
 
 
 ```csharp
-using (var context = new MyContext())
+using (var context = new EntityContext())
 {
     var fromDate = DateTime.Now.AddDays(-7);
 
-    var customer = context.Customers.Where(c => c.Id == 1)
+    var customer = context.Customers.Where(c => c.CustomerID == 1)
         .Include(c => c.Invoices)
         .Where(c => c.Invoices.Any(i => i.Date >= fromDate))
         .FirstOrDefault();
 }
 ```
+
+[Try it online](https://dotnetfiddle.net/xT7Foc)
+
 Now when you execute the above example, you will see that it will retrieve the customer with id equal to 1 and will include all the invoices. That is because the where clause is just acting on the customer but not on Invoices.
 
 ### StackOverflow Related Questions
@@ -28,20 +31,21 @@ There are different ways to solve this issue, let's use the projection query.
 
 
 ```csharp
-using (var context = new MyContext())
+using (var context = new EntityContext())
 {
     var fromDate = DateTime.Now.AddDays(-7);
 
     var customer = context.Customers.Where(c => c.Id == 1)
-            .Where(c => c.Invoices.Any(i => i.Date >= fromDate))
-            .Select(c => new
-            {
-                c,
-                Invoices = c.Invoices.Where(i => i.Date >= fromDate)
-            })
-            .ToList();
+        .Where(c => c.Invoices.Any(i => i.Date >= fromDate))
+        .Select(c => new
+        {
+            c,
+            Invoices = c.Invoices.Where(i => i.Date >= fromDate)
+        })
+        .FirstOrDefault();
 }
 ```
+[Try it online](https://dotnetfiddle.net/p7gCwP)
 
 Now you will see that you have an anonymous type which has two properties, c, and Invoices. 
 
@@ -55,15 +59,17 @@ Entity Framework Plus [Query IncludeFilter](http://entityframework-plus.net/quer
 
 
 ```csharp
-using (var context = new MyContext())
+using (var context = new EntityContext())
 {
     var fromDate = DateTime.Now.AddDays(-7);
 
-    var customer = context.Customers.Where(c => c.Id == 1)
+    var customer = context.Customers.Where(c => c.CustomerID == 1)
             .IncludeFilter(c => c.Invoices.Where(i => i.Date >= fromDate))
-            .ToList();
+            .FirstOrDefault();
 }
 ```
+
+[Try it online](https://dotnetfiddle.net/WdiJTj)
 
 The **IncludeFilter** method works the same as **Include** method but lets you use LINQ Queryable extension methods as part of the query to filter related entities.
 

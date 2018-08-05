@@ -22,6 +22,7 @@ context.BulkDelete(list);
 context.BulkDelete(customers, options => 
         options.ColumnPrimaryKeyExpression = customer => customer.Code);
 ```
+[Try it online](https://dotnetfiddle.net/gZiNGK)
 
 All rows that match the entity key are considered as existing and are **DELETED** from the database.
 

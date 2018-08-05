@@ -23,7 +23,7 @@ It allows you to express LINQ queries using extension methods that take string a
 
 
 ```csharp
-using (var context = new CustomerContext())
+using (var context = new EntityContext())
 {
     var customersList1 = context.Customers
         .OrderBy("Name")
@@ -35,6 +35,7 @@ using (var context = new CustomerContext())
         .ToList();    
 }
 ```
+[Try it online](https://dotnetfiddle.net/NOP2Mx)
 
 ### Eval-Expression.NET
 
@@ -42,10 +43,10 @@ using (var context = new CustomerContext())
 
 
 ```csharp
-using (var context = new CustomerContext())
+using (var context = new EntityContext())
 {
-    var invoices = context.Invoices
-        .Where(i => "i.Items.Count > 0")
+    var customersList = context.Customers
+        .Where(c => "c.Invoices.Count > 2")
         .ToList();    
 }
 ```
@@ -54,7 +55,7 @@ using (var context = new CustomerContext())
 
 
 ```csharp
-using (var context = new CustomerContext())
+using (var context = new EntityContext())
 {
     var customersList1 = context.Customers
         .OrderByDynamic(c => "c.Name")
@@ -67,5 +68,7 @@ using (var context = new CustomerContext())
         .ToList();    
 }
 ```
+
+[Try it online](https://dotnetfiddle.net/oxSl3s)
 
 [Learn more](http://eval-expression.net/linq-dynamic-example)

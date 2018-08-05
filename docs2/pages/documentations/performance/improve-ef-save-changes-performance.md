@@ -22,6 +22,7 @@ using (var ctx = new CustomerContext())
     ctx.SaveChanges();
 }
 ```
+[Try it online](https://dotnetfiddle.net/0Bbdla)
 
 ### StackOverflow Related Questions
 
@@ -63,6 +64,7 @@ using (var ctx = new CustomerContext())
     ctx.BulkSaveChanges();
 }
 ```
+[Try it online](https://dotnetfiddle.net/jNqaMF)
 
 [Learn more](http://entityframework-extensions.net/tutorial-bulk-savechanges)
 
@@ -73,6 +75,7 @@ BulkSaveChanges is already very fast, but you can make it even faster by simply 
 ```csharp
 EntityFrameworkManager.DefaultEntityFrameworkPropagationValue = false;
 ```
+[Try it online](https://dotnetfiddle.net/NxeEId)
 
 When turning off this option, the library does no longer use the methods from Entity Framework but internal methods from our [Entity Framework Extensions](http://entityframework-extensions.net/) library.
 
