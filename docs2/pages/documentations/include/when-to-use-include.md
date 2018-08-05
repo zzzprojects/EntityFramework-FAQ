@@ -12,27 +12,26 @@ Before jumping into the answer of when to use Include, let's have a look at the 
 ```csharp
 public class Customer
 {
-    [Key]
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public virtual ICollection<Invoice> Invoices { get; set; }
+	public int CustomerID { get; set; }
+	public string Name { get; set; }
+	public virtual List<Invoice> Invoices { get; set; }
 }
 
 public class Invoice
 {
-    public int Id { get; set; }
-    public DateTime Date { get; set; }
-    public virtual ICollection<Item> Items { get; set; }
-    public int CustomerId { get; set; }
-    public virtual Customer Customer { get; set; }
+	public int InvoiceID { get; set; }
+	public DateTime Date { get; set; }
+	public int CustomerID { get; set; }
+	public virtual Customer Customer { get; set; }
+	public virtual ICollection<Item> Items { get; set; }
 }
 
 public class Item
 {
-    public int Id { get; set; }
-    public string ItemName { get; set; }
-    public int InvoiceId { get; set; }
-    public virtual Invoice Invoice { get; set; }
+	public int ItemID { get; set; }
+	public string Name { get; set; }
+	public int InvoiceID { get; set; }
+	public virtual Invoice Invoice { get; set; }
 }
 ```
 
@@ -56,6 +55,8 @@ using (var context = new MyContext())
     }
 }
 ```
+
+[Try it online](https://dotnetfiddle.net/72Qlki)
 
 If you look at the generated SQL, then you will see that one SQL query is executed for retrieving customers and then for each customer, another query is executed for retrieving the Invoices related to that customer. So, it means, if you have 1000 customers in your database then EF will execute 1000 queries for retrieving invoices for that 1000 customers.
 
@@ -107,6 +108,7 @@ using (var context = new MyContext())
     }
 }
 ```
+[Try it online](https://dotnetfiddle.net/r98dFD)
 
 In the above example, we are telling EF explicitly that besides Customers we also need their Invoices. The following is the SQL generated query:
 
