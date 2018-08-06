@@ -51,6 +51,8 @@ using (var context = new EntityContext())
 }
 ```
 
+[Try it online](https://dotnetfiddle.net/X6LLpf)
+
 #### OrderByDynamic and OrderByDescendingDynamic
 
 
