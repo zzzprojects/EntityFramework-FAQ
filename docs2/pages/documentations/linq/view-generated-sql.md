@@ -20,7 +20,7 @@ The simple way of viewing the SQL generated is to use reflection to create an **
 
 
 ```csharp
-using (var context = new CustomerContext())
+using (var context = new EntityContext())
 {
     var query = context.Customers.Where(c => c.Id == 1); 
     var sql = ((System.Data.Objects.ObjectQuery)query).ToTraceString();  
@@ -35,18 +35,20 @@ Entity Framework team added support for interception and logging of generated SQ
 
 
 ```csharp
-using (var context = new CustomerContext())
+using (var context = new EntityContext())
 {
     context.Database.Log = Console.Write; 
     // query here ....  
 }
 ```
 
+[Try it online](https://dotnetfiddle.net/Xn2Q48)
+
 #### Log SQL to Visual Studio Output panel.
 
 
 ```csharp
-using (var context = new CustomerContext())
+using (var context = new EntityContext())
 {
     context.Database.Log = s => System.Diagnostics.Debug.WriteLine(s); 
     // query here ....  
@@ -57,7 +59,7 @@ using (var context = new CustomerContext())
 
 
 ```csharp
-using (var context = new CustomerContext())
+using (var context = new EntityContext())
 {
     using (var sqlLogFile = new StreamWriter("C:\\temp\\LogFile.txt"))
     {          
@@ -67,16 +69,20 @@ using (var context = new CustomerContext())
 }
 ```
 
+[Try it online](https://dotnetfiddle.net/Yt89yF)
+
 Let's execute some examples and see the output on the console window.
 
 
 ```csharp
-using (var context = new CustomerContext())
+using (var context = new EntityContext())
 {
     context.Database.Log = Console.Write;
     var customers = context.Customers.ToList();    
 }
 ```
+
+[Try it online](https://dotnetfiddle.net/Xn2Q48)
 
 #### Output
 
@@ -97,7 +103,7 @@ Use some condition.
 
 
 ```csharp
-using (var context = new CustomerContext())
+using (var context = new EntityContext())
 {
     context.Database.Log = Console.Write;
     var customers = context.Customers
@@ -107,6 +113,7 @@ using (var context = new CustomerContext())
         .ToList();    
 }
 ```
+[Try it online](https://dotnetfiddle.net/jrZoBI)
 
 #### Output
 
