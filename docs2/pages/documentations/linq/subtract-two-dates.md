@@ -8,9 +8,9 @@ How to determine the number of days between 2 dates using LINQ with Entity Frame
 ```csharp
 using (var ctx = new MyContext())
 {
-    int noOfDays = 100;
-    var orders = ctx.Orders
-        .Where(s => DateTime.Now.Subtract(s.Date).TotalDays > noOfDays)
+    int noOfDays = 30;
+    var orders = context.Invoices
+        .Where(i => DateTime.Now.Subtract(s.Date).TotalDays > noOfDays)
         .ToList();
 }
 ```
@@ -29,13 +29,14 @@ The easiet way to subtract two dates using LINQ is to define a `DateTime` variab
 
 
 ```csharp
-using (var ctx = new MyContext())
-{
-    int noOfDays = 1000;
-    DateTime oldDate = DateTime.Now.Subtract(new TimeSpan(noOfDays, 0, 0, 0, 0));
+using (var context = new EntityContext())
+{	
+	int noOfDays = 30;
+	DateTime oldDate = DateTime.Now.Subtract(new TimeSpan(noOfDays, 0, 0, 0, 0));
 
-    var orders = ctx.Orders
-        .Where(s => s.Date > oldDate)
-        .ToList();
+	var invoices = context.Invoices
+ 		.Where(i => i.Date > oldDate)
+ 		.ToList();
 }
 ```
+[Try it online](https://dotnetfiddle.net/C0vwtL)
