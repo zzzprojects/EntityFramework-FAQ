@@ -20,19 +20,33 @@ In EF 6 and EF Core, you can use multiple SaveChanges within a single transactio
 
 
 ```csharp
-using (var context = new MyContext())
+using (var context = new EntityContext())
 {
-    using (var dbContextTransaction = context.Database.BeginTransaction())
+    context.Database.Log = Console.Write;
+
+    using (DbContextTransaction transaction = context.Database.BeginTransaction())
     {
         try
         {
-            //code here
-            dbContextTransaction.Commit();
+            List<Customer>  customerList = new List<Customer>()
+            {
+                new Customer() { Name ="John"},
+                new Customer() { Name ="Andy"},
+                new Customer() { Name ="Mark"}
+            };
+
+            context.Customers.AddRange(customerList);
+            context.SaveChanges();
+    
+            context.Invoices.Add(new Invoice() { Date = DateTime.Now.AddDays(-107), CustomerID = 1});
+            context.SaveChanges();
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-            dbContextTransaction.Rollback();
+            transaction.Rollback();
         }
     }
- }
+}
 ```
+
+[Try it online](https://dotnetfiddle.net/QZspxa)
