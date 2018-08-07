@@ -5,8 +5,6 @@
 
 People using this library often report performance enhancement by 50x times and more!
 
-
-
 ```csharp
 // Easy to use
 context.BulkSaveChanges();
@@ -36,7 +34,7 @@ BulkSaveChanges supports everything:
 - Self-Hierarchy
 - Etc.
 
-{% include template-example.html title='BulkSaveChanges Examples' %} 
+### BulkSaveChanges Examples
 ```csharp
 context.Customers.AddRange(listToAdd); // add
 context.Customers.RemoveRange(listToRemove); // remove
@@ -69,7 +67,7 @@ Bulk Operations Available:
 - [BulkDelete](/bulk-delete)
 - [BulkMerge](/bulk-merge) (UPSERT operation)
 
-{% include template-example.html title='Bulk Operations Examples' %} 
+### Bulk Operations Examples
 ```csharp
 // Easy to use
 context.BulkInsert(list);
