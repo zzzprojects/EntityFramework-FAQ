@@ -47,7 +47,7 @@ Now let's specify a separate table for each of the subclasses and tell Entity Fr
 
 
 ```csharp
-public class InheritanceMappingContext : DbContext
+public class EntityContext : DbContext
 {
     public DbSet<Person> People { get; set; }
 
