@@ -16,7 +16,7 @@ Entity Framework has a `ChangeTracker` property in DbContext class which provide
 
 
 ```csharp
-using (var ctx = new MyContext())
+using (var ctx = new EntityContext())
 {
     //code here
 
@@ -30,5 +30,6 @@ using (var ctx = new MyContext())
         .Where(e => e.State == EntityState.Deleted).ToList();
 }
 ```
+[Try it online](https://dotnetfiddle.net/i4RKYA)
 
 The `Entries()` method returns DbEntityEntry objects for all the entities tracked by this context.
