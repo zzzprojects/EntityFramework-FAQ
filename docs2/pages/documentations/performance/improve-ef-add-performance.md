@@ -119,7 +119,6 @@ By disabling AutoDetectChanges, the DetectChanges method will only be invoked wh
  3. SaveChanges
  4. Done!
 
-
 ```csharp
 using (var context = new EntityContext())
 {
