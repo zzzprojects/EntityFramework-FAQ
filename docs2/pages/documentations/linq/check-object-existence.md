@@ -15,11 +15,13 @@ For IEnumerable<T>, using **Any()** method is the fastest way to check if the ob
 
 
 ```csharp
-using (var context = new CustomerContext())
+using (var context = new EntityContext())
 {
-    if(context.Customers.Any(c => c.Id == 1))
+    if(context.Customers.Any(c => c.CustomerID == 1))
     {
         //match
     }  
 }
 ```
+
+[Try it online](https://dotnetfiddle.net/zSY8BL)

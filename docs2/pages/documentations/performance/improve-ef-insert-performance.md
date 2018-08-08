@@ -72,7 +72,7 @@ using (var ctx = new CustomerContext())
     }
     
     // 3. USE BulkInsert
-    ctx.BulkInsert();
+    ctx.BulkInsert(customers);
     
     // 4. Done!
 }

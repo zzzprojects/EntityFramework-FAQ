@@ -47,7 +47,7 @@ Now let's specify a separate table for each of the subclasses and tell Entity Fr
 
 
 ```csharp
-public class InheritanceMappingContext : DbContext
+public class EntityContext : DbContext
 {
     public DbSet<Person> People { get; set; }
 
@@ -80,7 +80,7 @@ public class InheritanceMappingContext : DbContext
 
 
 ```csharp
-using (var context = new InheritanceMappingContext())
+using (var context = new EntityContext())
 {
     Student student = new Student()
     {
@@ -102,6 +102,8 @@ using (var context = new InheritanceMappingContext())
     context.SaveChanges();
 }
 ```
+
+[Try it online](https://dotnetfiddle.net/IwlxO2)
 
 As you can see, the SQL schema is not aware of the inheritance. We have mapped two unrelated tables to a more expressive class structure. 
 
@@ -144,5 +146,6 @@ SELECT
         cast(1 as bit) AS [C2]
         FROM [dbo].[Students] AS [Extent2]) AS [UnionAll1]
 ```
+[Try it online](https://dotnetfiddle.net/zypIN0)
 
 For more information see [Inheritance with EF Code First: Part 3 - Table per Concrete Type (TPC)](https://weblogs.asp.net/manavi/inheritance-mapping-strategies-with-entity-framework-code-first-ctp5-part-3-table-per-concrete-type-tpc-and-choosing-strategy-guidelines)

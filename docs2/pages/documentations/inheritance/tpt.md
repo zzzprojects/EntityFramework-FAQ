@@ -47,15 +47,13 @@ public class Teacher : Person
     public DateTime HireDate { get; set; }
 }
 
-public class InheritanceMappingContext : DbContext
+public class EntityContext : DbContext
 {
     public DbSet<Person> People { get; set; }
 }
 ```
 
 If you prefer fluent API, then you can create a TPT mapping by using ToTable() method:
-
-
 
 ```csharp
 protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -67,9 +65,8 @@ protected override void OnModelCreating(DbModelBuilder modelBuilder)
 
 Our TPT mapping is ready, and we can try adding new records to the database.
 
-
 ```csharp
-using (var context = new InheritanceMappingContext())
+using (var context = new EntityContext())
 {
     Student student = new Student()
     {
@@ -89,6 +86,7 @@ using (var context = new InheritanceMappingContext())
     context.SaveChanges();
 }
 ```
+[Try it online]
 
 As you can see, the base class and subclasses have its own table. The table for subclasses contains columns only for each noninherited property along with a primary key that is also a foreign key of the base class table. 
 
@@ -101,9 +99,9 @@ Let's examine SQL query that returns a list of all the students.
 ```csharp
 var query = context.People.OfType<Student>().ToString();
 ```
+[Try it online](https://dotnetfiddle.net/7bnLn8)
 
 This query generated the following SQL statements that were executed in the database.
-
 
 ```csharp
 SELECT 

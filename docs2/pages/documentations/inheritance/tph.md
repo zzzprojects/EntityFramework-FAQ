@@ -24,10 +24,9 @@ TPH inheritance uses one database table to maintain data for all of the entity t
  - The concrete subclass represented by a particular row is identified by the value of a type discriminator column. 
  - 
 
-#### TPT in Code First
+#### TPH in Code First
 
 You don't have to do anything special in Code First to enable TPH; it's the default inheritance mapping strategy. Here is the very simple model which contains one abstract class `Person` and two non-abstract classes `Student` and `Teacher`. `Student` and `Teacher` classes inherit the Person class.
-
 
 ```csharp
 public abstract class Person
@@ -46,7 +45,7 @@ public class Teacher : Person
     public DateTime HireDate { get; set; }
 }
 
-public class InheritanceMappingContext : DbContext
+public class EntityContext : DbContext
 {
     public DbSet<Person> People { get; set; }
 }
@@ -56,7 +55,7 @@ Let's add some new records to the database.
 
 
 ```csharp
-using (var context = new InheritanceMappingContext())
+using (var context = new EntityContext())
 {
     Student student = new Student()
     {
@@ -76,6 +75,7 @@ using (var context = new InheritanceMappingContext())
     context.SaveChanges();
 }
 ```
+[Try it online](https://dotnetfiddle.net/ZqCM2Q)
 
 As you can see in the DB schema, Code First has added all the properties in one table and also added a discriminator column to distinguish between persistent classes. 
 
@@ -94,6 +94,7 @@ Let's examine SQL query that returns a list of all the students and teachers.
 ```csharp
 var query = context.People.ToString();
 ```
+[Try it online](https://dotnetfiddle.net/QcKqqG)
 
 This query generated the following SQL statements that were executed in the database.
 

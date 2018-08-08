@@ -66,29 +66,30 @@ When adding multiple entities, you should always use Entity Framework AddRange o
 
 
 ```csharp
-using (var ctx = new CustomerContext())
+using (var context = new EntityContext())
 {
     // 1. CREATE a list
-    List<Customer> customers = new List<Customer>();
+    List<Customer>  list = new List<Customer>();
     
-    foreach(var line in lines)
+    for(int i = 0; i < 2000; i++)
     {
         var customer = new Customer();
         // ...code...
-        
+    
         // 2. ADD entity to the list
-        customers.Add(customer);
+    	list.Add(customer);
     }
-    
-    // 3. USE AddRange with the list
-    ctx.Customers.AddRange(customers);
-    
+	
+    // 3. USE AddRange with the list		
+    context.Customers.AddRange(list);
+	
     // 4. SaveChanges
     ctx.SaveChanges();
     
     // 5. Done!
 }
 ```
+[Try it online](https://dotnetfiddle.net/gPXbQ8)
 
 ### SET AutoDetectChanges to false
 
@@ -118,29 +119,34 @@ By disabling AutoDetectChanges, the DetectChanges method will only be invoked wh
  3. SaveChanges
  4. Done!
 
-
 ```csharp
-using (var ctx = new CustomerContext())
+using (var context = new EntityContext())
 {
     // 1. SET AutoDetectChangesEnabled = false
-    ctx.Configuration.AutoDetectChangesEnabled = false;
+    context.Configuration.AutoDetectChangesEnabled = false;
      
-    foreach(var line in lines)
+    List<Customer>  list = new List<Customer>();
+
+    for(int i = 0; i < 2000; i++)
     {
         var customer = new Customer();
         // ...code...
-        ctx.Customers.Add(customer);
+    
+    	list.Add(customer);
     }
     
+    context.Customers.AddRange(list);
+    
     // 2. CALL DetectChanges before SaveChanges
-    ctx.ChangeTracker.DetectChanges();
+    context.ChangeTracker.DetectChanges();
     
     // 3. SaveChanges
-    ctx.SaveChanges();
+    context.SaveChanges();
     
     // 4. Done!
 }
 ```
+[Try it online](https://dotnetfiddle.net/RFsvB5)
 
 ### SPLIT SaveChanges into multiple batches
 
@@ -170,29 +176,30 @@ More tracking entities your context contains, slower the DetectChanges method is
  3. CALL SaveChanges
  4. Done!
 
-
-
 ```csharp
 // 1. CREATE a batchSize variable
-int batchSize = 1000;
+int batchSize = 400;
+		
+var context = new EntityContext();
 
-var ctx = new CustomerContext();
-for (int i = 0; i < lines.Count; i++)
+for(int i = 0; i <= 2000; i++)
 {
     // 2. CALL SaveChanges before creating a new batch
     if (i != 0 && i%batchSize == 0)
     {
-        ctx.SaveChanges();
-        ctx = new CustomerContext();
+    	context.SaveChanges();
+    	context = new EntityContext();
     }
-
+    
     var customer = new Customer();
     // ...code...
-    ctx.Customers.Add(customer);
+    
+    context.Customers.Add(customer);
 }
 
 // 3. CALL SaveChanges
-ctx.SaveChanges();
+context.SaveChanges();
 
 // 4. Done!
 ```
+[Try it online](https://dotnetfiddle.net/ch7vyd)

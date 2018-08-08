@@ -6,24 +6,24 @@ There are certain cases where your program throws some exception, but with the e
 
 
 ```csharp
-class Blog
-    {
-        public int BlogId { get; set; }
-        public string Name { get; set; }
-        [StringLength(10)]
-        public string Url { get; set; }
-    }
+public class Blog
+{
+    public int BlogId { get; set; }
+    [StringLength(10)]
+    public string Name { get; set; }
+    public string Url { get; set; }
+}
 ```
 
 Now let's add a blog to the database.
 
 
 ```csharp
-using (var context = new BloggingContext())
+using (var context = new EntityContext())
 {
     var blog = new Blog()
     {
-        Name = ".NET Blog",
+        Name = ".NET Framework Blog",
         Url = "https://blogs.msdn.microsoft.com/dotnet/"
     };
 
@@ -31,6 +31,7 @@ using (var context = new BloggingContext())
     context.SaveChanges();
 }
 ```
+[Try it online](https://dotnetfiddle.net/UZtI6h)
 
 When you execute, you will see the following exception.
  
@@ -50,13 +51,13 @@ To see the actual error or the cause of the error, we need to use the catch the 
 
 
 ```csharp
-using (var context = new BloggingContext())
+using (var context = new EntityContext())
 {
     try
     {
         var blog = new Blog()
         {
-            Name = ".NET Blog",
+            Name = ".NET Framework Blog",
             Url = "https://blogs.msdn.microsoft.com/dotnet/"
         };
 
@@ -86,6 +87,7 @@ using (var context = new BloggingContext())
     }
 }
 ```
+[Try it online](https://dotnetfiddle.net/eu3eMK)
 
 EntityValidationErrors is a collection which represents the entities which couldn't be validated successfully, and the inner collection ValidationErrors per entity is a list of errors on property level.
 
