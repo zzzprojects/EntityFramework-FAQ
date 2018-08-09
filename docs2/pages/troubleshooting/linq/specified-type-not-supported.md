@@ -6,15 +6,17 @@ Entity Framework cannot convert some data types to SQL such as DateTime.Date.
 
 
 ```csharp
-using (var context = new CustomerContext())
+using (var context = new EntityContext())
 {
     var fromDate = DateTime.Now.AddDays(-7).Date;
-    var customers = context.Customers
-            .Include(c => c.Invoices)
-            .Where(c => c.Invoices.Any(i => i.Date.Date >= fromDate)
-            .FirstOrDefault();
+
+    var customer = context.Customers.Where(c => c.CustomerID == 1)
+        .Include(c => c.Invoices)
+        .Where(c => c.Invoices.Any(i => i.InvoiceDate.Date >= fromDate))
+        .FirstOrDefault();
 }
 ```
+[Try it online](https://dotnetfiddle.net/RKXTuP)
 
 ### StackOverflow Related Questions
 
@@ -29,9 +31,16 @@ The easiest solution to handle this exception is to use **DbFunctions.TruncateTi
 using (var context = new CustomerContext())
 {
     var fromDate = DateTime.Now.AddDays(-7).Date;
-    var customers = context.Customers
-            .Include(c => c.Invoices)
-            .Where(c => c.Invoices.Any(i => DbFunctions.TruncateTime(i.Date) >= fromDate)
-            .FirstOrDefault();
+
+    var customer = context.Customers.Where(c => c.CustomerID == 1)
+        .Where(c => c.Invoices.Any(i => DbFunctions.TruncateTime(i.InvoiceDate) >= fromDate))
+        .Select(c => new
+        {
+            c,
+            Invoices = c.Invoices.Where(i => DbFunctions.TruncateTime(i.InvoiceDate) >= fromDate)
+        })
+        .FirstOrDefault();
 }
 ```
+
+[Try it online](https://dotnetfiddle.net/YjpKhg)
