@@ -73,7 +73,7 @@ Another way of handling this problem is to project into anonymous type first and
 ```csharp
 using (var context = new CustomerContext())
 {
-    var customers = context.Customers.Where(c => c.Name.StartsWith("J"))
+    var customers = context.Customers.Where(c => c.CustomerID == 1)
         .Select(c => new
         {
             Name = c.Name
