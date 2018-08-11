@@ -4,25 +4,22 @@
 
 The DbContext.SaveChanges is a poor choice for BULK operations as far as performance is concerned. Once you get beyond a few thousand records, the SaveChanges method really starts to break down.
 
-
 ```csharp
 using (var ctx = new CustomerContext())
 {
     List<Customer> customers = new List<Customer>();
     
-    foreach(var line in lines)
-    {
-        var customer = new Customer();
-        // ...code...
-        
-        customers.Add(customer);
-    }
-    
-    ctx.Customers.AddRange(customers);
+    for(int i = 0; i < 1000; i++)
+	{
+		list.Add(new Customer() { Name ="Customer_" + i});
+	}
+	
+	context.Customers.AddRange(list);
 
-    ctx.SaveChanges();
+    context.SaveChanges();
 }
 ```
+[Try it online](https://dotnetfiddle.net/n3JMye)
 
 ### StackOverflow Related Questions
 
@@ -52,19 +49,17 @@ using (var ctx = new CustomerContext())
 {
     List<Customer> customers = new List<Customer>();
     
-    foreach(var line in lines)
-    {
-        var customer = new Customer();
-        // ...code...
-        
-        customers.Add(customer);
-    }
-    
-    ctx.Customers.AddRange(customers);
+    for(int i = 0; i < 1000; i++)
+	{
+		list.Add(new Customer() { Name ="Customer_" + i});
+	}
+	
+	context.Customers.AddRange(list);
 
-    ctx.BulkSaveChanges();
+    context.BulkSaveChanges();
 }
 ```
+[Try it online](https://dotnetfiddle.net/ii773p)
 
 [Learn more](http://entityframework-extensions.net/tutorial-bulk-savechanges)
 
@@ -72,10 +67,10 @@ using (var ctx = new CustomerContext())
 
 BulkSaveChanges is already very fast, but you can make it even faster by simply turning off the **EntityFrameworkPropagation** option.
 
-
 ```csharp
 EntityFrameworkManager.DefaultEntityFrameworkPropagationValue = false;
 ```
+[Try it online](https://dotnetfiddle.net/QSAcrl)
 
 When turning off this option, the library does no longer use the methods from Entity Framework but internal methods from our [Entity Framework Extensions](http://entityframework-extensions.net/) library.
 
