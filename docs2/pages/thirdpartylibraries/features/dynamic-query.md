@@ -24,7 +24,7 @@ Dynamic Query allows you to perform dynamic where clause, select, order by, with
  - [Dynamic LINQ OrderBy on IEnumerable< T >](https://stackoverflow.com/questions/41244/dynamic-linq-orderby-on-ienumerablet?rq=1)
  - [How to Dynamically build Select as relates to Linq & Entity Framework](https://stackoverflow.com/questions/44441338/how-to-dynamically-build-select-as-relates-to-linq-entity-framework)
  - [Using dynamic linq in EF Linq to Entities](https://stackoverflow.com/questions/28721888/using-dynamic-linq-in-ef-linq-to-entities)
-
+ - [c# - Dynamically generate linq select with nested properties](https://stackoverflow.com/questions/51753165/c-sharp-dynamically-generate-linq-select-with-nested-properties)
 
 ```csharp
 var customersList1 = context.Customers
