@@ -56,8 +56,6 @@ using (var context = new EntityContext())
     context.Customers.Attach(deletedCustomer);
     context.Customers.Remove(deletedCustomer);
     context.SaveChanges();
-    
-    FiddleHelper.WriteTable(context.Customers.Take(3).ToList());
 }
 ```
 

@@ -21,11 +21,14 @@ Updating entities using SaveChanges requires typically to load them first in the
 // UPDATE all customers that are inactive for more than two years
 context.Customers
     .Where(x => x.Actif && x.LastLogin < DateTime.Now.AddYears(-2))
-    .UpdateFromQuery(x => new Customer {Actif = false});
+    .UpdateFromQuery(x => new Customer {IsActif = false});
 	
 // UPDATE customers by id
-context.Customers.Where(x => x.ID == userId).UpdateFromQuery(x => new Customer {Actif = false});
+context.Customers
+    .Where(x => x.CustomerID == userId)
+    .UpdateFromQuery(x => new Customer {IsActif = false});
 ```
+[Try it online](https://dotnetfiddle.net/9hAsuQ)
 
 ### Performance Comparisons
 

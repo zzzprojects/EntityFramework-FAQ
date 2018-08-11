@@ -13,6 +13,7 @@ using (var context = new CustomerContext())
         .ToList();
 }
 ```
+[Try it online](https://dotnetfiddle.net/vsVdHW)
 
 In this example, entity framework is trying to convert a whole customer object equality into a database query. 
 
@@ -29,7 +30,8 @@ The easiest solution to handle this exception is to query data in entity framewo
 using (var context = new CustomerContext())
 {
     var invoices = context.Invoices
-        .Where(i => i.Customer.Id == customer.Id)
+        .Where(i => i.Customer.CustomerID == customer.CustomerID)
         .ToList();
 }
 ```
+[Try it online](https://dotnetfiddle.net/V0qZIX)

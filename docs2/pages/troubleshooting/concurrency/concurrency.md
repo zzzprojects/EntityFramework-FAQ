@@ -6,9 +6,8 @@ A concurrency conflict occurs when one user displays an entity's data in order t
 
 Another case for this exception is when a new object is created and and it's state is set to modified the EntityState.Modified.
 
-
 ```csharp
-using (var context = new CustomerContext())
+using (var context = new EntityContext())
 {
     var customer = new Customer();
     // ...code...
@@ -17,10 +16,13 @@ using (var context = new CustomerContext())
     context.SaveChanges();
 }
 ```
+[Try it online](https://dotnetfiddle.net/qsBxKA)
+
 ### StackOverflow Related Questions
 
  - [Entity Framework: Store update, insert, or delete statement affected an unexpected number of rows (0).](https://stackoverflow.com/questions/1836173/entity-framework-store-update-insert-or-delete-statement-affected-an-unexpec)
  - [Solution for: Store update, insert, or delete statement affected an unexpected number of rows (0)](https://stackoverflow.com/questions/6819813/solution-for-store-update-insert-or-delete-statement-affected-an-unexpected-n)
+
 ## Solution
 
 This exception can be used to warn another user that record has been modified and this is the usual way of handling concurrency conflict.
@@ -29,7 +31,7 @@ But if there is a requirement like not to show the warning in case of concurrenc
 
 
 ```csharp
-using (var context = new CustomerContext())
+using (var context = new EntityContext())
 {
     // ...code...
     try
@@ -57,3 +59,4 @@ using (var context = new CustomerContext())
     context.SaveChanges();
 }
 ```
+[Try it online](https://dotnetfiddle.net/eUYel4)

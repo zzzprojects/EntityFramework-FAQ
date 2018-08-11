@@ -15,17 +15,19 @@ It is pretty easy. If you are using DB generated Ids (like `IDENTITY` in MS SQL)
 
 
 ```csharp
-using (var context = new MyContext())
+using (var context = new EntityContext())
 {
-    Student student = new Student()
-    {
-        Name = "Mark";
-    };  
-    context.Students.Add(student);
-    context.SaveChanges();
+	var customer = new Customer()
+	{
+		Name = "John"
+	};
 
-  int id = student.Id;
+	context.Customers.Add(customer);
+	context.SaveChanges();
+		
+	int id = customer.CustomerID;
 }
 ```
+[Try it online](https://dotnetfiddle.net/YsMZR6)
 
 Entity framework by default follows each `INSERT` with SELECT `SCOPE_IDENTITY()` when auto-generated Ids are used.

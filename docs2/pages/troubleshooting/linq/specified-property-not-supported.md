@@ -7,7 +7,7 @@ Entity Framework can't filter data based on a property on the server side which 
 The following example is trying to filter the customers on TotalInvoices, but the TotalInvoices property is not mapped to database.
 
 ```csharp
-using (var context = new EnumTestContext())
+using (var context = new EntityContext())
 {
     var customers = context.Customers
         .Include(c => c.Invoices)
@@ -15,6 +15,7 @@ using (var context = new EnumTestContext())
         .ToList();
 }
 ```
+[Try it online](https://dotnetfiddle.net/2H8LcC)
 
 ### StackOverflow Related Questions
 
@@ -26,7 +27,7 @@ The easiest solution to handle this exception is to filter the customers on the 
 
 
 ```csharp
-using (var context = new EnumTestContext())
+using (var context = new EntityContext())
 {
     var customers = context.Customers
         .Include(c => c.Invoices)
@@ -36,5 +37,6 @@ using (var context = new EnumTestContext())
         .ToList();
 }
 ```
+[Try it online](https://dotnetfiddle.net/dzRVIi)
 
 In this example, the data is first retrieved from the database, and then the data is filtered based on a property which is not mapped to the database.
