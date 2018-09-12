@@ -36,6 +36,7 @@ ctx.Users.Where(x => x.LastLoginDate < DateTime.Now.AddYears(-2))
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|
 |:----------|:----------|:----------|:----------|:----------|:----------|
+|[Z.EntityFramework.Classic](/ef-classic)	|PRO	|EF6|< 1 Day	|Yes	| Bulk SaveChanges<br>Bulk Insert<br>Bulk Update<br>Bulk Delete<br>Bulk Merge<br>Batch Delete<br>Batch Update<br>Cache<br>Deferred Query<br>Future|
 |[Z.EntityFramework.Plus](/ef-plus)	|FREE	|EF5<br>EF6<br>EF Core|	< 1 Day	|Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Deferred Query<br>Filter<br>Future<br>Include Filter<br>Include Optimized|
 
 ## Unsuported Libraries
