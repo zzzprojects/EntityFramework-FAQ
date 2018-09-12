@@ -16,7 +16,7 @@ The only way to achieve is either create code for this kind of scenario or use a
 |Library	|Type	|EF Version	|Support	|Doc	|Features|
 |:----------|:----------|:----------|:----------|:----------|:----------|
 |[Z.EntityFramework.Extensions](/ef-extensions)	|PRO	|EF5<br>EF6<br>EF Core|< 1 Day	|Yes	| Bulk SaveChanges<br>Bulk Insert<br>Bulk Update<br>Bulk Delete<br>Bulk Merge|
-|[Z.EntityFramework.Classic(/ef-classic)	|PRO	|EF6|< 1 Day	|Yes	| Batch Delete<br>Batch Update<br>Cache<br>Deferred Query<br>Future|
+|[Z.EntityFramework.Classic](/ef-classic)	|PRO	|EF6|< 1 Day	|Yes	| Batch Delete<br>Batch Update<br>Cache<br>Deferred Query<br>Future|
 |[Z.EntityFramework.Plus](/ef-plus)	|FREE	|EF5<br>EF6<br>EF Core|	< 1 Day	|Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Deferred Query<br>Filter<br>Future<br>Include Filter<br>Include Optimized|
 |[Eval Expression.NET](/eval-expression-net)	|FREE/PRO	|All	|< 1 Day	|Yes	|Dynamic Query|
 |[Audit.NET](/audit-net)	|FREE	|EF6<br>EF Core	|< 1 Day	|Yes    |Audit  |
