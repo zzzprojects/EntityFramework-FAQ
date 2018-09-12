@@ -42,5 +42,6 @@ var customersList2 = context.Customers
 
 |Library	|Type	|EF Version	|Support	|Doc	|Features|
 |:----------|:----------|:----------|:----------|:----------|:----------|
+|[Z.EntityFramework.Classic](/ef-classic)	|FREE/PRO	|EF6|< 1 Day	|Yes	| Bulk SaveChanges<br>Bulk Insert<br>Bulk Update<br>Bulk Delete<br>Bulk Merge<br>Batch Delete<br>Batch Update<br>Cache<br>Deferred Query<br>Future|
 |[Eval Expression.NET](/eval-expression-net)	|FREE/PRO	|All	|< 1 Day	|Yes	|Dynamic Query|
 |[System.Linq.Dynamic](/system-linq-dynamic)	|FREE	|All	|< 1 Day	|Yes    |Dynamic Query  |
