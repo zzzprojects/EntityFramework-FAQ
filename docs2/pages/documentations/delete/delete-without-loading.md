@@ -18,7 +18,7 @@ Deleting entities using SaveChanges requires typically to load them first in the
 
 ```csharp
 // DELETE all customers that are inactive
-context.Customers.Where(c => !c.IsActif).DeleteFromQuery();
+context.Customers.Where(c => !c.IsActive).DeleteFromQuery();
 
 // DELETE customers by id
 context.Customers.Where(x => x.CustomerID == customerId).DeleteFromQuery();
