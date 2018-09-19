@@ -4,9 +4,26 @@
 
 Entity framework is very slow to load for the first time after every compilation especially when you have a large model.
 
+### StackOverflow Related Questions
+
+ - [Entity Framework 6.2 very slow first startup and EFInteractiveViews](https://stackoverflow.com/questions/52376465/entity-framework-6-2-very-slow-first-startup-and-efinteractiveviews/52405059#52405059)
+
 ## Answer
 
-Entity Framework loads very slow for the first time because on the first query EF compiles the model. To speed up your application startup time here are three suggestions mentioned in this [post](https://www.fusonic.net/en/blog/3-steps-for-fast-entityframework-6.1-code-first-startup-performance/).
+Entity Framework loads very slow for the first time because on the first query EF compiles the model. If you are using EF 6.2, you can use a Model Cache which loads a prebuilt edmx when using code first; instead, EF generates it on startup.
+
+```csharp
+public class MyDbConfiguration : DbConfiguration
+{
+    public MyDbConfiguration() : base()
+    {
+        var path = Path.GetDirectoryName(this.GetType().Assembly.Location);
+        SetModelStore(new DefaultDbModelStore(path));
+    }
+}
+```
+
+To speed up your application startup time in an earlier version of EF, here are three suggestions mentioned in this post.
 
  - Using a Cached DbModelStore
  - Generate pre-compiled Views
