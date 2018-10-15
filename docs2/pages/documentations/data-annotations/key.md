@@ -22,7 +22,7 @@ public class Category
 The `Book` class follow the default code first conventions, and `Category` class doesn't follow the default conventions and uses `CatId` instead.
 
 
- - If code first does not find a property that matches the default convention it will throw an exception because Entity Framework requires a key property. 
+ - If code first does not find a property that matches the default convention, it will throw an exception because Entity Framework requires a key property. 
  - The `Key` attribute overrides this default convention, you can use the key annotation to specify which property is to be used as the EntityKey.
 
 ```csharp
@@ -31,5 +31,39 @@ public class Category
     [Key]
     public int CatId { get; set; }
     public string CategoryName { get; set; }
+}
+```
+
+## Composite keys
+
+A primary key that consists of more than one property. For example, a `BookCategory` entity class has a primary key which contains `BookId` and `CategoryId`.
+
+```csharp
+public class BookCategory
+{
+    [Key]
+    public int BookId { get; set; }
+    [Key]
+    public int CategoryId { get; set; }
+    public Book Book { get; set; }
+    public Category Category { get; set; }
+}
+```
+
+Using the above example would result in an `InvalidOperationException`.
+
+> System.InvalidOperationException: 'Unable to determine composite primary key ordering for type 'BookCategory'. Use the ColumnAttribute or the HasKey method to specify an order for composite primary 
+
+Entity Framework requires you to define an order for the key properties. You can do this by using the Column annotation to specify an order.
+
+```csharp
+public class BookCategory
+{
+    [Key, Column(Order = 1)]
+    public int BookId { get; set; }
+    [Key, Column(Order = 2)]
+    public int CategoryId { get; set; }
+    public Book Book { get; set; }
+    public Category Category { get; set; }
 }
 ```
