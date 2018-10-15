@@ -1,0 +1,35 @@
+# Key
+
+The `Key` attribute can be applied to a property to make it a key property in an entity class and the corresponding column to a primary key column in the database. 
+
+ - The default Code First convention look for a property named **"Id"**, or a combination of **"class name"** and **"Id"**, such as **BookId**. 
+ - This property will map to a primary key column in the database.
+
+```csharp
+public class Book
+{
+    public int BookId { get; set; }
+    public string Title { get; set; }
+}
+
+public class Category
+{
+    public int CatId { get; set; }
+    public string CategoryName { get; set; }
+}
+```
+
+The `Book` class follow the default code first conventions, and `Category` class doesn't follow the default conventions and uses `CatId` instead.
+
+
+ - If code first does not find a property that matches the default convention it will throw an exception because Entity Framework requires a key property. 
+ - The `Key` attribute overrides this default convention, you can use the key annotation to specify which property is to be used as the EntityKey.
+
+```csharp
+public class Category
+{
+    [Key]
+    public int CatId { get; set; }
+    public string CategoryName { get; set; }
+}
+```
