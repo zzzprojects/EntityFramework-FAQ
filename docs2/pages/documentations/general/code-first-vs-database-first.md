@@ -18,8 +18,8 @@ What is the difference between **Code First** and **Database First** in Entity F
 
 ### Code First Approach
 
- - Code First is very popular approach and has full control over the code rather than database activity. 
- - In this approach, we can do all the database operations from the code and manual changes to database have been lost and everything is depended on the code.
+ - Code First is a very popular approach and has full control over the code rather than database activity. 
+ - In this approach, we can do all the database operations from the code and manual changes to database have been lost and everything is depending on the code.
  - In this you need to create POCO entities as data model.
 
 [more...](/ef-code-first)
