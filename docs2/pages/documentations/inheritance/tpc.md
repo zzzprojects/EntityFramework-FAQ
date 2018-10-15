@@ -120,7 +120,7 @@ Let's examine SQL for a simple query in TPC mapping.
 var query = context.People.ToString();
 ```
 
-This query generated the following SQL statements that being executed in the database.
+This query generated the following SQL statements that is being executed in the database.
 
 
 ```csharp
