@@ -49,7 +49,7 @@ using (var context = new EntityContext())
 
 Now you will see that you have an anonymous type which has two properties, c, and Invoices. 
 
-A property called c is of type Customer, and it has all the invoices, the other property Invoices will have only those invoices which are generated in the last seven days.
+A property called c is of type Customer, and it has all the invoices, the other property Invoices will have only those generated in the last seven days.
 
 ## Third Part Library
 
