@@ -8,8 +8,8 @@ When you start learning Entity Framework, you will also often see the term **Ent
 
 In Entity Framework, the Database First Approach provides an alternative to the Code First by creating POCO classes from the existing database.
 
- - Database first approach is used when database is ready then Entity Framework will complete his duty and create POCO entities for you.
- - If you have already a designed database and you don't want to do extra effort then you can go with this approach.
+ - Database first approach is used when database is ready, then Entity Framework will complete its duty and create POCO entities for you
+ - If you already had a designed database and you don't want to do extra efforts, then you can go with this approach.
  - You can modify the database manually and update model from database. 
  - So, we can say, entity framework is able to create your model classes based on tables and columns from relational database.
 

@@ -10,7 +10,7 @@ Entity framework is very slow to load for the first time after every compilation
 
 ## Answer
 
-Entity Framework loads very slow for the first time because on the first query EF compiles the model. If you are using EF 6.2, you can use a Model Cache which loads a prebuilt edmx when using code first; instead, EF generates it on startup.
+Entity Framework loads very slowly the first time because the first query EF compiles the model. If you are using EF 6.2, you can use a Model Cache which loads a prebuilt edmx when using code first; instead, EF generates it on startup.
 
 ```csharp
 public class MyDbConfiguration : DbConfiguration

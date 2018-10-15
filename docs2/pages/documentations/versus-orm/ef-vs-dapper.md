@@ -40,6 +40,6 @@ Entity Framework (EF) and Dapper both are object-relational mappers that enable 
 #### Disadvantages
 
  - Dapper can't generate a class model for you
- - It can not generate queries for you
- - It can not track objects and their changes
+ - It cannot generate queries for you
+ - It cannot track objects and their changes
  - The raw dapper library doesn't provide CRUD features, but the "contrib" additional package does provide basic CRUD.

@@ -22,7 +22,6 @@ TPH inheritance uses one database table to maintain data for all of the entity t
  - An entire class hierarchy can be mapped to a single table. 
  - The table includes columns for all properties of all classes in the hierarchy. 
  - The concrete subclass represented by a particular row is identified by the value of a type discriminator column. 
- - 
 
 #### TPH in Code First
 
