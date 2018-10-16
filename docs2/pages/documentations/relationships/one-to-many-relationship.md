@@ -67,6 +67,8 @@ public class Book
 }
 ```
 
+[Try it](https://dotnetfiddle.net/MPx1yh)
+
 #### Add Navigation Properties in Both Entities
 
 Adding navigation properties at both entities will also result in a one-to-many relationship. For example, `Author` class contains a collection of `Books` while `Book` class contains a navigation property of type `Author`.
@@ -86,6 +88,7 @@ public class Book
     public Author Author { get; set; }
 }
 ```
+[Try it](https://dotnetfiddle.net/DrES9C)
 
 #### Fully Defined Relationship
 
@@ -108,6 +111,8 @@ public class Book
 }
 ```
 
+[Try it](https://dotnetfiddle.net/moGbUs)
+
 All these conventions produces the same result in the database.
 
 ### Using Fluent API
@@ -124,3 +129,5 @@ protected override void OnModelCreating(DbModelBuilder modelBuilder)
         .HasForeignKey<int>(b => b.AuthorId);
 }
 ```
+
+[Try it](https://dotnetfiddle.net/a72lbs)
