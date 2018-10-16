@@ -6,13 +6,13 @@ The `MinLength` attributes allow you to specify additional property validations.
 public class Book
 {
     public int BookId { get; set; }
-    [MinLength]
+    [MinLength(5)]
     public string Title { get; set; }
 }
 ```
 [Try it](https://dotnetfiddle.net/9nLeUA)
 
-If you set a value of Title property less than the specified length in MinLength attribute, EF will throw an `EntityValidationError`.
+If you set a value of Title property less than the specified length in `MinLength` attribute, EF will throw an `EntityValidationError`.
 
 > Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
 
