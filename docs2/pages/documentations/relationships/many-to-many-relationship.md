@@ -86,6 +86,8 @@ public class BookCategory
 }
 ```
 
+[Try it](https://dotnetfiddle.net/ZIE8r9)
+
 It will create `Books`, `Categories` and `BookCategories` tables in the database. The `BookCategories` table will have composite key `BookId` & `CategoryId`.
 
 ### Using Fluent API
@@ -106,3 +108,5 @@ modelBuilder.Entity<Book>()
        cs.ToTable("BookCategories");
    });
 ```
+
+[Try it](https://dotnetfiddle.net/jf4gjY)
