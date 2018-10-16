@@ -47,6 +47,8 @@ Code First can't determine which class is dependent and when you execute to buil
 
 > System.InvalidOperationException: 'Unable to determine the principal end of an association between the types 'EFDemo.Author' and 'EFDemo.AuthorBiography'. The principal end of this association must be explicitly configured using either the relationship fluent API or data annotations.'
 
+[Try it](https://dotnetfiddle.net/rjUmxe)
+
 ### Using Data Annotation
 
 You can solve this problem very easily by using a `ForeignKey` data annotation on the dependent class so that code first can identify that it contains the foreign key.
@@ -64,6 +66,8 @@ public class AuthorBiography
 }
 ```
 
+[Try it](https://dotnetfiddle.net/LISWtb)
+
 In this case, the `AuthorBiography` is depending on `Author`, so the `AuthorBiographyId` property is a primary as well as a foreign key.
 
 ### Using Fluent API
@@ -78,6 +82,8 @@ protected override void OnModelCreating(DbModelBuilder modelBuilder)
         .WithRequired(ab => ab.Author);
 }
 ```
+
+[Try it](https://dotnetfiddle.net/E6BpOz)
 
  - The `HasOptional()` method marks the `Biography` property optional in `Author` entity.
  - The `.WithRequired()`method marks `Author` property as required in `AuthorBiography` entity.
