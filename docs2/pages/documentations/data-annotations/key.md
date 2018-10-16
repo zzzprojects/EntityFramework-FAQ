@@ -34,6 +34,8 @@ public class Category
 }
 ```
 
+[Try it](https://dotnetfiddle.net/kQAyYp)
+
 ## Composite keys
 
 A primary key that consists of more than one property. For example, a `BookCategory` entity class has a primary key which contains `BookId` and `CategoryId`.
@@ -54,6 +56,8 @@ Using the above example would result in an `InvalidOperationException`.
 
 > System.InvalidOperationException: 'Unable to determine composite primary key ordering for type 'BookCategory'. Use the ColumnAttribute or the HasKey method to specify an order for composite primary 
 
+[Try it](https://dotnetfiddle.net/k6kTIb)
+
 Entity Framework requires you to define an order for the key properties. You can do this by using the Column annotation to specify an order.
 
 ```csharp
@@ -67,3 +71,4 @@ public class BookCategory
     public Category Category { get; set; }
 }
 ```
+[Try it](https://dotnetfiddle.net/LIp2Xh)
