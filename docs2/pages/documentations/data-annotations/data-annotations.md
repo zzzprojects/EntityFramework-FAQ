@@ -17,3 +17,4 @@ The mostly used Data Annotations attributes are as follows;
 |<a href="{{ site.github.url }}/string-length">StringLength</a> |Sets the maximum allowed length of the property value.|
 |<a href="{{ site.github.url }}/table">Table</a> |Create a table with a specified name in Table attribute for a given domain class.|
 |<a href="{{ site.github.url }}/column">Column</a> |Create a column with a specified name in Column attribute for a given property in a domain class.|
+<a href="{{ site.github.url }}/foreign-key">ForeignKey</a> |specify which property is the foreign key in a relationship.|
