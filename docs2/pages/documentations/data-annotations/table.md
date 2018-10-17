@@ -5,6 +5,8 @@ In EF 6, the default convention creates a table name matching with `<DbSet<TEnti
 - The `Table` attribute overrides this default convention.
 - It is applied to an entity to specify the name of the database table that the entity should map to. 
 
+The following example specifies that the `Book` entity should map to a database table named `BooksInfo`.
+
 ```csharp
 [Table("BooksInfo")]
 public class Book

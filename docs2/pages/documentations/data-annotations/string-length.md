@@ -5,6 +5,8 @@ The `StringLength` attributes allow you to specify additional property validatio
  - It is applied to a property to specify a maximum number of characters or bytes for the column that the property should map to.
  - The only difference is that `StringLength` attribute can only be applied to a string type property of Domain classes.
 
+The following example specifies that the `Title` column in the Books table have a maximum length of 12 characters.
+
 ```csharp
 public class Book
 {

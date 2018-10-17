@@ -2,6 +2,8 @@
 
 The `MaxLength` attributes allow you to specify additional property validations. It is applied to a property to specify a maximum number of characters or bytes for the column that the property should map to.
 
+The following example specifies that the `Title` column in the Books table have a maximum length of 12 characters.
+
 ```csharp
 public class Book
 {

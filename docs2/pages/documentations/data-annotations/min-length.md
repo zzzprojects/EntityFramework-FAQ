@@ -2,6 +2,8 @@
 
 The `MinLength` attributes allow you to specify additional property validations. It is applied to a property to specify a minimum number of characters or bytes for the column that the property should map to.
 
+The following example specifies that the `Title` column in the Books table must have a minimum length of 5 characters.
+
 ```csharp
 public class Book
 {
