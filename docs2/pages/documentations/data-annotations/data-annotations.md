@@ -11,3 +11,8 @@ The mostly used Data Annotations attributes are as follows;
 |Attribute     	|Description    |
 |:------------- |:--------------|
 |<a href="{{ site.github.url }}/key">Key</a> |To make the corresponding column a primary pey (PK) column in the database.|
+|<a href="{{ site.github.url }}/required">Required</a> |To make the corresponding column a `NOT NULL` column in a database table.|
+|<a href="{{ site.github.url }}/min-length">MinLength</a> |Specify a minimum number of characters or bytes for the column that the property should map to.|
+|<a href="{{ site.github.url }}/max-length">MaxLength</a> |Specify a maximum number of characters or bytes for the column that the property should map to.|
+|<a href="{{ site.github.url }}/string-length">StringLength</a> |Sets the maximum allowed length of the property value.|
+|<a href="{{ site.github.url }}/table">Table</a> |Create a table with a specified name in Table attribute for a given domain class.|
