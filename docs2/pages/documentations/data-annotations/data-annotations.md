@@ -19,3 +19,4 @@ The mostly used Data Annotations attributes are as follows;
 |<a href="{{ site.github.url }}/table">Table</a> |Create a table with a specified name in Table attribute for a given domain class.|
 |<a href="{{ site.github.url }}/column">Column</a> |Create a column with a specified name in Column attribute for a given property in a domain class.|
 |<a href="{{ site.github.url }}/concurrency-check">ConcurrencyCheck</a> |Specifies that the property is included in concurrency checks.|
+|<a href="{{ site.github.url }}/time-stamp">Timestamp</a> |Specifies the data type of the database column as rowversion.|
