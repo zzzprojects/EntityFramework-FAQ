@@ -12,11 +12,20 @@ The Complex types are non-scalar properties of entity types that enable scalar p
 The following example maps the `BookTitle` property in the Book entity to a database column named `Title`.
 
 ```csharp
-public class Book
+public class Author
 {
-    public int BookId { get; set; }
-    [Column("Title")]
-    public string BookTitle { get; set; }
+    public int AuthorId { get; set; }
+    public string Name { get; set; }
+    public Address Address { get; set; }
+}
+
+[ComplexType]
+public class Address
+{
+    public string City { get; set; }
+    public string Street { get; set; }
+    public string StateOrProvince { get; set; }
+    public string Country { get; set; }
 }
 ```
 
