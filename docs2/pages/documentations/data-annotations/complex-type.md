@@ -8,8 +8,7 @@ The Complex types are non-scalar properties of entity types that enable scalar p
  - Complex type properties cannot be null. 
  - Scalar properties of complex objects can be null.
 
-
-The following example maps the `BookTitle` property in the Book entity to a database column named `Title`.
+In the following example, we have added an `Address` class and decorate it with `ComplexType` attribute.
 
 ```csharp
 public class Author
@@ -29,4 +28,6 @@ public class Address
 }
 ```
 
-[Try it](https://dotnetfiddle.net/Rh3pAR)
+You can see that `Address` class does not have any type of key property. Complex types cannot be tracked on their own, so as a property in the `Author` class, it will be tracked as part of an author object.
+
+[Try it](https://dotnetfiddle.net/aFAD8Z)

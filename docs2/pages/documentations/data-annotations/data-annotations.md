@@ -23,3 +23,4 @@ The mostly used Data Annotations attributes are as follows;
 |<a href="{{ site.github.url }}/not-mapped">NotMapped</a> |Applied to properties or classes that are to be excluded from database mapping.|
 |<a href="{{ site.github.url }}/inverse-property">InverseProperty</a> |Specifies the inverse of a navigation property.|
 |<a href="{{ site.github.url }}/complex-type">ComplexType</a> |Complex Types cannot be tracked on their own but they are tracked as part of an entity. |
+|<a href="{{ site.github.url }}/database-generated">DatabaseGenerated</a> |Specifies how the database generates values for the property.|
