@@ -32,18 +32,3 @@ using (var context = new BookStore())
 ```
 
 [Try it](https://dotnetfiddle.net/yXTgHu)
-
-## String Path
-
-You can also use a string path to specify the relationships to load all authors and their related books.
-
-```csharp
-using (var context = new BookStore())
-{
-    var authors = context.Authors
-        .Include("Books")
-        .ToList();
-}
-```
-
-[Try it](https://dotnetfiddle.net/rSAVjT)
