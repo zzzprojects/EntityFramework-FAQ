@@ -8,7 +8,7 @@ Entity framework supports three types of relationships.
  - <a href="{{ site.github.url }}/one-to-many-relationship">One-to-Many</a>
  - <a href="{{ site.github.url }}/many-to-many-relationship">Many-to-Many</a> 
 
-<img src="https://github.com/zzzprojects/EntityFramework-FAQ/blob/master/docs2/images/relationships.png">
+<img src="https://raw.githubusercontent.com/zzzprojects/EntityFramework-FAQ/master/docs2/images/relationships.png">
 
 ## One-to-One Relationship
 
