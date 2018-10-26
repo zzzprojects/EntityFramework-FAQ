@@ -7,6 +7,7 @@ By default, Entity Framework tracks changes of the loaded entities during the li
  - The entity must have a primary key property to be tracked by the context. 
 
 The `DbChangeTracker` class gives you all the information about current entities being tracked by the context, and all the changes are kept by the DbContext level. 
+
 ```csharp
 private static void DisplayTrackedEntities(DbChangeTracker changeTracker)
 {
@@ -26,7 +27,6 @@ The Change Tracker tracks an entity using any of the following states:
  - Deleted
  - Unchanged
  - Detached
-
 
 ## Added State
 
