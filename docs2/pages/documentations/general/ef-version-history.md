@@ -1,6 +1,4 @@
-# Entity Framework - EF Version History
-
-## Entity Framework Version History 
+# Entity Framework Version History
 
 The first two versions of Entity Framework shipped with the .NET Framework and had versions numbers that aligned with the version of the framework that they were included in (3.5 and 4). Later, this EF started shipping independently through [NuGet](https://www.nuget.org)
 
