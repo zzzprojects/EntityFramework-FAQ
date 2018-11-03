@@ -1,10 +1,4 @@
-# Entity Framework - Where to download Entity Framework
-
-## Where to download Entity Framework? 
-
-From where to download Entity Framework to getting started with Entity Framework.
-
-## Answer
+# Entity Framework Download
 
 The first two versions of Entity Framework shipped with the .NET Framework and had versions numbers that aligned with the version of the framework that they were included in (3.5 and 4). After this EF started shipping independently through [NuGet](https://www.nuget.org)
 
