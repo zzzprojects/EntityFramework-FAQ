@@ -1,4 +1,4 @@
-# Entity Framework - Dixin's Blog
+# Dixin's Blog
 
 @using Z.Websites.Web.Models
 @{
