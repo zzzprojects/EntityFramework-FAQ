@@ -83,6 +83,8 @@ Let's run your application, and you will see that the database is created automa
 
 <img src="https://raw.githubusercontent.com/zzzprojects/EntityFramework-FAQ/master/docs2/images/migration1.png">
 
+## Update Database
+
 Now let's change your model by adding another property to the `Book` class.
 
 ```csharp
@@ -98,7 +100,7 @@ It’s time to start using Code First Migrations. There are two kinds of Migration
  - Automated Migration
  - Code-based Migration
 
-## Automated Migration
+### Automated Migration
 
 To use Automated Migration, run the following command in the Package Manager Console.
 
@@ -158,7 +160,7 @@ Now EF will automatically take care of the migration when you change the domain 
 
 <img src="https://raw.githubusercontent.com/zzzprojects/EntityFramework-FAQ/master/docs2/images/migration2.png">
 
-## Code-based Migration
+### Code-based Migration
 
 In Code First Migrations, you need to execute the following commands in the Package Manager Console.
 
