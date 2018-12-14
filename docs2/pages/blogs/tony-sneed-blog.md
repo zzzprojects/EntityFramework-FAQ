@@ -1,4 +1,4 @@
-# Entity Framework - Tony Sneed's Blog
+# Tony Sneed's Blog
 
 @using Z.Websites.Web.Models
 @{
