@@ -1,4 +1,4 @@
-# Entity Framework - Gil Fink's Blog
+# Gil Fink's Blog
 
 @using Z.Websites.Web.Models
 @{
