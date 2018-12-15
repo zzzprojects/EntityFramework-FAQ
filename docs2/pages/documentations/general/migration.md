@@ -8,7 +8,7 @@ Migrations provide a set of tools that allow:
  - Generating migrations to keep track of changes you make to your EF model
  - Keep your database up to date with those changes
 
-## Initial Model & Database
+## Initial Model & Database Using Code First Approach
 
 Create a new application and install the EntityFramework NuGet package.
 
