@@ -1,4 +1,4 @@
-# Entity Framework Extended
+# Extended
 
 ## Definition
 
