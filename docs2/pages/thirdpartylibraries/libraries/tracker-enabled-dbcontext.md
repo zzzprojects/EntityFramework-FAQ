@@ -1,4 +1,4 @@
-# Entity Framework - Tracker Enabled DbContext
+# Tracker Enabled DbContext
 
 ## Definition
 
