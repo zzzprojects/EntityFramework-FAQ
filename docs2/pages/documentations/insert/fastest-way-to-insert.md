@@ -1,4 +1,4 @@
-# Entity Framework - Fastest Way To Insert
+# Fastest Way To Insert
 
 ## What's the fastest way to insert?
 
