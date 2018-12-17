@@ -1,4 +1,4 @@
-# Entity Framework - Table Per Concrete
+# Table Per Concrete
 
 ## What is Inheritance Type in Entity Framework?  
 
