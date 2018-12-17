@@ -1,4 +1,4 @@
-# Entity Framework - What is DbContext
+# What is DbContext
 
 ## What is DbContext? 
 
