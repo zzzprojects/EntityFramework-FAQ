@@ -1,4 +1,4 @@
-# Entity Framework - System.Linq.Dynamic
+# System.Linq.Dynamic
 
 ## Definition
 
