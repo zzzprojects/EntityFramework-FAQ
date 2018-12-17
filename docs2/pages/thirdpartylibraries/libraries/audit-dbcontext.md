@@ -1,4 +1,4 @@
-# Entity Framework - AuditDbContext
+# AuditDbContext
 
 ## Definition
 
