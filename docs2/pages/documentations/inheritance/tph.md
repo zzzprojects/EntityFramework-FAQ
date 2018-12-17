@@ -1,4 +1,4 @@
-# Entity Framework - Table Per Hierarchy
+# Table Per Hierarchy
 
 ## What is Inheritance Type in Entity Framework?  
 
