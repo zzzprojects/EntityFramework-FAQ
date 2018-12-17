@@ -1,4 +1,4 @@
-# Entity Framework - BulkSaveChanges
+# BulkSaveChanges
 
 ## Introduction
 
