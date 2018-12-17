@@ -1,4 +1,4 @@
-# Entity Framework - EF Database First
+# EF Database First
 
 ## What is Entity Framework Database First? 
 
