@@ -1,4 +1,4 @@
-# Entity Framework - Supported Database Providers
+# Supported Database Providers
 
 ## What database provider are supported in Entity Framework?  
 
