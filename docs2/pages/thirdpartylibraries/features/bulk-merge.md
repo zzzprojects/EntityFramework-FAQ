@@ -1,4 +1,4 @@
-# Entity Framework - Bulk Merge
+# Bulk Merge
 
 ## Introduction
 
