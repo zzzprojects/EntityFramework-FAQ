@@ -1,4 +1,4 @@
-# Entity Framework - LINQ Does Not Recognize Method
+# LINQ Does Not Recognize Method
 
 ## Exception: LINQ to Entities does not recognize the method 
 
