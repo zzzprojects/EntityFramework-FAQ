@@ -1,4 +1,4 @@
-# Entity Framework - Audit.NET
+# Audit.NET
 
 ## Definition
 
