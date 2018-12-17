@@ -1,4 +1,4 @@
-# Entity Framework - Lynda Videos
+# Lynda Videos
 
 @using Z.Websites.Web.Models
 @{
