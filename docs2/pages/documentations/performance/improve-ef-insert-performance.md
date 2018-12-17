@@ -1,4 +1,4 @@
-# Entity Framework - Improve EF Insert Performance
+# Improve EF Insert Performance
 
 ## How to Improve Entity Framework Insert Performance?
 
