@@ -1,4 +1,4 @@
-# Entity Framework - Include Filter
+# Include Filter
 
 ## Introduction
 
