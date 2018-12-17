@@ -1,4 +1,4 @@
-# Entity Framework - How EF Transaction Works
+# How EF Transaction Works
 
 ## How Entity Framework Transaction Works?  
 
