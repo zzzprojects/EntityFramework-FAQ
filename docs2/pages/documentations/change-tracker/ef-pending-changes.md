@@ -1,4 +1,4 @@
-# Entity Framework - EF Pending Changes
+# EF Pending Changes
 
 ## How can I see pending changes? 
 
