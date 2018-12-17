@@ -1,4 +1,4 @@
-# Entity Framework - Preserve Insert Order
+# Preserve Insert Order
 
 ## How to Preserve Insert Order? 
 
