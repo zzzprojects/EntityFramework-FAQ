@@ -1,4 +1,4 @@
-# Entity Framework - Bulk Insert
+# Bulk Insert
 
 ## Introduction
 
