@@ -1,4 +1,4 @@
-# Entity Framework - YouTube Videos
+# YouTube Videos
 
 @using Z.Websites.Web.Models
 @{
