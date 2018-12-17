@@ -1,4 +1,4 @@
-# Entity Framework Books
+# Books
 
 @using Z.Websites.Web.Models
 @{
