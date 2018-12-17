@@ -1,4 +1,4 @@
-# Entity Framework Classic
+# Classic
 
 ## Definition
 
