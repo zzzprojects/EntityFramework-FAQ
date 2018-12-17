@@ -1,4 +1,4 @@
-# Entity Framework - Concurrency
+# Concurrency
 
 ## Exception: Store update, insert, or delete statement affected an unexpected number of rows (0)
 
