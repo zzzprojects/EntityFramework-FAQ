@@ -1,4 +1,4 @@
-# Entity Framework - Why EF Async Methods are Slow
+# Why EF Async Methods are Slow
 
 ## Why EF async methods are slower than non-async? 
 
