@@ -1,4 +1,4 @@
-# Entity Framework - Delete Records
+# Delete Records
 
 ## How to Bulk Delete?
 
