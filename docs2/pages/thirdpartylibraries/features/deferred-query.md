@@ -1,4 +1,4 @@
-# Entity Framework - Deferred Query
+# Deferred Query
 
 ## Introduction
 
