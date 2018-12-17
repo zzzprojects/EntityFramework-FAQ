@@ -1,4 +1,4 @@
-# Entity Framework - Update Records
+# Update Records
 
 ## How to Bulk Update?
 
