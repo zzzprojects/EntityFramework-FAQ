@@ -1,4 +1,4 @@
-# Entity Framework - EF Code First
+# EF Code First
 
 ## What is Entity Framework Code First? 
 
