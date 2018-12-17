@@ -1,4 +1,4 @@
-# Entity Framework - Improve EF DetectChanges Performance
+# Improve EF DetectChanges Performance
 
 ## How to Improve Entity Framework DetectChanges Performance?
 
