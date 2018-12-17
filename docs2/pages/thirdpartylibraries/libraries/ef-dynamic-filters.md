@@ -1,4 +1,4 @@
-# Entity Framework Dynamic Filters
+# Dynamic Filters
 
 ## Definition
 
