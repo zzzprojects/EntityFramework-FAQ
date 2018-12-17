@@ -1,4 +1,4 @@
-# Entity Framework - Check Object Existence
+# Check Object Existence
 
 ## How to check if an object exists in the database?
 
