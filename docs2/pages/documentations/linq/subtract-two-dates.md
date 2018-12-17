@@ -1,4 +1,4 @@
-# Entity Framework - Subtract Two Dates
+# Subtract Two Dates
 
 ## How to subtract two dates? 
 
