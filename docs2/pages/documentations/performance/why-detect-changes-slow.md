@@ -1,4 +1,4 @@
-# Entity Framework - Why DetectChanges is slow?
+# Why DetectChanges is slow?
 
 ## Why Entity Framework DetectChanges is slow?
 
