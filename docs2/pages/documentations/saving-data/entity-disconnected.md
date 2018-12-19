@@ -86,7 +86,7 @@ If you have an entity that already exists in the database, but you made some cha
 ```csharp
 using(var context = new BookStore())
 {
-    context.Entry(existingAuthor).State = EntityState.Unchanged;
+    context.Entry(existingAuthor).State = EntityState.Modified;
     Console.WriteLine("Entity State: {0}", context.Entry(existingAuthor).State);
     context.SaveChanges();
 }
