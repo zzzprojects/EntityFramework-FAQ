@@ -6,7 +6,11 @@ When working with Entity Framework Code First the default behavior is to map you
  - We can configure many different things by using it because it provides more configuration options than data annotation attributes.
  - Data annotations and the fluent API can be used together, but precedence of **Fluent API > data annotations > default conventions**.
 
-You can override the `DbContext.OnModelCreating` method and use a parameter modelBuilder of type `ModelBuilder` to configure domain classes.
+## DbModelBuilder
+
+DbModelBuilder is typically used to configure a model by overriding DbContext.OnModelCreating(DbModelBuilder) .
+
+You can override the `DbContext.OnModelCreating` method and use a parameter modelBuilder of type `DbModelBuilder` to configure domain classes.
 
 ##  Key
 
