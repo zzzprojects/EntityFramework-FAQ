@@ -209,3 +209,17 @@ using (var context = new BookStore())
 ```
 
 [Try it](https://dotnetfiddle.net/SI32Bt)
+
+## Any
+
+You can use the **Any** method to determines whether a sequence contains any elements.
+
+```csharp
+using (var context = new BookStore())
+{
+    var author = context.Authors
+        .Where(a => a.Books.Any()).ToList();
+}
+``` 
+
+[Try it](https://dotnetfiddle.net/KVAUjv)
