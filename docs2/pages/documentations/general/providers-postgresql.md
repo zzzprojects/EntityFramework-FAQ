@@ -1,4 +1,4 @@
-# Entity Framework Core - PostgreSQL
+# PostgreSQL
 
 ## Introduction
 
@@ -8,7 +8,7 @@
 
 To use PostgreSQL database provider, the first step is to install [Npgsql.EntityFramework](https://www.nuget.org/packages/Npgsql.EntityFramework/) NuGet package. 
 
-Now to use Entity Framework with PostgreSQL database, add the following to the `App.config` file.
+Now to use Entity Framework with PostgreSQL database, add connection string and PostgreSQL provider for EF6 in configuration sections of `App.config` file
 
 ```csharp
 <connectionStrings>
