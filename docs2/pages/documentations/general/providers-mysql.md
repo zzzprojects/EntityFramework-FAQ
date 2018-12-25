@@ -4,12 +4,12 @@
 
 You can also use `MySQL Connector/Net` which integrates support for Entity Framework. [MySql.Data.Entity](https://www.nuget.org/packages/MySql.Data.Entity/7.0.7-m61) allows Entity Framework Core to be used with MySQL. The provider is maintained as part of the [MySQL](https://dev.mysql.com/) project. 
 
-#### Requirements
+## Requirements
 
  - [Install Connector/Net](https://dev.mysql.com/doc/connector-net/en/connector-net-installation-windows.html)
  - [MySQL Server 5.5 or higher](https://dev.mysql.com/downloads/)
 
-#### How to Use MySQL Database Provider
+## How to Use MySQL Database Provider
 
 To use MySQL database provider, the first step is to install [MySql.Data.Entity](https://www.nuget.org/packages/MySql.Data.Entity/7.0.7-m61) NuGet package.
 
