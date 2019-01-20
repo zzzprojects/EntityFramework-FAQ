@@ -1,4 +1,4 @@
-# Entity Framework - .NET Blog
+# .NET Blog
 
 @using Z.Websites.Web.Models
 @{

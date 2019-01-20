@@ -1,4 +1,4 @@
-# Entity Framework - Eval Expression.NET
+# Eval Expression.NET
 
 ## Definition
 

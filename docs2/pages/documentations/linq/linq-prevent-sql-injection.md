@@ -1,4 +1,4 @@
-# Entity Framework - LINQ Prevent SQL Injection
+# LINQ Prevent SQL Injection
 
 ## Do LINQ is SQL Injection safe? 
 

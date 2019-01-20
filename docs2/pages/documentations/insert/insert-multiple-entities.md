@@ -1,4 +1,4 @@
-# Entity Framework - Insert Multiple Entities
+# Insert Multiple Entities
 
 ## How to Insert Multiple Entities at Once?
 

@@ -1,4 +1,4 @@
-# Entity Framework - EntityType Has No Key Defined
+# EntityType Has No Key Defined
 
 ## Exception: One or more validation errors were detected during model generation. EntityType has no key defined. Define the key for this EntityType.
 

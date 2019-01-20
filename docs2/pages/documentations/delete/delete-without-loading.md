@@ -1,4 +1,4 @@
-# Entity Framework - Delete Without Loading
+# Delete Without Loading
 
 ## How to delete without loading entities in the context? 
 

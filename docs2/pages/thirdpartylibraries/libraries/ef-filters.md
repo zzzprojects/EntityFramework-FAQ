@@ -1,4 +1,4 @@
-# Entity Framework Filters
+# Filters
 
 ## Definition
 

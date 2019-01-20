@@ -1,4 +1,4 @@
-# Entity Framework Videos
+# Videos
 
 @using Z.Websites.Web.Models
 @{

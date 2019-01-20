@@ -1,4 +1,4 @@
-# Entity Framework - Cannot Construct Entity
+# Cannot Construct Entity
 
 ## Exception: The entity cannot be constructed in a LINQ to Entities query
 

@@ -1,4 +1,4 @@
-# Entity Framework - Not Found in ObjectStateManager
+# Not Found in ObjectStateManager
 
 ## Exception: The object cannot be deleted because it was not found in the ObjectStateManager
 

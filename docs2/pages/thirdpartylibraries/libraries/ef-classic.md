@@ -1,4 +1,4 @@
-# Entity Framework Plus
+# EF Classic
 
 ## Definition
 

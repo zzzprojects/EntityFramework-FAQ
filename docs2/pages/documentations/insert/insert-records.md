@@ -1,4 +1,4 @@
-# Entity Framework - Insert Records
+# Insert Records
 
 ## How to do a Bulk Insert?
 

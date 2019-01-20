@@ -1,4 +1,4 @@
-# Entity Framework - Channel9 Videos
+# Channel9 Videos
 
 @using Z.Websites.Web.Models
 @{

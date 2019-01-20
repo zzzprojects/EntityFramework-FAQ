@@ -1,4 +1,4 @@
-# Entity Framework - Bulk Update
+# Bulk Update
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Entity Framework - Change Connection at Runtime
+# Change Connection at Runtime
 
 ## How to change the connection at runtime? 
 

@@ -1,4 +1,4 @@
-# Entity Framework - How to see Entity Framework Errors
+# How to see Entity Framework Errors
 
 ## How to see Entity Framework Errors?
 

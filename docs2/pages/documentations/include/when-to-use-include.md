@@ -1,4 +1,4 @@
-# Entity Framework - When to Use Include
+# When to Use Include
 
 ## When to use Include() with Entity Framework? 
 

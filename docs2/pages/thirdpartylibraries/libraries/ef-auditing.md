@@ -1,4 +1,4 @@
-# EF Auditing
+# Auditing
 
 ## Definition
 

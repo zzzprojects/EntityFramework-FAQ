@@ -1,4 +1,4 @@
-# Entity Framework - AutoHistory
+# AutoHistory
 
 ## Definition
 

@@ -1,4 +1,4 @@
-# Entity Framework - Delete Multiple Entities
+# Delete Multiple Entities
 
 ## How to Delete Multiple Entities at Once?
 

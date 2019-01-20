@@ -1,4 +1,4 @@
-# Entity Framework - How to Mock Data
+# How to Mock Data
 
 ## How to mock data and write unit tests with Entity Framework?
  

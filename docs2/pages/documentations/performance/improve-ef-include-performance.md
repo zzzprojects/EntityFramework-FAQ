@@ -1,4 +1,4 @@
-# Entity Framework - Improve EF Include Performance
+# Improve EF Include Performance
 
 ## How to Improve Entity Framework Include Performance?
 

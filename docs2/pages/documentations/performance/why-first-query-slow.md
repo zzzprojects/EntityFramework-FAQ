@@ -1,4 +1,4 @@
-# Entity Framework - Why First Query is slow?
+# Why First Query is slow?
 
 ## Why Entity Framework First Load is Slow?
 

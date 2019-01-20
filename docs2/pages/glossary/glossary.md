@@ -1,4 +1,4 @@
-# Entity Framework - Glossary
+# Glossary
 
 @using Z.Websites.Web.Models
 @{

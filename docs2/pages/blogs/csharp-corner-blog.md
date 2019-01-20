@@ -1,4 +1,4 @@
-# Entity Framework - CSharpCorner's Blog
+# CSharpCorner's Blog
 
 @using Z.Websites.Web.Models
 @{

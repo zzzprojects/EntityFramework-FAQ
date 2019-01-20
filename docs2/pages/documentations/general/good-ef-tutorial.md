@@ -1,4 +1,4 @@
-# Entity Framework - Good EF Tutorial
+# Good EF Tutorial
 
 ## What are good Entity Framework Tutorial?  
 

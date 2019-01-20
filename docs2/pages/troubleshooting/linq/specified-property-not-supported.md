@@ -1,4 +1,4 @@
-# Entity Framework - Specified Property Not Supported
+# Specified Property Not Supported
 
 ## Exception: The specified type member '[ColumnName]' is not supported in LINQ to Entities Exception 
 

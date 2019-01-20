@@ -1,4 +1,4 @@
-# Entity Framework - Only Primitive Types Supported
+# Only Primitive Types Supported
 
 ## Exception: Unable to create a constant value of type [Object]. Only primitive types or enumeration types are supported in this context.
 

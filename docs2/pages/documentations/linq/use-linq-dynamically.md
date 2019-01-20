@@ -1,4 +1,4 @@
-# Entity Framework - Use LINQ Dynamically
+# Use LINQ Dynamically
 
 ## How to use LINQ dynamically? 
 

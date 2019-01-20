@@ -1,4 +1,4 @@
-# Entity Framework - Batch Update
+# Batch Update
 
 ## Introduction
 

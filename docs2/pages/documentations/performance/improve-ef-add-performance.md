@@ -1,4 +1,4 @@
-# Entity Framework - Improve EF Add Performance
+# Improve EF Add Performance
 
 ## How to Improve Entity Framework Add Performance?
 

@@ -1,4 +1,4 @@
-# Entity Framework - Stored Procedure
+# Stored Procedure
 
 ## How to work with stored procedure within Entity Framework? 
 

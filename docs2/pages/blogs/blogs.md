@@ -1,4 +1,4 @@
-# Entity Framework Blogs
+# Blogs
 
 @using Z.Websites.Web.Models
 @{

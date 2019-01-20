@@ -1,4 +1,4 @@
-# Entity Framework - Update Without Loading
+# Update Without Loading
 
 ## How to update without loading entities in the context?
 

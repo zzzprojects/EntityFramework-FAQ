@@ -1,4 +1,4 @@
-# Entity Framework - JetBrains Blog
+# JetBrains Blog
 
 @using Z.Websites.Web.Models
 @{

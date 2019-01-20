@@ -1,4 +1,4 @@
-# Entity Framework - Prashant Brall's Blog
+# Prashant Brall's Blog
 
 @using Z.Websites.Web.Models
 @{

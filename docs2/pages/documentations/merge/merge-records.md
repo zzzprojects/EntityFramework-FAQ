@@ -1,4 +1,4 @@
-# Entity Framework - Merge Records
+# Merge Records
 
 ## How to Bulk Merge?
 

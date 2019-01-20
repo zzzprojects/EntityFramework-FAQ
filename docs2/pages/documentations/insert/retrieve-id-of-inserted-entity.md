@@ -1,4 +1,4 @@
-# Entity Framework - Retrieve Id of Inserted Entity
+# Retrieve Id of Inserted Entity
 
 ## How can I get Id of inserted entity? 
 

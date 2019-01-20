@@ -1,4 +1,4 @@
-# Entity Framework - Batch Delete
+# Batch Delete
 
 ## Introduction
 

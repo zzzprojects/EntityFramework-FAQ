@@ -1,4 +1,4 @@
-# Entity Framework - Bulk Delete
+# Bulk Delete
 
 ## Introduction
 

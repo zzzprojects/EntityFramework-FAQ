@@ -1,4 +1,4 @@
-# Entity Framework Utilities
+# Utilities
 
 ## Definition
 

@@ -1,4 +1,4 @@
-# Entity Framework - SaveChanges Performance
+# SaveChanges Performance
 
 ## How to Improve SaveChanges Performance? 
 
