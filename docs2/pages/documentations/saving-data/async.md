@@ -1,5 +1,6 @@
 ---
 PermaID: 1000049
+Name: Async
 ---
 
 # Async
@@ -30,4 +31,3 @@ using (var db = new BookStore())
     }
 }
 ```
-

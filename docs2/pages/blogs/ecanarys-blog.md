@@ -1,5 +1,6 @@
 ---
 PermaID: 1000142
+Name: Ecanarys Blog
 ---
 
 # eCanarys's Blog
@@ -27,4 +28,3 @@ PermaID: 1000142
         }
     </tbody>
 </table>
-

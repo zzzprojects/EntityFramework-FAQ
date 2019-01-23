@@ -1,5 +1,6 @@
 ---
 PermaID: 1000033
+Name: How to see EF Erros
 ---
 
 # How to see Entity Framework Errors

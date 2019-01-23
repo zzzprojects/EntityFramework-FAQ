@@ -1,5 +1,6 @@
 ---
 PermaID: 1000111
+Name: Delete Multiple Entities
 ---
 
 # Delete Multiple Entities

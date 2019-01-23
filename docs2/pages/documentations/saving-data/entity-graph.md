@@ -1,5 +1,6 @@
 ---
 PermaID: 1000043
+Name: Entity Graph
 ---
 
 # Entity Graph
@@ -67,4 +68,3 @@ The context sets an appropriate state for each entity based on the key property 
  - The SaveChanges() method will execute the appropriate `INSERT` or `UPDATE` command to the database for each entity.
 
 [Try it](https://dotnetfiddle.net/QH89br)
-

@@ -1,5 +1,6 @@
 ---
 PermaID: 1000025
+Name: Bulk Delete
 ---
 
 # Bulk Delete

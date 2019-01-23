@@ -1,5 +1,6 @@
 ---
 PermaID: 1000159
+Name: LINQ does not recognize method
 ---
 
 # LINQ Does Not Recognize Method

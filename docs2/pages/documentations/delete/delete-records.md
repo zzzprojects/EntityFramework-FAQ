@@ -1,5 +1,6 @@
 ---
 PermaID: 1000110
+Name: Delete Records
 ---
 
 # Delete Records
@@ -38,5 +39,3 @@ All rows that match the entity key are considered as existing and are **DELETED*
 |BulkDelete	|45 ms	        |50 ms	        |60 ms         |
 
 [Learn more](http://entityframework-extensions.net/bulk-delete)
-
-

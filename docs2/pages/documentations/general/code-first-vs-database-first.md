@@ -1,5 +1,6 @@
 ---
 PermaID: 1000107
+Name: Code First vs Database First
 ---
 
 # Code First vs Database First
@@ -36,5 +37,3 @@ What is the difference between **Code First** and **Database First** in Entity F
  - So, we can say, entity framework is able to create your model classes based on tables and columns from relational database.
 
 [more...](/ef-database-first)
-
-

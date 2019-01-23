@@ -1,5 +1,6 @@
 ---
 PermaID: 1000109
+Name: Delete without Loading
 ---
 
 # Delete Without Loading

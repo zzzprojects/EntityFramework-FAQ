@@ -1,5 +1,6 @@
 ---
 PermaID: 1000073
+Name: EF Performance
 ---
 
 # Improve Entity Framework Performance

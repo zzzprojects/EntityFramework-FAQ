@@ -1,5 +1,6 @@
 ---
 PermaID: 1000081
+Name: Find
 ---
 
 # Find
@@ -19,4 +20,3 @@ using (var context = new BookStore())
 ```
 
 [Try it](https://dotnetfiddle.net/U3oGAV)
-

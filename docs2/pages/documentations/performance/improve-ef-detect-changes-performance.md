@@ -1,5 +1,6 @@
 ---
 PermaID: 1000071
+Name: Detect Changes Performance
 ---
 
 # Improve EF DetectChanges Performance

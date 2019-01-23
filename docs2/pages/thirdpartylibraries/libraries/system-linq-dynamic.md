@@ -1,5 +1,6 @@
 ---
 PermaID: 1000004
+Name: LINQ Dynamic
 ---
 
 # System.Linq.Dynamic

@@ -1,5 +1,6 @@
 ---
 PermaID: 1000058
+Name: Raw SQL Queries
 ---
 
 # Raw SQL Queries

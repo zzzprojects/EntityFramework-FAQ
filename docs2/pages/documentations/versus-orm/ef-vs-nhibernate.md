@@ -1,5 +1,6 @@
 ---
 PermaID: 1000031
+Name: Entity Framework vs Nhibernate
 ---
 
 # Entity Framework vs NHibernate

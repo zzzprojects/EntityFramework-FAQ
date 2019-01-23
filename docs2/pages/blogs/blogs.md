@@ -1,5 +1,6 @@
 ---
 PermaID: 1000147
+Name: Blogs
 ---
 
 # Blogs

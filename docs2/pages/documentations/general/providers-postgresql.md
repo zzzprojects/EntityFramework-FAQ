@@ -1,5 +1,6 @@
 ---
 PermaID: 1000096
+Name: PostgreSQL Provider
 ---
 
 # PostgreSQL
@@ -33,5 +34,3 @@ Now to use Entity Framework with PostgreSQL database, add connection string and 
   </DbProviderFactories>
 </system.data>
 ```
-
-

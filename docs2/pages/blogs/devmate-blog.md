@@ -1,5 +1,6 @@
 ---
 PermaID: 1000145
+Name: Devmate Blog
 ---
 
 # Blogs
@@ -27,4 +28,3 @@ PermaID: 1000145
         }
     </tbody>
 </table>
-

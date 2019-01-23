@@ -1,5 +1,6 @@
 ---
 PermaID: 1000087
+Name: Table per Type
 ---
 
 # Table Per Type

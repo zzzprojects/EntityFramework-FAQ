@@ -1,5 +1,6 @@
 ---
 PermaID: 1000123
+Name: Foreign Key
 ---
 
 # ForeignKey

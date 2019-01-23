@@ -1,5 +1,6 @@
 ---
 PermaID: 1000088
+Name: Table per Hierarchy
 ---
 
 # Table Per Hierarchy

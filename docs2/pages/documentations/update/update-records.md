@@ -1,5 +1,6 @@
 ---
 PermaID: 1000035
+Name: Update Records
 ---
 
 # Update Records
@@ -41,5 +42,3 @@ All rows that match the entity key are considered as existing and are UPDATED in
 |BulkUpdate	|50 ms	        |55 ms	        |65 ms         |
 
 [Learn more](http://entityframework-extensions.net/bulk-update)
-
-

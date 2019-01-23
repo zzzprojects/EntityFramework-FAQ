@@ -1,5 +1,6 @@
 ---
 PermaID: 1000077
+Name: LINQ Dynamic
 ---
 
 # Use LINQ Dynamically

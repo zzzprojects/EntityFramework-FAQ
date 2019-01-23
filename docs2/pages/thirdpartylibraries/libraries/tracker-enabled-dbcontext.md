@@ -1,5 +1,6 @@
 ---
 PermaID: 1000003
+Name: Tracker Enabled DbContext
 ---
 
 # Tracker Enabled DbContext
@@ -67,4 +68,3 @@ EntityTracker
  - Entity Framework 6.x
 
 [Learn more](https://github.com/bilal-fazlani/tracker-enabled-dbcontext)
-

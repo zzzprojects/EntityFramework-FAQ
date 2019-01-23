@@ -1,5 +1,6 @@
 ---
 PermaID: 1000086
+Name: Fastest Way to Insert
 ---
 
 # Fastest Way To Insert

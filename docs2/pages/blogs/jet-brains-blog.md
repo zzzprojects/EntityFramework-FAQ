@@ -1,5 +1,6 @@
 ---
 PermaID: 1000139
+Name: Jet Brains Blog
 ---
 
 # JetBrains Blog
@@ -27,4 +28,3 @@ PermaID: 1000139
         }
     </tbody>
 </table>
-

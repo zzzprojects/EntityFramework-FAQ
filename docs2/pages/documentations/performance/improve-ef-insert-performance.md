@@ -1,5 +1,6 @@
 ---
 PermaID: 1000069
+Name: Insert Performance
 ---
 
 # Improve EF Insert Performance

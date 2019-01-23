@@ -1,5 +1,6 @@
 ---
 PermaID: 1000135
+Name: Telerik  Blog
 ---
 
 # Telerik's Blog
@@ -27,4 +28,3 @@ PermaID: 1000135
         }
     </tbody>
 </table>
-

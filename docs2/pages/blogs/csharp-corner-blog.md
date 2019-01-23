@@ -1,5 +1,6 @@
 ---
 PermaID: 1000146
+Name: Csharp Corner Blog
 ---
 
 # CSharpCorner's Blog
@@ -27,4 +28,3 @@ PermaID: 1000146
         }
     </tbody>
 </table>
-

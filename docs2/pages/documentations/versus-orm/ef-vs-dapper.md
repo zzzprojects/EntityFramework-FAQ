@@ -1,5 +1,6 @@
 ---
 PermaID: 1000032
+Name: Entity Framework vs Dapper
 ---
 
 # Entity Framework vs Dapper

@@ -1,5 +1,6 @@
 ---
 PermaID: 1000030
+Name: Entity Framework vs LINQ2SQL
 ---
 
 # Entity Framework vs LINQ to SQL

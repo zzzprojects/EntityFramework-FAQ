@@ -1,5 +1,6 @@
 ---
 PermaID: 1000027
+Name: Batch Delete
 ---
 
 # Batch Delete
@@ -51,4 +52,3 @@ Use these libraries at your risk!
 |:--------- |:--------- |:--------- |:--------- |:--------- |:--------- |
 |[EFUtilities](/ef-utilities)	|FREE	|EF5<br>EF6	|No	    |No |Bulk Insert<br>Batch Delete<br>Batch Update<br>Include Optimized<br>
 |[EntityFramework.Extended](/ef-extended)	|FREE	|EF5<br>EF6	|No	    |Yes    |Audit<br>Batch Delete<br>Batch Update<br>Cache<br>Future|
-

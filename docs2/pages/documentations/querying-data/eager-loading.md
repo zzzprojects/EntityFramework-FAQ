@@ -1,5 +1,6 @@
 ---
 PermaID: 1000063
+Name: Eager Loading
 ---
 
 # Eager Loading
@@ -45,4 +46,3 @@ SELECT
 ```
 
 [Try it](https://dotnetfiddle.net/Kjlh5E)
-

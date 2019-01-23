@@ -1,5 +1,6 @@
 ---
 PermaID: 1000144
+Name: Dixin Blog
 ---
 
 # Dixin's Blog
@@ -27,4 +28,3 @@ PermaID: 1000144
         }
     </tbody>
 </table>
-

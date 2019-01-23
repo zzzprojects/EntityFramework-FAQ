@@ -1,5 +1,6 @@
 ---
 PermaID: 1000143
+Name: Dot Net Blog
 ---
 
 # .NET Blog
@@ -27,4 +28,3 @@ PermaID: 1000143
         }
     </tbody>
 </table>
-

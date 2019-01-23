@@ -1,5 +1,6 @@
 ---
 PermaID: 1000038
+Name: Stored Procedure
 ---
 
 # Stored Procedure
@@ -68,4 +69,4 @@ using ( var context = new BloggingContextDbEntities())
 }
 ``` 
 
-It will return the blog where Id is 1. 
+It will return the blog where Id is 1.

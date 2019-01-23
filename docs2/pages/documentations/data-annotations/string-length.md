@@ -1,5 +1,6 @@
 ---
 PermaID: 1000116
+Name: String Length
 ---
 
 # StringLength

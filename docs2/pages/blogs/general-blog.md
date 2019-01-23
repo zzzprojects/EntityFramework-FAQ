@@ -1,5 +1,6 @@
 ---
 PermaID: 1000141
+Name: General Blog
 ---
 
 # General's Blog
@@ -27,4 +28,3 @@ PermaID: 1000141
         }
     </tbody>
 </table>
-

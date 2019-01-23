@@ -1,5 +1,6 @@
 ---
 PermaID: 1000060
+Name: Lazy Loading
 ---
 
 # Lazy Loading

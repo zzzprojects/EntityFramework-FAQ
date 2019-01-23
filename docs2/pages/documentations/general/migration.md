@@ -1,5 +1,6 @@
 ---
 PermaID: 1000098
+Name: Migration
 ---
 
 # Migration
@@ -214,4 +215,3 @@ Run the `Update-Database` command in Package Manager Console.
 <img src="https://raw.githubusercontent.com/zzzprojects/EntityFramework-FAQ/master/docs2/images/migration3.png">
 
 You can see that the database is now up to date by adding the `Publisher` column in the `Books` table.
-

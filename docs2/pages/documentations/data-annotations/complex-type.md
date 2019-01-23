@@ -1,5 +1,6 @@
 ---
 PermaID: 1000127
+Name: Complex Type
 ---
 
 # ComplexType
