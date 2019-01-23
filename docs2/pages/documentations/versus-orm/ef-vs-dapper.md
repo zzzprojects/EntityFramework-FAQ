@@ -1,3 +1,7 @@
+---
+PermaID: 1000032
+---
+
 # Entity Framework vs Dapper
 
 ## Entity Framework vs Dapper? 

@@ -1,3 +1,7 @@
+---
+PermaID: 1000047
+---
+
 # Cascade Delete
 
 Cascade delete allows the deletion of a row to trigger the deletion of related rows automatically.

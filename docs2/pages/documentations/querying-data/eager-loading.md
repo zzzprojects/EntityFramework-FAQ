@@ -1,3 +1,7 @@
+---
+PermaID: 1000063
+---
+
 # Eager Loading
 
 In Eager loading, a query for one type of entity also loads related entities as part of the query. 

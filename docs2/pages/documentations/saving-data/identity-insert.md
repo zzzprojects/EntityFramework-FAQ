@@ -1,3 +1,7 @@
+---
+PermaID: 1000042
+---
+
 # Identity Insert
 
 In Entity Framework, when you have a primary key field such as `Id` or `AuthorId` which is mapped to `IDENTITY` column in the database, it works well when you insert data. 

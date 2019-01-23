@@ -1,3 +1,7 @@
+---
+PermaID: 1000054
+---
+
 # One-to-One Relationships
 
 In a one-to-one relationship, each row of data in one table is linked to zero or one row in the second table. For example, the `Author` and `AuthorBiography` have a one-to-one relationship.

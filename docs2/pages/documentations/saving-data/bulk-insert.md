@@ -1,3 +1,7 @@
+---
+PermaID: 1000048
+---
+
 # BulkInsert
 
 When you want to insert hundreds, thousands, or millions of entities using `SaveChanges()` method, you will notice that your application performance is INSANELY slow. 

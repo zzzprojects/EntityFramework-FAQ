@@ -1,3 +1,7 @@
+---
+PermaID: 1000116
+---
+
 # StringLength
 
 The `StringLength` attributes allow you to specify additional property validations like `MaxLength`. 

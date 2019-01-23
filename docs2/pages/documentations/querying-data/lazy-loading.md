@@ -1,3 +1,7 @@
+---
+PermaID: 1000060
+---
+
 # Lazy Loading
 
 In Lazy loading, an entity or collection of entities is automatically loaded from the database when a property referring to that entity/entities is accessed for the first time. 

@@ -1,3 +1,7 @@
+---
+PermaID: 1000111
+---
+
 # Delete Multiple Entities
 
 ## How to Delete Multiple Entities at Once?

@@ -1,3 +1,7 @@
+---
+PermaID: 1000041
+---
+
 # SaveChanges
 
 In Entity Framework, the `DbContext.SaveChanges` method saves all changes made in the context of the database. 

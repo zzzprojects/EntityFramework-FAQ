@@ -1,3 +1,7 @@
+---
+PermaID: 1000031
+---
+
 # Entity Framework vs NHibernate
 
 ## Entity Framework vs NHibernate? 

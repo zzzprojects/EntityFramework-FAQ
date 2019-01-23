@@ -1,3 +1,7 @@
+---
+PermaID: 1000127
+---
+
 # ComplexType
 
 The Complex types are non-scalar properties of entity types that enable scalar properties to be organized within entities. 

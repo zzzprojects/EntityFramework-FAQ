@@ -1,3 +1,7 @@
+---
+PermaID: 1000025
+---
+
 # Bulk Delete
 
 ## Introduction

@@ -1,3 +1,7 @@
+---
+PermaID: 1000129
+---
+
 # Connection String
 
 A connection string contains initialization information that is passed as a parameter from a data provider to a data source.

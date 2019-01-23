@@ -1,3 +1,7 @@
+---
+PermaID: 1000119
+---
+
 # MinLength
 
 The `MinLength` attributes allow you to specify additional property validations. It is applied to a property to specify a minimum number of characters or bytes for the column that the property should map to.

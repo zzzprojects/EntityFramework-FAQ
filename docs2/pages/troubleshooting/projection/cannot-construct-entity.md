@@ -1,3 +1,7 @@
+---
+PermaID: 1000153
+---
+
 # Cannot Construct Entity
 
 ## Exception: The entity cannot be constructed in a LINQ to Entities query

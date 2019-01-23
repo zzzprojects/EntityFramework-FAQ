@@ -1,3 +1,7 @@
+---
+PermaID: 1000122
+---
+
 # InverseProperty
 
 The `InverseProperty` attribute is used to denote the inverse navigation property of a relationship when the same type takes part in multiple relationships. 

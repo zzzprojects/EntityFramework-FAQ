@@ -1,3 +1,7 @@
+---
+PermaID: 1000050
+---
+
 # AddOrUpdate
 
 A common pattern for some applications is to either add an entity as new (resulting in a database insert) or attach an entity as existing and mark it as modified (resulting in a database update) depending on the value of the primary key. 

@@ -1,3 +1,7 @@
+---
+PermaID: 1000144
+---
+
 # Dixin's Blog
 
 @using Z.Websites.Web.Models

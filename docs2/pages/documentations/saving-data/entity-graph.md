@@ -1,3 +1,7 @@
+---
+PermaID: 1000043
+---
+
 # Entity Graph
 
 In Entity Framework, `DbSet`provides `Add and `Attach` methods for entity graph-traversal and determine whether an entity should be marked as Added (to insert), Modified (to update), Unchanged (do nothing), or Deleted (to delete).

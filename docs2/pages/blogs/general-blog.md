@@ -1,3 +1,7 @@
+---
+PermaID: 1000141
+---
+
 # General's Blog
 
 @using Z.Websites.Web.Models

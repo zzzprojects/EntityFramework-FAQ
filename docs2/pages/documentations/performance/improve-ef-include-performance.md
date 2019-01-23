@@ -1,3 +1,7 @@
+---
+PermaID: 1000070
+---
+
 # Improve EF Include Performance
 
 ## How to Improve Entity Framework Include Performance?

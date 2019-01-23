@@ -1,3 +1,7 @@
+---
+PermaID: 1000056
+---
+
 # Many-to-Many Relationships
 
 In a many-to-many relationship, each row of data in one table is linked to many rows in the second table and vice versa.

@@ -1,3 +1,7 @@
+---
+PermaID: 1000123
+---
+
 # ForeignKey
 
 The `ForeignKey` attribute is used to specify which property is the foreign key in a relationship. It is used to express the relationship between two tables.

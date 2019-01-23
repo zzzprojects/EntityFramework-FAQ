@@ -1,3 +1,7 @@
+---
+PermaID: 1000066
+---
+
 # Why First Query is slow?
 
 ## Why Entity Framework First Load is Slow?

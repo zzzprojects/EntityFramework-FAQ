@@ -1,3 +1,7 @@
+---
+PermaID: 1000082
+---
+
 # Check Object Existence
 
 ## How to check if an object exists in the database?

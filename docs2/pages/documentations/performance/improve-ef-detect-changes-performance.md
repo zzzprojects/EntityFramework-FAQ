@@ -1,3 +1,7 @@
+---
+PermaID: 1000071
+---
+
 # Improve EF DetectChanges Performance
 
 ## How to Improve Entity Framework DetectChanges Performance?

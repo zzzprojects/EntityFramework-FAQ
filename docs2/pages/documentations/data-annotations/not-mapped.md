@@ -1,3 +1,7 @@
+---
+PermaID: 1000118
+---
+
 # NotMapped
 
 The `NotMapped` attribute is used to specify that an entity or property is not to be mapped to a table or column in the database. 

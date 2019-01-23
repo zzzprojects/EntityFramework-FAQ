@@ -1,3 +1,7 @@
+---
+PermaID: 1000059
+---
+
 # Projection
 
 A projection is just a way of mapping one set of properties to another. In Entity Framework, it's a way of translating a full entity (database table) into a C# class with a subset of those properties.

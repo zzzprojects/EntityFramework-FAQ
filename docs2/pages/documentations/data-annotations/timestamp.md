@@ -1,3 +1,7 @@
+---
+PermaID: 1000114
+---
+
 # Timestamp
 
 The `TimeStamp` attribute is used to creates a column with timestamp data type in the SQL Server database.

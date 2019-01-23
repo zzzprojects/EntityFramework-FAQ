@@ -1,3 +1,7 @@
+---
+PermaID: 1000109
+---
+
 # Delete Without Loading
 
 ## How to delete without loading entities in the context? 

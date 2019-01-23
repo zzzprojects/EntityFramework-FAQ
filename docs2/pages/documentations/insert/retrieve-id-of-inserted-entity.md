@@ -1,3 +1,7 @@
+---
+PermaID: 1000083
+---
+
 # Retrieve Id of Inserted Entity
 
 ## How can I get Id of inserted entity? 

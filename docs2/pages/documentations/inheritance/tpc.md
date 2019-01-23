@@ -1,3 +1,7 @@
+---
+PermaID: 1000089
+---
+
 # Table Per Concrete
 
 ## What is Inheritance Type in Entity Framework?  

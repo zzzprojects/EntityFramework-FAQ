@@ -1,3 +1,7 @@
+---
+PermaID: 1000115
+---
+
 # Table
 
 In EF 6, the default convention creates a table name matching with `<DbSet<TEntity> property name>` + 's' or 'es' in a context class.

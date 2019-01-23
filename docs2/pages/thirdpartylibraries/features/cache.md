@@ -1,3 +1,7 @@
+---
+PermaID: 1000020
+---
+
 # Cache
 
 ## Introduction

@@ -1,3 +1,7 @@
+---
+PermaID: 1000086
+---
+
 # Fastest Way To Insert
 
 ## What's the fastest way to insert?

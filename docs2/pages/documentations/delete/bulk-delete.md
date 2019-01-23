@@ -1,3 +1,7 @@
+---
+PermaID: 1000112
+---
+
 # Bulk Delete
 
 ## Definition

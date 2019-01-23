@@ -1,3 +1,7 @@
+---
+PermaID: 1000065
+---
+
 # AsNoTracking
 
 In the Entity Framework, the `DbContext` keeps the track of all the changes done in the objects, so that the correct update is done to the database when the `SaveChanges()` method of the context is called. 

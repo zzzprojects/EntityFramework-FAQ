@@ -1,3 +1,7 @@
+---
+PermaID: 1000073
+---
+
 # Improve Entity Framework Performance
 
 ## Improve Entity Framework Performance

@@ -1,3 +1,7 @@
+---
+PermaID: 1000124
+---
+
 # DatabaseGenerated
 
 The `DatabaseGenerated` attribute added to the properties whose value is automatically computed/updated by the Database. It specifies how the database generates values for the property. There are three possible values:

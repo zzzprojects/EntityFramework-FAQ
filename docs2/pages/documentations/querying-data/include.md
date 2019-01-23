@@ -1,3 +1,7 @@
+---
+PermaID: 1000062
+---
+
 # Include
 
 In Entity Framework, the `Include` method loads the related objects to include in the query results. It can be used to retrieve some information from the database and also want to include related entities. 

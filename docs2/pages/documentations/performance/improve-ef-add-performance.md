@@ -1,3 +1,7 @@
+---
+PermaID: 1000072
+---
+
 # Improve EF Add Performance
 
 ## How to Improve Entity Framework Add Performance?

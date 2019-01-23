@@ -1,3 +1,7 @@
+---
+PermaID: 1000094
+---
+
 # What is Entity Framework?
 
 Entity Framework (EF) is an open source ORM framework for .NET applications supported by Microsoft. EF simplifies mapping between objects in your software to the tables and columns of a relational database.

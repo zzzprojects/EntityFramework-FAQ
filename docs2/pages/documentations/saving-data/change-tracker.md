@@ -1,3 +1,7 @@
+---
+PermaID: 1000046
+---
+
 # Change Tracker
 
 By default, Entity Framework tracks changes of the loaded entities during the life-time of the context. 

@@ -1,3 +1,7 @@
+---
+PermaID: 1000069
+---
+
 # Improve EF Insert Performance
 
 ## How to Improve Entity Framework Insert Performance?

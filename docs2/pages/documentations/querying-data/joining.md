@@ -1,3 +1,7 @@
+---
+PermaID: 1000061
+---
+
 # Joining
 
 In SQL, a `JOIN` clause is used to combine data from two or more tables, based on a related column between them. Similarly, in Entity Framework, the LINQ `Join` is used to load data from two or more tables. 

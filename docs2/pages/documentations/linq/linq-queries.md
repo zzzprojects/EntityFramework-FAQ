@@ -1,3 +1,7 @@
+---
+PermaID: 1000079
+---
+
 # LINQ Queries
 
 A query is an expression that retrieves data from a data source. Queries are usually expressed in a specialized query language, such as SQL for relational databases and XQuery for XML. 

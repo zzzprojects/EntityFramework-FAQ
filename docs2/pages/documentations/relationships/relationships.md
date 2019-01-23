@@ -1,3 +1,7 @@
+---
+PermaID: 1000053
+---
+
 # Relationships
 
 In the context of relational databases, a relationship exists between two relational database tables when one table has a foreign key that references the primary key of the other table. In Entity Framework, a relationship defines how two entities relate to each other.

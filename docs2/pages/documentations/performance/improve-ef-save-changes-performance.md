@@ -1,3 +1,7 @@
+---
+PermaID: 1000068
+---
+
 # Improve EF SaveChanges Performance
 
 ## How to Improve SaveChanges Performance? 

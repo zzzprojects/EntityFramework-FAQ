@@ -1,3 +1,7 @@
+---
+PermaID: 1000080
+---
+
 # LINQ Prevent SQL Injection
 
 ## Do LINQ is SQL Injection safe? 

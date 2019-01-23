@@ -1,3 +1,7 @@
+---
+PermaID: 1000077
+---
+
 # Use LINQ Dynamically
 
 ## How to use LINQ dynamically? 

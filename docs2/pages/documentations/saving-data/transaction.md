@@ -1,3 +1,7 @@
+---
+PermaID: 1000039
+---
+
 # Transaction
 
 In Entity Framework, when you call SaveChanges() to insert, delete, or update data to the database, the entity framework will wrap that operation in a transaction. 

@@ -1,3 +1,7 @@
+---
+PermaID: 1000049
+---
+
 # Async
 
 In Entity Framework 6, asynchronous query and save are introduced using the `async` and `await` keywords that were introduced in .NET 4.5. 

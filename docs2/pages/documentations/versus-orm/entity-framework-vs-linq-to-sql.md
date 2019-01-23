@@ -1,3 +1,7 @@
+---
+PermaID: 1000030
+---
+
 # Entity Framework vs LINQ to SQL
 
 ## Entity Framework vs LINQ to SQL? 

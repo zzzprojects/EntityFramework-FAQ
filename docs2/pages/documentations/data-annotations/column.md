@@ -1,3 +1,7 @@
+---
+PermaID: 1000128
+---
+
 # Column
 
 In EF 6, the default convention creates a creates a column name similar to the property name in an entity class.

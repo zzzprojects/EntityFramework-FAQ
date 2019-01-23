@@ -1,3 +1,7 @@
+---
+PermaID: 1000126
+---
+
 # ConcurrencyCheck
 
 The `ConcurrencyCheck` attribute allows you to configure one or more properties to be used for concurrency checking in the database when a user edits or deletes an entity. 

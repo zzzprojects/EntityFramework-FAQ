@@ -1,3 +1,7 @@
+---
+PermaID: 1000067
+---
+
 # Why DetectChanges is slow?
 
 ## Why Entity Framework DetectChanges is slow?

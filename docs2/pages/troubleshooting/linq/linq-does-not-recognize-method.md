@@ -1,3 +1,7 @@
+---
+PermaID: 1000159
+---
+
 # LINQ Does Not Recognize Method
 
 ## Exception: LINQ to Entities does not recognize the method 
