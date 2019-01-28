@@ -3,7 +3,7 @@ PermaID: 1000002
 Name: Third Party Libraries
 ---
 
-# Entity Framework - Third Party Libraries
+# Third Party Libraries
 
 ## Introduction
 
