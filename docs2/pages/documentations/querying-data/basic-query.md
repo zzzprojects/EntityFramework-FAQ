@@ -1,9 +1,12 @@
 ---
 PermaID: 1000064
 Name: Basic Query
+IsUpdated: 1
 ---
 
 # Basic Query
+
+test
 
 In Entity Framework, querying data is executed against the `DbSet` properties of the `DbContext`.
 
