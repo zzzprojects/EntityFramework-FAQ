@@ -1,7 +1,6 @@
 ---
 PermaID: 1000064
 Name: Basic Query
-IsUpdated: 1
 ---
 
 # Basic Query
