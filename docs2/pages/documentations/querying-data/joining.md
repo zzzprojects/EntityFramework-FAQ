@@ -1,6 +1,7 @@
 ---
 PermaID: 1000061
 Name: Joining
+IsUpdated: 1
 ---
 
 # Joining
@@ -37,3 +38,39 @@ using (var context = new BookStore())
 ```
 
 [Try it](https://dotnetfiddle.net/yXTgHu)
+
+## Join Three Tables
+
+You can also join more than two tables using LINQ `Join`. The following query combines the `Authors`, `AuthorBiographies` and `Books` tables using the `Join()` method.
+
+```csharp
+using (var context = new BookStore())
+{
+    var authorsData = context.Authors
+        .Join(
+            context.AuthorBiographies,
+            author => author.AuthorId,
+            authorBio => authorBio.AuthorBiographyId,
+            (author, authorBio) => new
+            {
+                AuthorId = author.AuthorId,
+                Name = author.Name,
+                Biography = authorBio.Biography
+            }
+        )
+        .Join(
+            context.Books,
+            author => author.AuthorId,
+            book => book.BookId,
+            (author, book) => new
+            {
+                AuthorId = author.AuthorId,
+                Name = author.Name,
+                Biography = author.Biography,
+                BookTitle = book.Title
+            }
+        )
+        .ToList();
+```
+
+[Try it](https://dotnetfiddle.net/mDcWVr)
